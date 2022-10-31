@@ -412,16 +412,7 @@
     </header>
     <div class="forgot">
         <div class="containerForm" id="containerForm">
-            <!-- <div class="form-container sign-up-container">
-                <form action="#">
-                    <h1>Quên mật khẩu</h1>
-                    <p>Bạn hãy nhập email đã được đăng ký để đổi mật khẩu</p>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Mật khẩu" />
-                    <button>Gửi</button>
-                </form>
-            </div> -->
-            <div class="form-container sign-in-container">
+            <div class="form-container forgot-container">
                 <form action="#">
                     <h1>Quên mật khẩu</h1>
                     <p>Bạn hãy nhập email đã được đăng ký để đổi mật khẩu</p>
@@ -433,11 +424,6 @@
             </div>
             <div class="overlay-container">
                 <div class="overlay">
-                    <!-- <div class="overlay-panel overlay-left">
-                        <h1>Chào mừng trở lại!</h1>
-                        <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
-                        <button class="ghost" id="signIn">Đăng nhập</button>
-                    </div> -->
                     <div class="overlay-panel overlay-right">
                         <h1>Xin chào bạn!</h1>
                         <p>Nhập thông tin của bạn và bắt đầu trải nghiệm với chúng tôi.</p>   
@@ -544,21 +530,14 @@
             transition: all 0.6s ease-in-out;
         }
 
-        .sign-in-container {
+        .forgot-container {
             left: 0;
             width: 50%;
             z-index: 2;
         }
 
-        .containerForm.right-panel-active .sign-in-container {
+        .containerForm.right-panel-active .forgot-container {
             transform: translateX(100%);
-        }
-
-        .sign-up-container {
-            left: 0;
-            width: 50%;
-            opacity: 0;
-            z-index: 1;
         }
 
         .containerForm.right-panel-active .sign-up-container {
@@ -650,7 +629,7 @@
             transform: translateX(20%);
         }
     </style>
-    <script>
+    <!-- <script>
         const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
         const container = document.getElementById('containerForm');
@@ -662,7 +641,7 @@
         signInButton.addEventListener('click', () => {
             container.classList.remove('right-panel-active');
         });
-    </script>
+    </script> -->
     <footer id="footer" class="footer color-bg">
         <div class="footer-bottom">
             <div class="container">
