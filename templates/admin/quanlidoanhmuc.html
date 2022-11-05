@@ -3,16 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Daisan | Danh sách CTV</title>
+    <title>Daisan | Quản lí Danh Mục
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="Coderthemes" name="author">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets\images\favicon.ico">
-    <link rel="shortcut icon" href="assets/images/daisan.png">
-    <!-- Custom box css -->
-    <link href="assets\libs\custombox\custombox.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- third party css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css">
+    <link href="assets/libs/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css">
+    <!-- third party css end -->
 
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -84,14 +90,13 @@
                         <div class="dropdown-divider"></div>
 
                         <!-- item-->
-                        <a href="dangxuat.html" class="dropdown-item notify-item">
+                        <a href="pages-logout.html" class="dropdown-item notify-item">
                             <i class="remixicon-logout-box-line"></i>
                             <span>Đăng xuất</span>
                         </a>
 
                     </div>
                 </li>
-
 
             </ul>
 
@@ -104,7 +109,7 @@
                     </span>
                     <span class="logo-sm">
                         <!-- <span class="logo-sm-text-dark">X</span> -->
-                        <img src="assets/images/logo.png" alt="" height="24">
+                        <img src="assets/images/daisan.png" alt="" height="24">
                     </span>
                 </a>
             </div>
@@ -183,7 +188,6 @@
                                 <span>Sản phẩm</span>
                                 <!-- <span class="menu-arrow"></span> -->
                             </a>
-
                         </li>
 
                         <li>
@@ -194,11 +198,11 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li>
-                                    <a href="danhsachcongtacvien.html">Danh sách CTV</a>
+                                    <a href="danhsachctv.html">Danh sách CTV</a>
                                 </li>
 
                                 <li>
-                                    <a href="baocaodoanhthucongtacvien.html">Báo cáo doanh thu CTV</a>
+                                    <a href="baocaodoanhthuctv.html">Báo cáo doanh thu CTV</a>
                                 </li>
 
 
@@ -234,7 +238,6 @@
                                 <span> Blog </span>
                                 <!-- <span class="menu-arrow"></span> -->
                             </a>
-
                         </li>
 
                         <li>
@@ -243,6 +246,7 @@
                                 <span> Quản lý Danh Mục </span>
                             </a>
                         </li>
+
 
                         <li>
                             <a href="javascript: void(0);" class="waves-effect">
@@ -313,11 +317,11 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="trangchu.html">Admin</a></li>
-                                        <li class="breadcrumb-item">Cộng tác viên</a></li>
-                                        <li class="breadcrumb-item active">Danh sách cộng tác viên</li>
+
+                                        <li class="breadcrumb-item active">Quản lí danh mục</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">DANH SÁCH CỘNG TÁC VIÊN</h4>
+                                <h4 class="page-title">DANH SÁCH DANH MỤC</h4>
                             </div>
                         </div>
                     </div>
@@ -325,176 +329,175 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <div class="card-box">
-                                <div class="row">
-                                    <div class="col-lg-8">
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <label for="inputPassword2" class="sr-only">Tìm kiếm</label>
-                                                <input type="search" class="form-control" id="inputPassword2"
-                                                    placeholder="Tìm kiếm...">
-                                            </div>
-                                            <div class="form-group mx-sm-3">
-                                                <label for="status-select" class="mr-2">Sắp xếp theo</label>
-                                                <select class="custom-select" id="status-select">
-                                                    <option selected="">Tất cả</option>
-                                                    <option value="1">Tên</option>
-                                                    <option value="2">Bài đăng</option>
-                                                    <option value="3">Người theo dõi</option>
-                                                    <option value="4">Đang theo dõi</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="text-lg-right mt-3 mt-lg-0">
-                                            <button type="button"
-                                                class="btn btn-success waves-effect waves-light mr-1"><i
-                                                    class="mdi mdi-settings"></i></button>
-                                            <a href="#custom-modal" class="btn btn-danger waves-effect waves-light"
-                                                data-animation="fadein" data-plugin="custommodal"
-                                                data-overlaycolor="#38414a"><i class="mdi mdi-plus-circle mr-1"></i>
-                                                Thêm mới</a>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <div class="col-lg-8">
+                                            <form class="form-inline">
+                                                <div class="form-group mb-2">
+                                                    <label for="inputPassword2" class="sr-only">Tìm kiếm</label>
+                                                    <input type="search" class="form-control" id="inputPassword2"
+                                                        placeholder="Tìm kiếm...">
+                                                </div>
+
+                                            </form>
                                         </div>
-                                    </div><!-- end col-->
-                                </div> <!-- end row -->
-                            </div> <!-- end card-box -->
-                        </div><!-- end col-->
+                                        <div class="col-lg-4">
+                                            <div class="text-lg-right">
+                                                <button type="button" class="btn btn-danger mb-2 mr-2"><i
+                                                        class="mdi mdi-basket mr-1"></i> Thêm danh mục mới</button>
+                                                <button type="button" class="btn btn-light mb-2">Xuất Excel</button>
+                                            </div>
+                                        </div><!-- end col-->
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-centered table-nowrap mb-0">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th style="width: 20px;">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck1">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck1">&nbsp;</label>
+                                                        </div>
+                                                    </th>
+                                                    <th>ID</th>
+                                                    <th>Tên Danh Mục</th>
+                                                    <th>Ngày</th>
+
+                                                    <th style="width: 125px;">Tác vụ</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck3">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck3">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td><a href="ecommerce-orders-detail.html"
+                                                            class="text-body font-weight-medium">#DM01</a> </td>
+                                                    <td>Hot Deals</td>
+                                                    <td>
+                                                        15 Tháng 3 2022 <small class="text-muted">09:34 AM</small>
+                                                    </td>
+
+                                                    <td>
+                                                        <ul class="list-inline mb-0">
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-eye"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-square-edit-outline"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-delete"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customCheck4">
+                                                            <label class="custom-control-label"
+                                                                for="customCheck4">&nbsp;</label>
+                                                        </div>
+                                                    </td>
+                                                    <td><a href="ecommerce-orders-detail.html"
+                                                            class="text-body font-weight-medium">#DM02</a> </td>
+                                                    <td>Combo</td>
+                                                    <td>
+                                                        18 Tháng 3 2022 <small class="text-muted">11:09 AM</small>
+                                                    </td>
+
+                                                    <td>
+                                                        <ul class="list-inline mb-0">
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-eye"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-square-edit-outline"></i></a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a href="javascript:void(0);" class="action-icon"> <i
+                                                                        class="mdi mdi-delete"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="row mt-4">
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="font-18 text-body">Showing orders 1 to 10 of 112</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="float-sm-right">
+                                                <ul class="pagination pagination-rounded mb-sm-0">
+                                                    <li class="page-item disabled">
+                                                        <a href="#" class="page-link"><i
+                                                                class="mdi mdi-chevron-left"></i></a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">1</a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a href="#" class="page-link">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link">5</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link"><i
+                                                                class="mdi mdi-chevron-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- end row -->
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="text-center card-box ribbon-box">
-                                <div class="ribbon-two ribbon-two-danger"><span>Admin</span></div>
-                                <div class="clearfix"></div>
-                                <div class="pt-2 pb-2">
-                                    <img src="assets/images/users/duc.jpg"
-                                        class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
 
-                                    <h4 class="mt-3 font-17"><a href="taikhoanadmin.html" class="text-dark">Nguyễn Thái
-                                            Đức</a></h4>
-                                    <p class="text-muted">@FullStack <span> | </span> <span> <a href="#"
-                                                class="text-primary">18130047</a> </span></p>
 
-                                    <p class="text-muted font-13 mb-3">
 
-                                    </p>
 
-                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light"><i
-                                            class="mdi mdi-email mr-1"></i> Nhắn tin</button>
-                                    <button type="button" class="btn btn-light btn-sm waves-effect"><i
-                                            class="mdi mdi-phone mr-1"></i> Gọi</button>
 
-                                    <ul class="social-list list-inline mt-3 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-purple text-purple"><i
-                                                    class="mdi mdi-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-danger text-danger"><i
-                                                    class="mdi mdi-google"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-secondary text-secondary"><i
-                                                    class="mdi mdi-github-circle"></i></a>
-                                        </li>
-                                    </ul>
 
-                                </div> <!-- end .padding -->
-                            </div> <!-- end card-box-->
-                        </div> <!-- end col -->
 
-                        <div class="col-lg-4">
-                            <div class="text-center card-box ribbon-box">
-                                <div class="ribbon-two ribbon-two-warning"><span>Admin</span></div>
-                                <div class="pt-2 pb-2">
-                                    <img src="assets/images/users/tuan.jpg"
-                                        class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
 
-                                    <h4 class="mt-3 font-17"><a href="taikhoanadmin.html" class="text-dark">Bùi Anh
-                                            Tuấn</a></h4>
-                                    <p class="text-muted">@Webdesigner <span> | </span> <span> <a href="#"
-                                                class="text-primary">18130151</a> </span></p>
 
-                                    <p class="text-muted font-13 mb-3">
 
-                                    </p>
 
-                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light"><i
-                                            class="mdi mdi-email mr-1"></i> Nhắn tin</button>
-                                    <button type="button" class="btn btn-light btn-sm waves-effect"><i
-                                            class="mdi mdi-phone mr-1"></i> Gọi </button>
 
-                                    <ul class="social-list list-inline mt-3 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-purple text-purple"><i
-                                                    class="mdi mdi-facebook"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-info text-info"><i
-                                                    class="mdi mdi-twitter"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-secondary text-secondary"><i
-                                                    class="mdi mdi-github-circle"></i></a>
-                                        </li>
-                                    </ul>
 
-                                </div> <!-- end .padding -->
-                            </div> <!-- end card-box-->
-                        </div> <!-- end col -->
 
-                        <div class="col-lg-4">
-                            <div class="text-center card-box ribbon-box">
-                                <div class="ribbon-two ribbon-two-success"><span>Admin</span></div>
-                                <div class="pt-2 pb-2">
-                                    <img src="assets/images/users/thuy.jpg"
-                                        class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-
-                                    <h4 class="mt-3 font-17"><a href="taikhoanadmin.html" class="text-dark">Trần Thị Mỹ
-                                            Thùy</a></h4>
-                                    <p class="text-muted">@Webdeveloper <span> | </span> <span> <a href="#"
-                                                class="text-primary">2012343</a> </span></p>
-
-                                    <p class="text-muted font-13 mb-3">
-
-                                    </p>
-
-                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light"><i
-                                            class="mdi mdi-email mr-1"></i> Nhắn tin</button>
-                                    <button type="button" class="btn btn-light btn-sm waves-effect"><i
-                                            class="mdi mdi-phone mr-1"></i> Gọi</button>
-
-                                    <ul class="social-list list-inline mt-3 mb-0">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-danger text-danger"><i
-                                                    class="mdi mdi-google"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-info text-info"><i
-                                                    class="mdi mdi-twitter"></i></a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);"
-                                                class="social-list-item border-secondary text-secondary"><i
-                                                    class="mdi mdi-github-circle"></i></a>
-                                        </li>
-                                    </ul>
-
-                                </div> <!-- end .padding -->
-                            </div> <!-- end card-box-->
-                        </div> <!-- end col -->
-                    </div>
-                    <!-- end row -->
 
 
 
@@ -525,7 +528,6 @@
                     </div>
                 </div>
             </footer>
-
             <!-- end Footer -->
 
         </div>
@@ -537,42 +539,6 @@
 
     </div>
     <!-- END wrapper -->
-
-
-    <!-- Modal -->
-    <div id="custom-modal" class="modal-demo">
-        <button type="button" class="close" onclick="Custombox.modal.close();">
-            <span>&times;</span><span class="sr-only">Close</span>
-        </button>
-        <h4 class="custom-modal-title">Add Members</h4>
-        <div class="custom-modal-text text-left">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name">
-                </div>
-                <div class="form-group">
-                    <label for="position">Position</label>
-                    <input type="text" class="form-control" id="position" placeholder="Enter position">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" class="form-control" id="company" placeholder="Enter company">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                </div>
-
-                <div class="text-right">
-                    <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
-                    <button type="button" class="btn btn-danger waves-effect waves-light m-l-10"
-                        onclick="Custombox.close();">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
 
     <!-- Right Sidebar -->
     <div class="right-bar">
@@ -778,8 +744,24 @@
     <!-- Vendor js -->
     <script src="assets/js/vendor.min.js"></script>
 
-    <!-- Modal-Effect -->
-    <script src="assets\libs\custombox\custombox.min.js"></script>
+    <!-- third party js -->
+    <script src="assets\libs\datatables\jquery.dataTables.min.js"></script>
+    <script src="assets\libs\datatables\dataTables.bootstrap4.js"></script>
+    <script src="assets\libs\datatables\dataTables.responsive.min.js"></script>
+    <script src="assets\libs\datatables\responsive.bootstrap4.min.js"></script>
+    <script src="assets\libs\datatables\dataTables.buttons.min.js"></script>
+    <script src="assets\libs\datatables\buttons.bootstrap4.min.js"></script>
+    <script src="assets\libs\datatables\buttons.html5.min.js"></script>
+    <script src="assets\libs\datatables\buttons.flash.min.js"></script>
+    <script src="assets\libs\datatables\buttons.print.min.js"></script>
+    <script src="assets\libs\datatables\dataTables.keyTable.min.js"></script>
+    <script src="assets\libs\datatables\dataTables.select.min.js"></script>
+    <script src="assets\libs\pdfmake\pdfmake.min.js"></script>
+    <script src="assets\libs\pdfmake\vfs_fonts.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
 
     <!-- App js -->
     <script src="assets/js/app.min.js"></script>
