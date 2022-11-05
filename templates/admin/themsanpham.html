@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Daisan | Thông tin chung</title>
+    <title>Daisan | Thêm sản phẩm
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="Coderthemes" name="author">
@@ -11,11 +12,16 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <!-- App css -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <!-- Plugins css -->
+    <link href="assets\libs\quill\quill.core.css" rel="stylesheet" type="text/css">
+    <link href="assets\libs\quill\quill.bubble.css" rel="stylesheet" type="text/css">
+    <link href="assets\libs\quill\quill.snow.css" rel="stylesheet" type="text/css">
 
+    <!-- App css -->
+    <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+    <link href="assets\libs\dropzone\dropzone.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -54,7 +60,7 @@
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                         href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="assets\images\users\duc.jpg" alt="user-image" class="rounded-circle">
+                        <img src="assets/images/users/duc.jpg" alt="user-image" class="rounded-circle">
                         <span class="pro-user-name ml-1">
                             Nguyễn Đức <i class="mdi mdi-chevron-down"></i>
                         </span>
@@ -100,7 +106,7 @@
                     </span>
                     <span class="logo-sm">
                         <!-- <span class="logo-sm-text-dark">X</span> -->
-                        <img src="assets/images/favicon.ico" alt="" height="24">
+                        <img src="assets/images/daisan.png" alt="" height="24">
                     </span>
                 </a>
             </div>
@@ -129,7 +135,7 @@
 
                     <ul class="metismenu" id="side-menu">
 
-                        <li class="menu-title">DAISAN ADMIN</li>
+                        <li class="menu-title">Daisan ADMIN</li>
 
                         <li>
                             <a href="trangchu.html" class="waves-effect">
@@ -194,7 +200,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="baocaodoanhthucongtacvien.html">Báo cáo doanh thu CTV</a>
+                                    <a href="baocaodoanhthuctv.html">Báo cáo doanh thu CTV</a>
                                 </li>
 
 
@@ -239,6 +245,10 @@
                                 <span> Quản lý Danh Mục </span>
                             </a>
                         </li>
+
+
+
+
 
                         <li>
                             <a href="javascript: void(0);" class="waves-effect">
@@ -299,6 +309,7 @@
         <div class="content-page">
             <div class="content">
 
+
                 <!-- Start Content-->
                 <div class="container-fluid">
 
@@ -308,370 +319,279 @@
                             <div class="page-title-box">
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="trangchu.html">Admin</a></li>
-                                        <li class="breadcrumb-item active">Thông tin chung</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Admin</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Sản phẩm</a></li>
+                                        <li class="breadcrumb-item active">Thêm sản phẩm</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">THÔNG TIN CHUNG</h4>
+                                <h4 class="page-title">THÊM SẢN PHẨM</h4>
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
-
                     <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="widget-bg-color-icon card">
+
+                        <div class="col-lg-12">
+
+                            <div class="card">
                                 <div class="card-body">
-                                    <div class="media">
-                                        <div class="avatar-lg rounded-circle bg-icon-success">
-                                            <i class="mdi mdi-eye font-24 avatar-title"></i>
-                                        </div>
-                                        <div class="media-body text-right align-self-center">
-                                            <h3 class="mt-0"><span data-plugin="counterup">150</span></h3>
-                                            <p class="text-muted mb-0">Lượt truy cập hằng ngày</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="widget-bg-color-icon card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="avatar-lg rounded-circle bg-icon-danger">
-                                            <i class="mdi mdi-cart-outline font-24 avatar-title"></i>
-                                        </div>
-                                        <div class="media-body text-right align-self-center">
-                                            <h3 class="mt-0"><span data-plugin="counterup">6,280</span></h3>
-                                            <p class="text-muted mb-0">Sản phẩm đã bán</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="widget-bg-color-icon card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="avatar-lg rounded-circle bg-icon-primary">
-                                            <i class="mdi mdi-tag-outline font-24 avatar-title"></i>
-                                        </div>
-                                        <div class="media-body text-right align-self-center">
-                                            <h3 class="mt-0"><span data-plugin="counterup">1,450</span></h3>
-                                            <p class="text-muted mb-0">Đơn đặt hàng mới</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
-
-                        <div class="col-xl-3 col-md-6">
-                            <div class="widget-bg-color-icon card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="avatar-lg rounded-circle bg-icon-warning">
-                                            <i class="mdi mdi-account-multiple-outline font-24 avatar-title"></i>
-                                        </div>
-                                        <div class="media-body text-right align-self-center">
-                                            <h3 class="mt-0"><span data-plugin="counterup">280</span></h3>
-                                            <p class="text-muted mb-0">Khách hàng mới</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
-
-                    </div>
-                    <!-- end row -->
-
-                    <div class="row">
-                        <div class="col-xl-4">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <img src="assets/images/logo.jpg" class="rounded-circle avatar-xl img-thumbnail"
-                                        alt="profile-image">
-
-                                    <h4 class="mt-3 mb-0">Daisan</h4>
-                                    <p class="text-muted">Vật liệu xây dựng</p>
-
-                                    <button type="button"
-                                        class="btn btn-success btn-xs waves-effect mb-2 waves-light">Vào trang web
-                                        chính</button>
-
-                                    <div class="text-left mt-3">
-                                        <h4 class="font-13 text-uppercase">Thông tin cửa hàng :</h4>
-
-                                        <div class="table-responsive">
-                                            <table class="table table-borderless table-sm">
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">Mã:</th>
-                                                        <td class="text-muted">#1695</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Phone:</th>
-                                                        <td class="text-muted">0962351043</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Email :</th>
-                                                        <td class="text-muted">daisanadmin@gmail.com</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Địa chỉ:</th>
-                                                        <td class="text-muted">Khu phố 6, phường Linh Trung, quận Thủ
-                                                            Đức, TP.HCM, Việt Nam</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
 
 
-                                </div>
-                            </div>
-                        </div> <!-- end col -->
-                        <div class="col-xl-4">
-                            <div class="card-box">
-                                <div class="dropdown float-right">
-                                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="mdi mdi-dots-horizontal"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <!-- item-->
-                                        <a href="404.html" class="dropdown-item">Settings</a>
-                                        <!-- item-->
-                                        <a href="404.html" class="dropdown-item">Download</a>
-                                        <!-- item-->
-                                        <a href="404.html" class="dropdown-item">Upload</a>
-                                        <!-- item-->
-                                        <a href="404.html" class="dropdown-item">Action</a>
-                                    </div>
-                                </div>
-                                <h4 class="header-title">Báo cáo thu nhập</h4>
-                                <p class="text-muted">Dữ liệu tính từ 1/10/2022 - 31/10/2022 </p>
-                                <h2 class="mb-4">987.654.321<span class=" text-primary">vnđ</span></h2>
 
-                                <div class="row mb-4">
-                                    <div class="col-6">
-                                        <p class="text-muted mb-1">Tháng này</p>
-                                        <h3 class="mt-0 font-18">120.051.651đ</h3>
-                                    </div>
+                                    <form>
+                                        <div id="progressbarwizard">
 
-                                    <div class="col-6">
-                                        <p class="text-muted mb-1">Tháng trước</p>
-                                        <h3 class="mt-0 font-18">547.898.100đ <small
-                                                class="badge badge-light-danger font-13">-15%</small></h3>
-                                    </div>
-                                </div>
+                                            <ul class="nav nav-pills nav-justified form-wizard-header mb-3">
+                                                <li class="nav-item">
+                                                    <a href="#account-2" data-toggle="tab" class="nav-link">
+                                                        <span class="number">1.</span>
+                                                        <span class="d-none d-sm-inline">Chung</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#profile-tab-2" data-toggle="tab" class="nav-link">
+                                                        <span class="number">2.</span>
+                                                        <span class="d-none d-sm-inline">Hình Ảnh Sản Phẩm</span>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#finish-2" data-toggle="tab" class="nav-link active">
+                                                        <span class="number">3.</span>
+                                                        <span class="d-none d-sm-inline">Kết Thúc</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
 
-                                <h5 class="font-16"><i class="mdi mdi-chart-donut text-primary"></i> Báo cáo thu nhập
-                                    hằng tuần</h5>
+                                            <div class="tab-content b-0 mb-0">
 
-                                <div class="mt-5">
-                                    <span data-plugin="peity-bar" data-colors="#1abc9c,#ebeff2" data-width="100%"
-                                        data-height="92">5,3,9,6,5,9,7,3,5,2,9,7,2,1,3,5,2,9,7,2,5,3,9,6,5,9,7</span>
-                                </div>
-
-                            </div> <!-- end card-box -->
-                        </div> <!-- end col -->
-                        <div class="col-xl-4">
-                            <div class="card-box">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-center">
-                                                <h1 class="display-4"><i class="wi wi-day-sleet text-primary"></i></h1>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="text-muted">
-                                                    <h2 class="mt-1"><b>32°</b></h2>
-                                                    <p>Nhiều mây</p>
-                                                    <p class=" mb-0">15km/h - 37%</p>
+                                                <div id="bar" class="progress mb-3" style="height: 7px;">
+                                                    <div class="bar progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                                        style="width: 100%;"></div>
                                                 </div>
-                                            </div>
-                                        </div><!-- End row -->
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="row">
-                                            <div class="col-4 text-center">
-                                                <h4 class="text-muted mt-0">T7</h4>
-                                                <h3 class="my-3"><i class="wi wi-night-alt-cloudy text-primary"></i>
-                                                </h3>
-                                                <h4 class="text-muted mb-0">30<i class="wi wi-degrees"></i></h4>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <h4 class="text-muted mt-0">CN</h4>
-                                                <h3 class="my-3"><i class="wi wi-day-sprinkle text-primary"></i></h3>
-                                                <h4 class="text-muted mb-0">28<i class="wi wi-degrees"></i></h4>
-                                            </div>
-                                            <div class="col-4 text-center">
-                                                <h4 class="text-muted mt-0">T2</h4>
-                                                <h3 class="my-3"><i class="wi wi-hot text-primary"></i></h3>
-                                                <h4 class="text-muted mb-0">33<i class="wi wi-degrees"></i></h4>
-                                            </div>
-                                        </div><!-- end row -->
-                                    </div>
-                                </div><!-- end row -->
-                            </div><!-- cardbox -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-widgets">
-                                        <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
-                                        <a data-toggle="collapse" href="#cardCollpase1" role="button"
-                                            aria-expanded="false" aria-controls="cardCollpase1"><i
-                                                class="mdi mdi-minus"></i></a>
-                                        <a href="#" data-toggle="remove"><i class="mdi mdi-close"></i></a>
-                                    </div>
-                                    <h4 class="header-title mb-4">ADMIN GROUP 18</h4>
 
-                                    <div class="media" id="cardCollpase1" class="pt-3 collapse show">
-                                        <img class="mr-3 rounded-circle" src="assets/images/users/duc.jpg" width="40"
-                                            alt="Generic placeholder image">
-                                        <div class="media-body">
+                                                <div class="tab-pane" id="account-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <h4 class="header-title">Thông tin chung</h4>
+                                                            <p class="sub-header">Điền tất cả thông tin bên dưới</p>
+                                                            <div>
 
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="form-group mb-3">
+                                                                            <label for="product-name">Tên sản phẩm <span
+                                                                                    class="text-danger">*</span></label>
+                                                                            <input type="text" id="product-name"
+                                                                                class="form-control"
+                                                                                placeholder="e.g : Apple iMac">
+                                                                        </div>
+                                                                    </div>
 
-                                            <h5 class="mt-0 mb-1">Nguyễn Thái Đức</h5>
-
-                                            <span class="font-13">18130047@st.hcmuaf.edu.vn <span
-                                                    class="badge badge-light-danger"> Full Stack</span></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="media mt-3" id="cardCollpase1" class="pt-3 collapse show">
-                                        <img class="mr-3 rounded-circle" src="assets/images/users/tuan.jpg" width="40"
-                                            alt="Generic placeholder image">
-                                        <div class="media-body">
-
-                                            <h5 class="mt-0 mb-1">Bùi Anh Tuấn</h5>
-                                            <span class="font-13">18130151@st.hcmuaf.edu.vn <span
-                                                    class="badge badge-light-warning">Web Designer</span></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="media mt-3" id="cardCollpase1" class="pt-3 collapse show">
-                                        <img class="mr-3 rounded-circle" src="assets/images/users/thuy.jpg" width="40"
-                                            alt="Generic placeholder image">
-                                        <div class="media-body">
-
-                                            <h5 class="mt-0 mb-1">Trần Thị Mỹ Thùy</h5>
-                                            <span class="font-13">20130430@st.hcmuaf.edu.vn <span
-                                                    class="badge badge-light-success">Web Developer</span></span>
-                                        </div>
-                                    </div>
+                                                                </div>
+                                                                <div class="form-group mb-3">
+                                                                    <label for="product-description">Mô tả Sản phẩm
+                                                                        <span class="text-danger">*</span></label>
 
 
 
+                                                                    <div id="snow-editor" style="height: 300px;">
 
-                                </div>
-                                <!-- end card-body -->
+
+                                                                    </div> <!-- end Snow-editor-->
+
+                                                                </div>
+
+
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <div class="form-group mb-3">
+                                                                            <label for="product-summary">
+                                                                                Sản Phẩm chính</label>
+                                                                            <textarea class="form-control"
+                                                                                id="product-summary" rows="5"
+                                                                                placeholder="Vui lòng nhập"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                        <div class="form-group mb-3">
+                                                                            <label for="product-category">Danh mục
+                                                                                <span
+                                                                                    class="text-danger">*</span></label>
+                                                                            <select
+                                                                                class="form-control select2 select2-hidden-accessible"
+                                                                                id="product-category"
+                                                                                data-select2-id="product-category"
+                                                                                tabindex="-1" aria-hidden="true">
+
+                                                                                <optgroup label="Shopping">
+                                                                                    <option value="SH1">Mua sắm 1
+                                                                                    </option>
+                                                                                    <option value="SH2">Mua sắm 2
+                                                                                    </option>
+                                                                                    <option value="SH3">Mua sắm 3
+                                                                                    </option>
+                                                                                    <option value="SH4">Mua sắm 4
+                                                                                    </option>
+                                                                                </optgroup>
+                                                                                <optgroup label="CRM">
+                                                                                    <option value="CRM1">Crm 1</option>
+                                                                                    <option value="CRM2">Crm 2</option>
+                                                                                    <option value="CRM3">Crm 3</option>
+                                                                                    <option value="CRM4">Crm 4</option>
+                                                                                </optgroup>
+                                                                                <optgroup label="eCommerce">
+                                                                                    <option value="E1">eCommerce 1
+                                                                                    </option>
+                                                                                    <option value="E2">eCommerce 2
+                                                                                    </option>
+                                                                                    <option value="E3">eCommerce 3
+                                                                                    </option>
+                                                                                    <option value="E4">eCommerce 4
+                                                                                    </option>
+                                                                                </optgroup>
+
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="form-group mb-3">
+                                                                            <label for="product-price">Giá <span
+                                                                                    class="text-danger">*</span></label>
+                                                                            <input type="text" class="form-control"
+                                                                                id="product-price"
+                                                                                placeholder="Vui lòng nhập giá">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group mb-3">
+                                                                    <label class="mb-2">Trạng Thái <span
+                                                                            class="text-danger">*</span></label>
+                                                                    <br>
+                                                                    <div class="radio form-check-inline">
+                                                                        <input type="radio" id="inlineRadio1"
+                                                                            value="option1" name="radioInline"
+                                                                            checked="">
+                                                                        <label for="inlineRadio1"> Online </label>
+                                                                    </div>
+                                                                    <div class="radio form-check-inline">
+                                                                        <input type="radio" id="inlineRadio2"
+                                                                            value="option2" name="radioInline">
+                                                                        <label for="inlineRadio2"> Offline </label>
+                                                                    </div>
+                                                                    <div class="radio form-check-inline">
+                                                                        <input type="radio" id="inlineRadio3"
+                                                                            value="option3" name="radioInline">
+                                                                        <label for="inlineRadio3"> Draft </label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group mb-0">
+                                                                    <label>Bình Luận</label>
+                                                                    <textarea class="form-control" rows="3"
+                                                                        placeholder="Vui lòng nhập bình luận"></textarea>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+
+                                                <div class="tab-pane" id="profile-tab-2">
+                                                    <div class="container-fluid">
+
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="card">
+                                                                    <div class="card-body">
+                                                                        <h4 class="header-title m-t-0">Hình ảnh sản phẩm
+                                                                        </h4>
+                                                                        <p class="text-muted font-13 m-b-30">
+                                                                            Tải lên hình ảnh sản phẩm
+                                                                        </p>
+
+                                                                        <form action="/" method="post" class="dropzone"
+                                                                            id="myAwesomeDropzone"
+                                                                            data-plugin="dropzone"
+                                                                            data-previews-container="#file-previews"
+                                                                            data-upload-preview-template="#uploadPreviewTemplate">
+                                                                            <div class="fallback">
+                                                                                <input name="file" type="file"
+                                                                                    multiple="">
+                                                                            </div>
+
+                                                                            <div class="dz-message needsclick">
+                                                                                <p class="h1 text-muted"><i
+                                                                                        class="mdi mdi-cloud-upload"></i>
+                                                                                </p>
+                                                                                <h3>Thả tệp vào đây hoặc nhấp để tải
+                                                                                    lên.
+                                                                                </h3>
+                                                                                <span class="text-muted font-13">(Đây
+                                                                                    chỉ là một dropzone demo. Đã chọn
+                                                                                    các tập tin là
+                                                                                    <strong>not</strong> thực ra
+                                                                                    đã tải lên.)</span>
+                                                                            </div>
+                                                                        </form>
+
+                                                                        <!-- Preview -->
+                                                                        <div class="dropzone-previews mt-3"
+                                                                            id="file-previews"></div>
+                                                                    </div>
+                                                                    <!-- end card-body -->
+                                                                </div>
+                                                                <!-- end card-->
+                                                            </div>
+                                                            <!-- end col-->
+                                                        </div>
+                                                        <!-- end row -->
+
+
+
+                                                    </div> <!-- container -->
+                                                </div>
+
+                                                <div class="tab-pane active" id="finish-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <h2 class="mt-0"><i class="mdi mdi-check-all"></i></h2>
+                                                                <h3 class="mt-0">Completed !</h3>
+
+                                                                <p class="w-75 mb-2 mx-auto">Sản phẩm sẽ có sẵn
+                                                                    sớm có trong cửa hàng.</p>
+
+
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+
+                                                <ul class="list-inline mb-0 wizard" style="margin-top: 1rem;">
+                                                    <li class="previous list-inline-item">
+                                                        <a href="javascript: void(0);"
+                                                            class="btn btn-secondary">Trước</a>
+                                                    </li>
+                                                    <li class="next list-inline-item float-right disabled">
+                                                        <a href="javascript: void(0);" class="btn btn-primary">Sau</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div> <!-- tab-content -->
+                                        </div> <!-- end #progressbarwizard-->
+                                    </form>
+
+                                </div> <!-- end card-body -->
                             </div>
+
+
                         </div>
-
-
-
-
-                    </div>
-                    <!-- end row -->
-
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-widgets">
-                                        <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
-                                        <a data-toggle="collapse" href="#cardCollpase1" role="button"
-                                            aria-expanded="false" aria-controls="cardCollpase1"><i
-                                                class="mdi mdi-minus"></i></a>
-                                        <a href="#" data-toggle="remove"><i class="mdi mdi-close"></i></a>
-                                    </div>
-                                    <h4 class="header-title mt-0 mb-3">DANH SÁCH TÊN MIỀN</h4>
-                                    <div id="cardCollpase1" class="pt-3 collapse show"
-                                        class="table-responsive browser_users">
-                                        <table class="table mb-0">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th class="border-top-0">STT</th>
-                                                    <th class="border-top-0">Tiêu Đề</th>
-                                                    <th class="border-top-0">Trạng Thái</th>
-                                                    <th class="border-top-0">Thời gian</th>
-                                                </tr>
-                                                <!--end tr-->
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td><a href="" class="text-primary">daisangroup18.tk</a></td>
-                                                    <td>Đã trỏ vào IP</td>
-                                                    <td>2022-10-27 16:54:16</td>
-
-                                                </tr>
-                                                <!--end tr-->
-                                                <!--end tr-->
-                                            </tbody>
-                                        </table>
-                                        <!--end table-->
-                                        <button type="button" class="btn btn-primary waves-effect waves-light"
-                                            style="float: right;margin-top: 1rem;">Quản lý tên miền</button>
-                                    </div>
-                                    <!--end /div-->
-                                </div>
-                                <!--end card-body-->
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-widgets">
-                                        <a href="javascript:;" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
-                                        <a data-toggle="collapse" href="#cardCollpase1" role="button"
-                                            aria-expanded="false" aria-controls="cardCollpase1"><i
-                                                class="mdi mdi-minus"></i></a>
-                                        <a href="#" data-toggle="remove"><i class="mdi mdi-close"></i></a>
-                                    </div>
-                                    <h4 class="header-title mt-0 mb-3">KHÁCH HÀNG MỚI NHẤT</h4>
-                                    <div id="cardCollpase1" class="pt-3 collapse show"
-                                        class="table-responsive browser_users">
-                                        <table class="table mb-0">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th class="border-top-0">ID</th>
-                                                    <th class="border-top-0">Tên</th>
-                                                    <th class="border-top-0">Tài khoản</th>
-                                                    <th class="border-top-0">Tel</th>
-                                                    <th class="border-top-0">Ngày tạo</th>
-                                                </tr>
-                                                <!--end tr-->
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><a href="" class="text-primary">125</a></td>
-                                                    <td><a href="" class="text-primary">Nguyễn Thái Đức</a></td>
-                                                    <td>18130047@st.hcmuaf.edu.vn</td>
-                                                    <td>0962351043</td>
-                                                    <td>2022-10-27 16:54:16</td>
-
-                                                </tr>
-                                                <!--end tr-->
-                                                <!--end tr-->
-                                            </tbody>
-                                        </table>
-                                        <!--end table-->
-                                        <button type="button" class="btn btn-primary waves-effect waves-light"
-                                            style="float: right;margin-top: 1rem;">Xem tất cả các khách hàng</button>
-                                    </div>
-                                    <!--end /div-->
-                                </div>
-                                <!--end card-body-->
-                            </div>
-
-                        </div> <!-- end col -->
-
-
-                    </div>
+                    </div> <!-- end col -->
 
 
                     <!-- end row -->
+
+
 
                 </div> <!-- container -->
 
@@ -686,9 +606,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="404.html">Giới thiệu</a>
-                                <a href="404.html">Trợ giúp</a>
-                                <a href="404.html">Liên hệ</a>
+                                <a href="javascript:void(0);">Giới thiệu</a>
+                                <a href="javascript:void(0);">Trợ giúp</a>
+                                <a href="javascript:void(0);">Liên hệ</a>
                             </div>
                         </div>
                     </div>
@@ -709,10 +629,10 @@
     <!-- Right Sidebar -->
     <div class="right-bar">
         <div class="rightbar-title">
-            <a href="404.html" class="right-bar-toggle float-right">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
                 <i class="fe-x noti-icon"></i>
             </a>
-            <h4 class="m-0 text-white">Cài Đặt</h4>
+            <h4 class="m-0 text-white">Settings</h4>
         </div>
         <div class="slimscroll-menu">
             <!-- User box -->
@@ -720,7 +640,7 @@
                 <div class="user-img">
                     <img src="assets\images\users\avatar-1.jpg" alt="user-img" title="Mat Helme"
                         class="rounded-circle img-fluid">
-                    <a href="404.html" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+                    <a href="javascript:void(0);" class="user-edit"><i class="mdi mdi-pencil"></i></a>
                 </div>
 
                 <h5><a href="javascript: void(0);">Nik G. Patel</a> </h5>
@@ -730,7 +650,7 @@
             <ul class="nav nav-pills bg-light nav-justified">
                 <li class="nav-item">
                     <a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link rounded-0">
-                        General
+                        Chung
                     </a>
                 </li>
                 <li class="nav-item">
@@ -743,8 +663,8 @@
                 <div class="tab-pane" id="home1">
                     <div class="row mb-2">
                         <div class="col">
-                            <h5 class="m-0 font-15">Notifications</h5>
-                            <p class="text-muted"><small>Do you need them?</small></p>
+                            <h5 class="m-0 font-15">Thông báo</h5>
+                            <p class="text-muted"><small>Bạn có cần chúng không?</small></p>
                         </div> <!-- end col-->
                         <div class="col-auto">
                             <div class="custom-control custom-switch mb-2">
@@ -891,8 +811,8 @@
                             </div>
 
                             <div class="text-center mt-2">
-                                <a href="404.html" class="text-muted"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load
-                                    more </a>
+                                <a href="javascript:void(0);" class="text-muted"><i
+                                        class="mdi mdi-spin mdi-loading mr-1"></i> Load more </a>
                             </div>
 
                         </div> <!-- end inbox-widget -->
@@ -910,18 +830,33 @@
     <!-- Vendor js -->
     <script src="assets\js\vendor.min.js"></script>
 
-    <script src="assets\libs\jquery-knob\jquery.knob.min.js"></script>
-    <script src="assets\libs\peity\jquery.peity.min.js"></script>
+    <!-- Plugins js -->
+    <script src="assets\libs\katex\katex.min.js"></script>
+    <script src="assets\libs\quill\quill.min.js"></script>
 
-    <!-- Sparkline charts -->
-    <script src="assets\libs\jquery-sparkline\jquery.sparkline.min.js"></script>
-
-    <!-- init js -->
-    <script src="assets\js\pages\dashboard-1.init.js"></script>
+    <!-- Init js-->
+    <script src="assets\js\pages\form-quilljs.init.js"></script>
 
     <!-- App js -->
     <script src="assets\js\app.min.js"></script>
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
 
+    <!-- Vendor js -->
+    <script src="assets\js\vendor.min.js"></script>
+
+    <!-- Plugins js-->
+    <script src="assets\libs\twitter-bootstrap-wizard\jquery.bootstrap.wizard.min.js"></script>
+
+    <!-- Init js-->
+    <script src="assets\js\pages\form-wizard.init.js"></script>
+    <!-- Plugins js -->
+    <script src="assets\libs\dropzone\dropzone.min.js"></script>
+
+    <!-- Init js-->
+    <script src="assets\js\pages\form-fileuploads.init.js"></script>
+    <!-- App js -->
+    <script src="assets\js\app.min.js"></script>
 </body>
 
 </html>
