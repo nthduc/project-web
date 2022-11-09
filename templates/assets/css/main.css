@@ -1272,7 +1272,7 @@ header{background:#157ed2}
   padding: 12px 19px 12px;
   text-align: center;
     background-color: #fdd922;
-    border: 1px solid #e0bc27;
+    border: 2px solid #e0bc27;
 }
 .main-header .top-search-holder .search-area .search-button:after {
   color: #333;
@@ -1491,7 +1491,7 @@ header{background:#157ed2}
   color: #fff;
 }
 .header-style-3 .header-nav {
-  background: #202020 !important;
+  background: #232f3e !important;
   border: medium none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -3288,7 +3288,7 @@ age-container #owl-main .owl-next {
   color: #666666;
 }
 .footer .footer-bottom {
-  background: #202020;
+  background: #232f3e;
   padding-top: 30px;
   padding-bottom:30px
 }
@@ -3313,7 +3313,7 @@ age-container #owl-main .owl-next {
 .toggle-footer {color:#666}
 .toggle-footer a {margin-left:0px!important}
 .toggle-footer a:before {display:none}
-.toggle-footer i{background:#333; border-radius:2px}
+.toggle-footer i{background:#232f3e; border-radius:2px}
 
 .footer .footer-bottom .module-body ul li:last-child{border:none}
 
