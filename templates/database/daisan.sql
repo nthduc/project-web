@@ -171,3 +171,23 @@ CREATE TABLE `user`  (
   `orderid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`, `email`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+
+-- WISHLIST -> SẢN PHẨM YÊU THÍCH
+DROP TABLE IF EXISTS `wishlist`;
+CREATE TABLE `wishlist`  (
+  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`userid`, `productid`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- INSERT VALUE WISHLIST
+-- ----------------------------
+INSERT INTO `wishlist` VALUES ('001', 'plv22');
+INSERT INTO `wishlist` VALUES ('001', 'pt02');
+INSERT INTO `wishlist` VALUES ('002', 'plv03');
+INSERT INTO `wishlist` VALUES ('002', 'plv05');
+INSERT INTO `wishlist` VALUES ('006', 'plv01');
+
+SET FOREIGN_KEY_CHECKS = 1;
