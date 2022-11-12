@@ -1,131 +1,19 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : localhost
- Source Server Type    : MySQL
- Source Server Version : 100605
- Source Host           : localhost:3306
- Source Schema         : daisan
-
- Target Server Type    : MySQL
- Target Server Version : 100605
- File Encoding         : 65001
-
- Date: 12/11/2022 22:42:57
-*/
-
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
-
--- ----------------------------
--- Table structure for banner
--- ----------------------------
-DROP TABLE IF EXISTS `banner`;
-CREATE TABLE `banner`  (
-  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `title2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `imgURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`, `imgURL`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of banner
--- ----------------------------
 INSERT INTO `banner` VALUES ('banner01', 'Flash Sale 11/11', 'Flash Sale', 'assets/images/sliders/20_t_i_a_400kweb-03.jpg');
 INSERT INTO `banner` VALUES ('banner02', 'Hàng mới', 'Accord & Silva', 'assets/images/sliders/aspenn-new-slider.png');
-
--- ----------------------------
--- Table structure for blog
--- ----------------------------
-DROP TABLE IF EXISTS `blog`;
-CREATE TABLE `blog`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `blogid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `thumbnailURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `smallcontent` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`blogid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of blog
--- ----------------------------
 INSERT INTO `blog` VALUES ('001', 'blog001', 'assets/images/blog/1.jpeg', 'Gạch khổ lớn và ứng dụng. Những ưu điểm và nhược điểm của gạch khổ lớn', 'Trên thế giới, xu hướng thiết kế mang dấu ấn cá nhân vô cùng phổ biến trong các lĩnh vực, từ thời trang\r\n                đến xe hơi và đặc biệt trong lĩnh vực thiết kế nội thất. Không có một giới hạn phong cách nào được đặt\r\n                ra, các thiết kế gạch khổ lớn năm 2022 được kết hợp với các tiêu chí để tổng hòa nên một sắc thái mới,\r\n                độc đáo. Với các kích thước 80x80, 100x100, 120x120, 60x120.. cm, xu hướng gạch ốp lát khổ lớn như được\r\n                thổi một làn gió mới với các thiết kế bề mặt ấn tượng, độc đáo, mang đến một thông điệp mới về sự phóng\r\n                khoáng, dấu ấn riêng biệt của mỗi gia chủ.');
 INSERT INTO `blog` VALUES ('002', 'blog002', 'assets/images/blog/2.jpeg', 'Gạch khổ lớn, mở ra không gian lớn trong ngôi nhà của bạn', 'Trước đây, gạch khổ lớn chỉ được sử dụng chủ yếu ở các công trình lớn và sang trọng như sảnh tại các\r\n                trung tâm thương mại, khách sạn… thì hiện nay ta đã thấy loại gạch này được ứng dụng phổ biến hơn trong\r\n                nhiều không gian khác nhau như nhà ở, chung cư… Gạch khổ lớn đang là xu hướng thết kế, xây dựng thịnh\r\n                hành nhất hiện nay...');
 INSERT INTO `blog` VALUES ('003', 'blog003', 'assets/images/blog/3.jpeg', 'TỔ ẤM 3 THẾ HỆ', 'Giữa lòng thành phố ồn ào, có một nơi trong trẻo tiếng cười\r\n                                                đùa, những chuyện trò an nhiên cùng gia đình sum họp trong không khí\r\n                                                thượng lưu xưa cũ và tinh tế.');
 INSERT INTO `blog` VALUES ('004', 'blog004', 'assets/images/blog/4.jpeg', 'PHONG CÁCH & ĐA NĂNG', 'Những tiện nghi hiện đại trong không gian tập trung hiệu quả\r\n                                                & thư giãn tối đa cho căn hộ office-tel đa chức năng.');
 INSERT INTO `blog` VALUES ('005', 'blog005', 'assets/images/blog/5.jpeg', 'BST PHÒNG KHÁCH - TRỌN VẸN TỪNG KHOẢNH KHẮC', 'Không chỉ là nơi tiếp đón, phòng khách còn là không gian sum\r\n                                                vầy và thư giãn cho mọi thành viên trong gia đình. Hãy để BAYA chăm chút\r\n                                                trọn vẹn từng khoảnh khắc gặp gỡ, giờ nghỉ ban trưa hay phút quây quần\r\n                                                buổi tối của gia đình bạn.');
-
--- ----------------------------
--- Table structure for blogdetail
--- ----------------------------
-DROP TABLE IF EXISTS `blogdetail`;
-CREATE TABLE `blogdetail`  (
-  `blogid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  PRIMARY KEY (`blogid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of blogdetail
--- ----------------------------
 INSERT INTO `blogdetail` VALUES ('blog001', 'Gạch lát nền - Cách lựa chọn gạch lát nền phòng khách đẹp chuẩn xu hướng nhà đẹp 2022');
-
--- ----------------------------
--- Table structure for cart
--- ----------------------------
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE `cart`  (
-  `cartid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` int NOT NULL,
-  PRIMARY KEY (`cartid`, `productid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of cart
--- ----------------------------
 INSERT INTO `cart` VALUES ('cart001', 'gachh01', 1);
 INSERT INTO `cart` VALUES ('cart002', 'gachh02', 1);
 INSERT INTO `cart` VALUES ('cart003', 'gachh03', 1);
 INSERT INTO `cart` VALUES ('cart004', 'gachh04', 1);
-
--- ----------------------------
--- Table structure for container
--- ----------------------------
-DROP TABLE IF EXISTS `container`;
-CREATE TABLE `container`  (
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` int NOT NULL,
-  PRIMARY KEY (`productid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of container
--- ----------------------------
 INSERT INTO `container` VALUES ('gachh01', 200);
 INSERT INTO `container` VALUES ('gachh02', 200);
 INSERT INTO `container` VALUES ('gachh03', 200);
 INSERT INTO `container` VALUES ('gachh04', 200);
-
--- ----------------------------
--- Table structure for order
--- ----------------------------
-DROP TABLE IF EXISTS `order`;
-CREATE TABLE `order`  (
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `orderid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `receptdate` datetime NULL DEFAULT NULL,
-  `deliverydate` datetime NULL DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `status` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`orderid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of order
--- ----------------------------
 INSERT INTO `order` VALUES ('nguyenthaiduc0212@gmail.com', 'order001', '2022-01-29 00:00:00', '2022-02-05 00:00:00', 'TP.HCM', NULL);
 INSERT INTO `order` VALUES ('buianhtuan@gmail.com', 'order002', '2022-08-12 00:00:00', '2022-08-05 00:00:00', 'TP.HCM', '0');
 INSERT INTO `order` VALUES ('tranthimythuy', 'order003', '2022-01-10 00:00:00', '2022-02-01 00:00:00', 'TP.HCM', '0');
@@ -133,47 +21,10 @@ INSERT INTO `order` VALUES ('tranthimythuy@gmail.com', 'order004', '2022-03-03 0
 INSERT INTO `order` VALUES ('buianhtuan@gmail.com', 'order005', '2022-10-10 00:00:00', '2022-08-05 00:00:00', 'TP.HCM', '0');
 INSERT INTO `order` VALUES ('buianhtuan@gmail.com', 'order006', '2022-07-12 00:00:00', '2022-08-05 00:00:00', 'TP.HCM', '0');
 INSERT INTO `order` VALUES ('buianhtuan@gmail.com', 'order007', NULL, NULL, 'TPHCM', '0');
-
--- ----------------------------
--- Table structure for orderdetail
--- ----------------------------
-DROP TABLE IF EXISTS `orderdetail`;
-CREATE TABLE `orderdetail`  (
-  `orderid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` int NULL DEFAULT NULL,
-  `totalprice` int NULL DEFAULT NULL,
-  PRIMARY KEY (`orderid`, `productid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of orderdetail
--- ----------------------------
 INSERT INTO `orderdetail` VALUES ('order001', 'gachh01', 1, 420850);
 INSERT INTO `orderdetail` VALUES ('order002', 'gachh02', 1, 420850);
 INSERT INTO `orderdetail` VALUES ('order003', 'gachh03', 1, 420850);
 INSERT INTO `orderdetail` VALUES ('order004', 'gachh04', 1, 420850);
-
--- ----------------------------
--- Table structure for product
--- ----------------------------
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE `product`  (
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `imgURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `price` decimal(10, 3) NULL DEFAULT NULL,
-  `saleprice` decimal(10, 3) NULL DEFAULT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `tag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`productid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of product
--- ----------------------------
 INSERT INTO `product` VALUES ('da01', 'Đá ốp tường BVMV 15x30', 'assets/images/products/daoplat/p1.jpeg', 140.600, 138.600, '', '0', 'BVMV', 'da');
 INSERT INTO `product` VALUES ('da02', 'Đá ghép Nghệ An vàng độ dày 1-1.5cm', 'assets/images/products/daoplat/p2.jpeg', 188.000, 145.000, NULL, '0', NULL, 'da');
 INSERT INTO `product` VALUES ('da03', 'Đá chẻ vàng Nghệ An ốp tường trang trí', 'assets/images/products/daoplat/p3.jpeg', 500.000, 440.800, NULL, '0', 'Nghệ An', 'da');
@@ -354,49 +205,10 @@ INSERT INTO `product` VALUES ('vattunganhda17', 'Móc ke nêm cân bằng gạch
 INSERT INTO `product` VALUES ('vattunganhda18', 'Ke nhựa ốp lát DKNC-842 1,5 mm', 'assets/images/products/vattunganhda/p19.jpeg', 200.000, 150.000, NULL, '0', NULL, 'vattunganhda');
 INSERT INTO `product` VALUES ('vattunganhda19', 'Ke nhựa chữ thập ốp lát gạch 1mm (1kg)', 'assets/images/products/vattunganhda/p20.png', 150.000, 120.000, NULL, '0', NULL, 'vattunganhda');
 INSERT INTO `product` VALUES ('vattunganhda20', 'Ke nhựa ốp lát gạch 4mm', 'assets/images/products/vattunganhda/p21.jpeg', 150.000, 120.000, NULL, '0', NULL, 'vattunganhda');
-
--- ----------------------------
--- Table structure for user
--- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `role` int NULL DEFAULT NULL,
-  `gender` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `dob` date NULL DEFAULT NULL,
-  `phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `wishlist` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cartid` varbinary(255) NULL DEFAULT NULL,
-  `orderid` int NULL DEFAULT NULL,
-  PRIMARY KEY (`userid`, `email`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of user
--- ----------------------------
 INSERT INTO `user` VALUES ('user001', 'nguyenthaiduc0212@gmail.com', 'ntduc', '123456', 1, 'male', '2002-10-10', '012345678', 'Tp.HCM', NULL, '0x63617274303032', NULL, NULL);
 INSERT INTO `user` VALUES ('user002', 'buianhtuan@gmail.com', 'juan`', '123456', 1, 'male', '2002-09-09', '012398765', 'Tp.HCM', NULL, '0x47827482', NULL, NULL);
 INSERT INTO `user` VALUES ('user003', 'tranthimythuy@gmail.com', 'mthuy', '123456', 1, 'female', '2002-07-07', '012332324', 'Tp.HCM', NULL, '0x4274374334', NULL, NULL);
 INSERT INTO `user` VALUES ('user004', 'test@gmail.com', 'test', '123456', 2, NULL, NULL, NULL, 'Hà Nội', NULL, '0x9999999999', NULL, NULL);
-
--- ----------------------------
--- Table structure for wishlist
--- ----------------------------
-DROP TABLE IF EXISTS `wishlist`;
-CREATE TABLE `wishlist`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`userid`, `productid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of wishlist
--- ----------------------------
 INSERT INTO `wishlist` VALUES ('user002', 'da06');
 INSERT INTO `wishlist` VALUES ('user002', 'da07');
 INSERT INTO `wishlist` VALUES ('user002', 'gachh02');
@@ -404,5 +216,3 @@ INSERT INTO `wishlist` VALUES ('user002', 'nep04');
 INSERT INTO `wishlist` VALUES ('user002', 'vatlieutho02');
 INSERT INTO `wishlist` VALUES ('user002', 'vattunganhda03');
 INSERT INTO `wishlist` VALUES ('user004', 'gachh01');
-
-SET FOREIGN_KEY_CHECKS = 1;
