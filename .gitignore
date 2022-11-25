@@ -1,2 +1,11 @@
+# Intellij
 *.iml
+*.iws
 .idea/
+# Maven
+log/
+target/
+# Package Files #
+*.jar
+*.war
+*.ear
