@@ -7,7 +7,7 @@ public class ConnectionDB {
     public static Connection con;
 
     public static void connect() throws SQLException, ClassNotFoundException{
-        String dbName = "baya";
+        String dbName = "daisan";
         if (con==null || con.isClosed()){
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3307/" + dbName + "?useUnicode=true&characterEncoding=utf-8","root","021220");
