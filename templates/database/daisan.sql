@@ -11,7 +11,7 @@
  Target Server Version : 100605
  File Encoding         : 65001
 
- Date: 12/11/2022 22:42:57
+ Date: 29/11/2022 23:21:43
 */
 
 SET NAMES utf8mb4;
@@ -174,6 +174,26 @@ CREATE TABLE `product`  (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
+INSERT INTO `product` VALUES ('cuaso01', 'Cửa Nhôm Xingfa Mô Quay', 'assets/images/products/cuaso/p1.jpg', 640.000, 600.000, NULL, '0', 'Xingfa', 'cuaso');
+INSERT INTO `product` VALUES ('cuaso02', 'Cửa Nhôm Xingfa Mô Quay2', 'assets/images/products/cuaso/p2.jpg', 640.000, 600.000, NULL, '0', 'Xingfa', 'cuaso');
+INSERT INTO `product` VALUES ('cuaso03', 'Cửa nhôm APC', 'assets/images/products/cuaso/p3.jpg', 900.000, 820.000, NULL, '0', 'AFC', 'cuaso');
+INSERT INTO `product` VALUES ('cuaso04', 'Của Nhôm Mở Quay 3 Cánh', 'assets/images/products/cuaso/p4.jpg', 1150.000, 1100.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso05', 'Cửa Sổ Nhôm Lùa 2 Cánh', 'assets/images/products/cuaso/p5.png', 1100.000, 1067.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso06', 'Cửa Sổ Nhôm 1 Cánh PV', 'assets/images/products/cuaso/p6.png', 1000.000, 670.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso07', 'Cửa Sổ Sắt Giã Gỗ Giá Rẻ 80x100', 'assets/images/products/cuaso/p7.jpg', 800.000, 720.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso08', 'Cửa sổ nhôm hệ 55 Vát Cạnh', 'assets/images/products/cuaso/p8.jpg', 1800.000, 1741.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso09', 'Cửa Sổ Nhôm Xingfa Mở Hất', 'assets/images/products/cuaso/p9.jpg', 830.000, 800.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso10', 'Cửa sổ nhôm Xingfa mở quay', 'assets/images/products/cuaso/p10.jpg', 2000.000, 1920.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso11', 'Cửa Sổ Xếp Trượt Nhôm Xingfa', 'assets/images/products/cuaso/p11.jpgassets/images/products/cuaso/p12.jpg', 2000.000, 1918.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso12', 'Cửa Sổ Nhôm Hất Xingfa', 'assets/images/products/cuaso/p12.jpg', 1440.000, 1220.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso13', 'Cửa Sổ Nhôm Xingfa Mở Trượt', 'assets/images/products/cuaso/p13.jpg', 1100.000, 1067.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso14', 'Cửa ssor Sắt Hoa Văn', 'assets/images/products/cuaso/p14.jpg', 1500.000, 1120.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso15', 'Cửa Sổ 2 Cánh PC', 'assets/images/products/cuaso/15.jpg', 900.000, 800.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso16', 'Cửa Sổ Cánh Đóng', 'assets/images/products/cuaso/p16.jpg', 1000.000, 800.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso17', 'Cửa ssor Tell Hiện Đại', 'assets/images/products/cuaso/p17.png', 1200.000, 1120.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso18', 'Cửa sổ Trượt', 'assets/images/products/cuaso/p18.png', 900.000, 820.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso19', 'Cửa Sổ Nhôm Mái Hiên', 'assets/images/products/cuaso/p19.png', 1000.000, 820.000, NULL, '0', NULL, 'cuaso');
+INSERT INTO `product` VALUES ('cuaso20', 'Cửa Sổ 2 Cánh', 'assets/images/products/cuaso/p20.png', 500.000, 475.000, NULL, '0', NULL, 'cuaso');
 INSERT INTO `product` VALUES ('da01', 'Đá ốp tường BVMV 15x30', 'assets/images/products/daoplat/p1.jpeg', 140.600, 138.600, '', '0', 'BVMV', 'da');
 INSERT INTO `product` VALUES ('da02', 'Đá ghép Nghệ An vàng độ dày 1-1.5cm', 'assets/images/products/daoplat/p2.jpeg', 188.000, 145.000, NULL, '0', NULL, 'da');
 INSERT INTO `product` VALUES ('da03', 'Đá chẻ vàng Nghệ An ốp tường trang trí', 'assets/images/products/daoplat/p3.jpeg', 500.000, 440.800, NULL, '0', 'Nghệ An', 'da');
