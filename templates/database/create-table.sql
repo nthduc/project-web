@@ -11,7 +11,7 @@
  Target Server Version : 100605
  File Encoding         : 65001
 
- Date: 30/11/2022 13:24:15
+ Date: 01/12/2022 12:41:28
 */
 
 SET NAMES utf8mb4;
@@ -34,12 +34,12 @@ CREATE TABLE `banner`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `blog`;
 CREATE TABLE `blog`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `blogid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `blogID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `thumbnailURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `smallcontent` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`blogid`) USING BTREE
+  PRIMARY KEY (`blogID`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -47,9 +47,9 @@ CREATE TABLE `blog`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `blogdetail`;
 CREATE TABLE `blogdetail`  (
-  `blogid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blogID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
-  PRIMARY KEY (`blogid`) USING BTREE
+  PRIMARY KEY (`blogID`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -57,10 +57,13 @@ CREATE TABLE `blogdetail`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart`  (
-  `cartid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cartID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `quantity` int NOT NULL,
-  PRIMARY KEY (`cartid`, `productid`) USING BTREE
+  `userID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`cartID`, `productid`) USING BTREE,
+  INDEX `userID`(`userID` ASC) USING BTREE,
+  CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -79,12 +82,15 @@ CREATE TABLE `container`  (
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order`  (
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `orderid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `orderID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `receptdate` datetime NULL DEFAULT NULL,
   `deliverydate` datetime NULL DEFAULT NULL,
   `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `status` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`orderid`) USING BTREE
+  `numItem` int NULL DEFAULT NULL,
+  `totalprice` decimal(10, 2) NULL DEFAULT NULL,
+  `payment` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`orderID`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -92,11 +98,11 @@ CREATE TABLE `order`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `orderdetail`;
 CREATE TABLE `orderdetail`  (
-  `orderid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `orderID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `quantity` int NULL DEFAULT NULL,
   `totalprice` int NULL DEFAULT NULL,
-  PRIMARY KEY (`orderid`, `productid`) USING BTREE
+  PRIMARY KEY (`orderID`, `productid`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -104,7 +110,7 @@ CREATE TABLE `orderdetail`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product`  (
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `imgURL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `price` decimal(10, 3) NULL DEFAULT NULL,
@@ -112,8 +118,20 @@ CREATE TABLE `product`  (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL,
   `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `company` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  `tag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`productid`) USING BTREE
+  `tagID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`productID`, `tagID`) USING BTREE,
+  INDEX `productID`(`productID` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for tag
+-- ----------------------------
+DROP TABLE IF EXISTS `tag`;
+CREATE TABLE `tag`  (
+  `tagID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nameTag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `imgTag` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`tagID`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -121,7 +139,7 @@ CREATE TABLE `product`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `password` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
@@ -132,9 +150,11 @@ CREATE TABLE `user`  (
   `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `card` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `wishlist` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cartid` varbinary(255) NULL DEFAULT NULL,
-  `orderid` int NULL DEFAULT NULL,
-  PRIMARY KEY (`userid`, `email`) USING BTREE
+  `cartID` varbinary(255) NULL DEFAULT NULL,
+  `orderID` int NULL DEFAULT NULL,
+  PRIMARY KEY (`userID`, `email`) USING BTREE,
+  INDEX `userid`(`userID` ASC) USING BTREE,
+  INDEX `userID_2`(`userID` ASC) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
@@ -142,9 +162,25 @@ CREATE TABLE `user`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `wishlist`;
 CREATE TABLE `wishlist`  (
-  `userid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `productid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`userid`, `productid`) USING BTREE
+  `userID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `wishlistID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `wldID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`userID`, `productID`, `wishlistID`) USING BTREE,
+  INDEX `wldID`(`wldID` ASC) USING BTREE,
+  CONSTRAINT `wishlist_ibfk_1` FOREIGN KEY (`wldID`) REFERENCES `wishlistdetail` (`wldID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for wishlistdetail
+-- ----------------------------
+DROP TABLE IF EXISTS `wishlistdetail`;
+CREATE TABLE `wishlistdetail`  (
+  `wldID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `productID` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`wldID`) USING BTREE,
+  INDEX `productID`(`productID` ASC) USING BTREE,
+  CONSTRAINT `wishlistdetail_ibfk_1` FOREIGN KEY (`productID`) REFERENCES `product` (`productID`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 SET FOREIGN_KEY_CHECKS = 1;
