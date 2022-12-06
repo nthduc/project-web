@@ -5,6 +5,14 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.*;
 
+/**
+ * Xử lí phân trang cho sản phẩm
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-06
+ */
+
 @WebServlet(name = "/Page", urlPatterns = "/Page")
 public class Page extends HttpServlet {
 

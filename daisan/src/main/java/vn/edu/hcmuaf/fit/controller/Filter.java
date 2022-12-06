@@ -7,6 +7,14 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Handle logic Filter features
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-06
+ */
+
 @WebServlet(name = "/Filter", urlPatterns = "/Filter")
 public class Filter extends HttpServlet {
 
