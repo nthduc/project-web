@@ -6,15 +6,15 @@ import javax.servlet.annotation.WebServlet;
 import java.io.*;
 
 /**
- * Xử lí phần xác nhận
+ * Xử lí phần thanh toán
  *
  * @author Nguyen Thai Duc
  * @version 1.0
  * @since 2022-12-06
  */
 
-@WebServlet(name = "/Confirm", urlPatterns = "/Confirm")
-public class Confirm extends HttpServlet {
+@WebServlet(name = "/Checkout", urlPatterns = "/Checkout")
+public class Checkout extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -25,7 +25,7 @@ public class Confirm extends HttpServlet {
 
 
 
-        request.getRequestDispatcher("xacnhandonhang.jsp").forward(request,response);
+        request.getRequestDispatcher("thanhtoan.jsp").forward(request,response);
     }
 
 }
