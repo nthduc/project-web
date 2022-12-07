@@ -5,6 +5,14 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.*;
 
+/**
+ * Xử lí phần xác nhận
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-06
+ */
+
 @WebServlet(name = "/Confirm", urlPatterns = "/Confirm")
 public class Confirm extends HttpServlet {
 
