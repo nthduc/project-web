@@ -451,7 +451,7 @@
                                 </a>
                                 <!-- <ul class="dropdown-menu mega-menu" style="height:530px !important;">
 
-                                              <!-- /.dropdown-menu -->
+                                              /.dropdown-menu -->
                             </li>
                             <!-- /.menu-item -->
 
