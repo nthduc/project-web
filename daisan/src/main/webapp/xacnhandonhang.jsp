@@ -92,8 +92,8 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
           <!-- ============================================================= LOGO ============================================================= -->
-          <div class="logo" ;"> <a href="home.html"> <img src="assets/images/daisan.png" alt="logo"
-                                                          style="height: 55px; margin-top: -10px" "> </a> </div>
+          <div class="logo"> <a href="home.html"> <img src="assets/images/daisan.png" alt="logo"
+                                                          style="height: 55px; margin-top: -10px"> </a> </div>
         <!-- /.logo -->
         <!-- ============================================================= LOGO : END ============================================================= --> </div>
       <!-- /.logo-holder -->
