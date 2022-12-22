@@ -21,16 +21,10 @@ public class Signup extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
-        session.removeAttribute("user");
-        session.removeAttribute("cart");
-        response.sendRedirect("home.jsp");
+        request.getRequestDispatcher("dangky.jsp").forward(request,response);
     }
 
 
-    public String getServletInfo() {
-        return "....";
-    }
+
 }
 
