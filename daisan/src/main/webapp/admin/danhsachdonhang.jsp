@@ -50,13 +50,13 @@
                 </a>
                 <div class="dropdown-menu">
                     <!-- item-->
-                    <a href="404.html" class="dropdown-item">
+                    <a href="404.jsp" class="dropdown-item">
 
                         <span>Chọn cửa hàng</span>
                     </a>
 
                     <!-- item-->
-                    <a href="404.html" class="dropdown-item">
+                    <a href="404.jsp" class="dropdown-item">
 
                         <span>Daisan</span>
                     </a>
@@ -82,13 +82,13 @@
                     </a>
 
                     <!-- item-->
-                    <a href="404.html" class="dropdown-item notify-item">
+                    <a href="404.jsp" class="dropdown-item notify-item">
                         <i class="remixicon-lock-unlock-line"></i>
                         <span>Đổi mật khẩu</span>
                     </a>
 
                     <!-- item-->
-                    <a href="404.html" class="dropdown-item notify-item">
+                    <a href="404.jsp" class="dropdown-item notify-item">
                         <i class="remixicon-settings-3-line"></i>
                         <span>Cài đặt</span>
                     </a>
@@ -225,10 +225,10 @@
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li>
-                                <a href="404.html">Sửa thông tin</a>
+                                <a href="404.jsp">Sửa thông tin</a>
                             </li>
                             <li>
-                                <a href="404.html">Cấu hình</a>
+                                <a href="404.jsp">Cấu hình</a>
                             </li>
                             <li>
                                 <a href="taikhoanadmin.html">Tài khoản Admin</a>
@@ -240,7 +240,7 @@
                     </li>
 
                     <li>
-                        <a href="quanliblog.html" class="waves-effect">
+                        <a href="quanliblog.jsp" class="waves-effect">
                             <i class="fas fa-newspaper"></i>
 
                             <span> Blog </span>
@@ -265,7 +265,7 @@
                         </a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li>
-                                <a href="404.html">Bảng tổng hợp</a>
+                                <a href="404.jsp">Bảng tổng hợp</a>
                             </li>
                             <li>
                                 <a href="dothi.html">Đồ thị</a>
@@ -274,7 +274,7 @@
                     </li>
 
                     <li>
-                        <a href="404.html" class="waves-effect">
+                        <a href="404.jsp" class="waves-effect">
                             <i class="fas fa-align-center"></i>
                             <span> Lịch sử thay đổi </span>
                         </a>
@@ -403,7 +403,7 @@
                                                            for="customCheck2">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2048</a> </td>
                                             <td>Phan Thị Duyên</td>
                                             <td>
@@ -449,7 +449,7 @@
                                                            for="customCheck3">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2047</a> </td>
                                             <td>Nguyễn Tấn Dũng</td>
                                             <td>
@@ -494,7 +494,7 @@
                                                            for="customCheck4">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2046</a> </td>
                                             <td>Bùi Anh Tuấn</td>
                                             <td>
@@ -539,7 +539,7 @@
                                                            for="customCheck5">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2045</a> </td>
                                             <td>Đinh Thị Tuyết Mai</td>
                                             <td>
@@ -584,7 +584,7 @@
                                                            for="customCheck6">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2044</a> </td>
                                             <td>Nguyễn Hoàng Minh</td>
                                             <td>
@@ -629,7 +629,7 @@
                                                            for="customCheck7">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2043</a> </td>
                                             <td>Nguyễn Hoàng Nghi</td>
                                             <td>
@@ -674,7 +674,7 @@
                                                            for="customCheck8">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2042</a> </td>
                                             <td>Phan Thành Danh</td>
                                             <td>
@@ -719,7 +719,7 @@
                                                            for="customCheck9">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2041</a> </td>
                                             <td>Trương Hữu Phước</td>
                                             <td>
@@ -764,7 +764,7 @@
                                                            for="customCheck10">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2040</a> </td>
                                             <td>Nguyễn Văn Thân</td>
                                             <td>
@@ -809,7 +809,7 @@
                                                            for="customCheck11">&nbsp;</label>
                                                 </div>
                                             </td>
-                                            <td><a href="ecommerce-orders-chitietsanpham.html"
+                                            <td><a href="ecommerce-orders-chitietsanpham.jsp"
                                                    class="text-body font-weight-medium">#MN2039</a> </td>
                                             <td>Trần Khánh Ly</td>
                                             <td>

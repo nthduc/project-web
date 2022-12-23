@@ -101,7 +101,7 @@
 
                 <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <p> <a href="quenmatkhau.html" class="text-muted ml-1">Quên mật khẩu ?</a></p>
+                        <p> <a href="quenmatkhau.jsp" class="text-muted ml-1">Quên mật khẩu ?</a></p>
                         <p class="text-muted">Bạn chưa có tài khoản ? <a href="dangky.html"
                                                                          class="text-primary font-weight-medium ml-1">Đăng ký</a></p>
                     </div> <!-- end col -->

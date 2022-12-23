@@ -48,13 +48,13 @@
         </a>
         <div class="dropdown-menu">
           <!-- item-->
-          <a href="404.html" class="dropdown-item">
+          <a href="404.jsp" class="dropdown-item">
 
             <span>Chọn cửa hàng</span>
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item">
+          <a href="404.jsp" class="dropdown-item">
 
             <span>Daisan</span>
           </a>
@@ -80,13 +80,13 @@
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item notify-item">
+          <a href="404.jsp" class="dropdown-item notify-item">
             <i class="remixicon-lock-unlock-line"></i>
             <span>Đổi mật khẩu</span>
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item notify-item">
+          <a href="404.jsp" class="dropdown-item notify-item">
             <i class="remixicon-settings-3-line"></i>
             <span>Cài đặt</span>
           </a>
@@ -222,10 +222,10 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="404.html">Sửa thông tin</a>
+                <a href="404.jsp">Sửa thông tin</a>
               </li>
               <li>
-                <a href="404.html">Cấu hình</a>
+                <a href="404.jsp">Cấu hình</a>
               </li>
               <li>
                 <a href="taikhoanadmin.html">Tài khoản Admin</a>
@@ -237,7 +237,7 @@
           </li>
 
           <li>
-            <a href="quanliblog.html" class="waves-effect">
+            <a href="quanliblog.jsp" class="waves-effect">
               <i class="fas fa-newspaper"></i>
 
               <span> Blog </span>
@@ -265,7 +265,7 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="404.html">Bảng tổng hợp</a>
+                <a href="404.jsp">Bảng tổng hợp</a>
               </li>
               <li>
                 <a href="dothi.html">Đồ thị</a>
@@ -274,7 +274,7 @@
           </li>
 
           <li>
-            <a href="404.html" class="waves-effect">
+            <a href="404.jsp" class="waves-effect">
               <i class="fas fa-align-center"></i>
               <span> Lịch sử thay đổi </span>
             </a>

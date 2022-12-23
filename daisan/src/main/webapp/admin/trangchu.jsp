@@ -42,13 +42,13 @@
         </a>
         <div class="dropdown-menu">
           <!-- item-->
-          <a href="404.html" class="dropdown-item">
+          <a href="404.jsp" class="dropdown-item">
 
             <span>Chọn cửa hàng</span>
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item">
+          <a href="404.jsp" class="dropdown-item">
 
             <span>Daisan</span>
           </a>
@@ -74,13 +74,13 @@
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item notify-item">
+          <a href="404.jsp" class="dropdown-item notify-item">
             <i class="remixicon-lock-unlock-line"></i>
             <span>Đổi mật khẩu</span>
           </a>
 
           <!-- item-->
-          <a href="404.html" class="dropdown-item notify-item">
+          <a href="404.jsp" class="dropdown-item notify-item">
             <i class="remixicon-settings-3-line"></i>
             <span>Cài đặt</span>
           </a>
@@ -216,10 +216,10 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="404.html">Sửa thông tin</a>
+                <a href="404.jsp">Sửa thông tin</a>
               </li>
               <li>
-                <a href="404.html">Cấu hình</a>
+                <a href="404.jsp">Cấu hình</a>
               </li>
               <li>
                 <a href="taikhoanadmin.html">Tài khoản Admin</a>
@@ -231,7 +231,7 @@
           </li>
 
           <li>
-            <a href="quanliblog.html" class="waves-effect">
+            <a href="quanliblog.jsp" class="waves-effect">
               <i class="fas fa-newspaper"></i>
 
               <span> Blog </span>
@@ -255,7 +255,7 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="404.html">Bảng tổng hợp</a>
+                <a href="404.jsp">Bảng tổng hợp</a>
               </li>
               <li>
                 <a href="dothi.html">Đồ thị</a>
@@ -264,7 +264,7 @@
           </li>
 
           <li>
-            <a href="404.html" class="waves-effect">
+            <a href="404.jsp" class="waves-effect">
               <i class="fas fa-align-center"></i>
               <span> Lịch sử thay đổi </span>
             </a>
@@ -448,13 +448,13 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                   <!-- item-->
-                  <a href="404.html" class="dropdown-item">Settings</a>
+                  <a href="404.jsp" class="dropdown-item">Settings</a>
                   <!-- item-->
-                  <a href="404.html" class="dropdown-item">Download</a>
+                  <a href="404.jsp" class="dropdown-item">Download</a>
                   <!-- item-->
-                  <a href="404.html" class="dropdown-item">Upload</a>
+                  <a href="404.jsp" class="dropdown-item">Upload</a>
                   <!-- item-->
-                  <a href="404.html" class="dropdown-item">Action</a>
+                  <a href="404.jsp" class="dropdown-item">Action</a>
                 </div>
               </div>
               <h4 class="header-title">Báo cáo thu nhập</h4>
@@ -693,9 +693,9 @@
           </div>
           <div class="col-md-6">
             <div class="text-md-right footer-links d-none d-sm-block">
-              <a href="404.html">Giới thiệu</a>
-              <a href="404.html">Trợ giúp</a>
-              <a href="404.html">Liên hệ</a>
+              <a href="404.jsp">Giới thiệu</a>
+              <a href="404.jsp">Trợ giúp</a>
+              <a href="404.jsp">Liên hệ</a>
             </div>
           </div>
         </div>
@@ -716,7 +716,7 @@
 <!-- Right Sidebar -->
 <div class="right-bar">
   <div class="rightbar-title">
-    <a href="404.html" class="right-bar-toggle float-right">
+    <a href="404.jsp" class="right-bar-toggle float-right">
       <i class="fe-x noti-icon"></i>
     </a>
     <h4 class="m-0 text-white">Cài Đặt</h4>
@@ -727,7 +727,7 @@
       <div class="user-img">
         <img src="assets\images\users\avatar-1.jpg" alt="user-img" title="Mat Helme"
              class="rounded-circle img-fluid">
-        <a href="404.html" class="user-edit"><i class="mdi mdi-pencil"></i></a>
+        <a href="404.jsp" class="user-edit"><i class="mdi mdi-pencil"></i></a>
       </div>
 
       <h5><a href="javascript: void(0);">Nik G. Patel</a> </h5>
@@ -898,7 +898,7 @@
             </div>
 
             <div class="text-center mt-2">
-              <a href="404.html" class="text-muted"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load
+              <a href="404.jsp" class="text-muted"><i class="mdi mdi-spin mdi-loading mr-1"></i> Load
                 more </a>
             </div>
 
