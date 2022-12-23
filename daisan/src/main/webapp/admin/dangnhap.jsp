@@ -36,7 +36,7 @@
                     <div class="card-body p-4">
 
                         <div class="text-center w-75 m-auto">
-                            <a href="trangchu.html">
+                            <a href="trangchu.jsp">
                                 <span><img src="assets/images/daisan.png" alt="" height="22"></span>
                             </a>
                             <h3 class="text-primary mb-4 mt-3">ĐĂNG NHẬP HỆ THỐNG</h3>
@@ -102,7 +102,7 @@
                 <div class="row mt-3">
                     <div class="col-12 text-center">
                         <p> <a href="quenmatkhau.jsp" class="text-muted ml-1">Quên mật khẩu ?</a></p>
-                        <p class="text-muted">Bạn chưa có tài khoản ? <a href="dangky.html"
+                        <p class="text-muted">Bạn chưa có tài khoản ? <a href="dangky.jsp"
                                                                          class="text-primary font-weight-medium ml-1">Đăng ký</a></p>
                     </div> <!-- end col -->
                 </div>

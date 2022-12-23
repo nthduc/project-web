@@ -67,7 +67,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
           <!-- item-->
-          <a href="taikhoanadmin.html" class="dropdown-item notify-item">
+          <a href="taikhoanadmin.jsp" class="dropdown-item notify-item">
             <i class="remixicon-account-circle-line"></i>
             <span>Tài khoản</span>
           </a>
@@ -87,7 +87,7 @@
           <div class="dropdown-divider"></div>
 
           <!-- item-->
-          <a href="dangxuat.html" class="dropdown-item notify-item">
+          <a href="dangxuat.jsp" class="dropdown-item notify-item">
             <i class="remixicon-logout-box-line"></i>
             <span>Đăng xuất</span>
           </a>
@@ -100,7 +100,7 @@
 
     <!-- LOGO -->
     <div class="logo-box">
-      <a href="trangchu.html" class="logo text-center">
+      <a href="trangchu.jsp" class="logo text-center">
                     <span class="logo-lg">
                         <img src="assets\images\logo-white.png" alt="" height="35">
                       <!-- <span class="logo-lg-text-light">Xeria</span> -->
@@ -139,14 +139,14 @@
           <li class="menu-title">Daisan ADMIN</li>
 
           <li>
-            <a href="trangchu.html" class="waves-effect">
+            <a href="trangchu.jsp" class="waves-effect">
               <i class="fas fa-home"></i>
               <span> Trang chủ </span>
             </a>
           </li>
 
           <li>
-            <a href="banhangthungan.html" class="waves-effect">
+            <a href="banhangthungan.jsp" class="waves-effect">
               <i class="fas fa-shopping-bag"></i>
               <span> Bán hàng/Thu ngân </span>
 
@@ -162,10 +162,10 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="danhsachkhachhang.html">Danh sách khách hàng</a>
+                <a href="danhsachkhachhang.jsp">Danh sách khách hàng</a>
               </li>
               <li>
-                <a href="chatvoikhachhang.html">Chat với khách hàng</a>
+                <a href="chatvoikhachhang.jsp">Chat với khách hàng</a>
               </li>
 
 
@@ -173,7 +173,7 @@
           </li>
 
           <li>
-            <a href="danhsachdonhang.html" class="waves-effect">
+            <a href="danhsachdonhang.jsp" class="waves-effect">
               <i class="fas fa-shopping-cart"></i>
               <span> Đơn hàng </span>
 
@@ -181,7 +181,7 @@
           </li>
 
           <li>
-            <a href="danhsachsanpham.html" class="waves-effect">
+            <a href="danhsachsanpham.jsp" class="waves-effect">
               <i class="fab fa-product-hunt"></i>
               <span>Sản phẩm</span>
               <!-- <span class="menu-arrow"></span> -->
@@ -197,7 +197,7 @@
             </a>
             <ul class="nav-second-level" aria-expanded="false">
               <li>
-                <a href="danhsachcongtacvien.html">Danh sách CTV</a>
+                <a href="danhsachcongtacvien.jsp">Danh sách CTV</a>
               </li>
 
               <li>
@@ -222,7 +222,7 @@
                 <a href="404.jsp">Cấu hình</a>
               </li>
               <li>
-                <a href="taikhoanadmin.html">Tài khoản Admin</a>
+                <a href="taikhoanadmin.jsp">Tài khoản Admin</a>
               </li>
 
 
@@ -240,7 +240,7 @@
           </li>
 
           <li>
-            <a href="quanlidanhmuc.html" class="waves-effect">
+            <a href="quanlidanhmuc.jsp" class="waves-effect">
               <i class="fas fa-bullseye"></i>
               <span> Quản lý Danh Mục </span>
             </a>
@@ -258,7 +258,7 @@
                 <a href="404.jsp">Bảng tổng hợp</a>
               </li>
               <li>
-                <a href="dothi.html">Đồ thị</a>
+                <a href="dothi.jsp">Đồ thị</a>
               </li>
             </ul>
           </li>
@@ -315,7 +315,7 @@
             <div class="page-title-box">
               <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                  <li class="breadcrumb-item"><a href="trangchu.html">Admin</a></li>
+                  <li class="breadcrumb-item"><a href="trangchu.jsp">Admin</a></li>
 
                   <li class="breadcrumb-item active">Tài khoản</li>
                 </ol>
