@@ -36,7 +36,7 @@
           <div class="card-body p-4">
 
             <div class="text-center w-75 m-auto">
-              <a href="trangchu.html">
+              <a href="trangchu.jsp">
                 <span><img src="assets/images/daisan.png" alt="" height="22"></span>
               </a>
             </div>
@@ -79,7 +79,7 @@
 
         <div class="row mt-3">
           <div class="col-12 text-center">
-            <p class="text-muted">Trở về <a href="dangnhap.html"
+            <p class="text-muted">Trở về <a href="dangnhap.jsp"
                                             class="text-muted font-weight-medium ml-1">Đăng nhập</a></p>
           </div> <!-- end col -->
         </div>
