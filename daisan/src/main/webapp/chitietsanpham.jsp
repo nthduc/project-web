@@ -51,12 +51,12 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="thongtintaikhoan.html"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
                         </li>
-                        <li><a href="sanphamyeuthich.html"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                        <li><a href="giohang.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="thanhtoan.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="dangnhapdangky.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="dangnhapdangky.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
                 <!-- /.cnt-account -->
@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="home.html"> <img src="assets/images/daisan.png" alt="logo"
+                    <div class="logo"> <a href="home.jsp"> <img src="assets/images/daisan.png" alt="logo"
                                                                  style="height: 55px; margin-top: -10px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
@@ -108,36 +108,36 @@
                                         <ul class="dropdown-menu" role="menu">
 
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="gachoplat.html">- Gạch ốp lát</a>
+                                                                       href="gachoplat.jsp">- Gạch ốp lát</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="daoplat.html">- Đá ốp lát</a>
+                                                                       href="daoplat.jsp">- Đá ốp lát</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="son.html">- Sơn nội thất & ngoại
+                                                                       href="son.jsp">- Sơn nội thất & ngoại
                                                 thất</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="sango.html">- Sàn gỗ và phụ
+                                                                       href="sango.jsp">- Sàn gỗ và phụ
                                                 kiện</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="tamoptuong.html">- Tấm ốp
+                                                                       href="tamoptuong.jsp">- Tấm ốp
                                                 tường</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vatlieutho.html">- Vật liệu
+                                                                       href="vatlieutho.jsp">- Vật liệu
                                                 thô</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vattunganhda.html">- Vật tư ngành
+                                                                       href="vattunganhda.jsp">- Vật tư ngành
                                                 đá</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                        href="category.html">- Vật liệu mài &
                                                 phụ kiện</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="cuaso.html">- Cửa & cửa sổ,
+                                                                       href="cuaso.jsp">- Cửa & cửa sổ,
                                                 bản lề & phụ
                                                 kiện</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="nep.html">- Nẹp</a></li>
+                                                                       href="nep.jsp">- Nẹp</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -169,7 +169,7 @@
                                 <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
-                                            <div class="image"> <a href="chitietsanpham.html"><img
+                                            <div class="image"> <a href="chitietsanpham.jsp"><img
                                                     src="assets/images/products/gachoplat/p1.jpg" alt=""></a>
                                             </div>
                                         </div>
@@ -191,7 +191,7 @@
                                             class='price'>900.000đ.00</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="thanhtoan.html"
+                                    <a href="thanhtoan.jsp"
                                        class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
                                 </div>
                                 <!-- /.cart-total-->
@@ -228,7 +228,7 @@
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="home.html">Trang chủ</a> </li>
+                                <li class="active dropdown yamm-fw"> <a href="home.jsp">Trang chủ</a> </li>
                                 <li class="dropdown yamm mega-menu"> <a href="#" data-hover="dropdown"
                                                                         class="dropdown-toggle" data-toggle="dropdown">Danh Mục</a>
                                     <ul class="dropdown-menu container">
@@ -388,14 +388,14 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="hotdeal.html">Hot Deal <span
+                                    <a href="hotdeal.jsp">Hot Deal <span
                                             class="menu-label hot-menu hidden-xs">hot</span> </a>
                                 </li>
-                                <li class="dropdown"> <a href="blog.html">blog</a>
+                                <li class="dropdown"> <a href="blog.jsp">blog</a>
                                 </li>
-                                <li class="dropdown"> <a href="hangmoi.html">hàng mới <span
+                                <li class="dropdown"> <a href="hangmoi.jsp">hàng mới <span
                                         class="menu-label new-menu hidden-xs">new</span></a> </li>
-                                <li class="dropdown"> <a href="lienhe.html">Liên hệ</a> </li>
+                                <li class="dropdown"> <a href="lienhe.jsp">Liên hệ</a> </li>
 
                             </ul>
                             <!-- /.navbar-nav -->
@@ -471,7 +471,7 @@
                                     <!-- /.hot-deal-wrapper -->
 
                                     <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.html">Bê Tông Cống tròn D300</a>
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Bê Tông Cống tròn D300</a>
                                         </h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="product-price"> <span class="price"> 1.200.000đ </span> <span
@@ -525,7 +525,7 @@
                                     <!-- /.hot-deal-wrapper -->
 
                                     <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.html">Cửa gỗ nhựa composite KOS
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Cửa gỗ nhựa composite KOS
                                             49</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="product-price"> <span class="price"> 2.500.000đ </span> <span
@@ -578,7 +578,7 @@
                                     <!-- /.hot-deal-wrapper -->
 
                                     <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.html">
+                                        <h3 class="name"><a href="chitietsanpham.jsp">
                                             Cửa gỗ nhựa composite KOS 1602</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="product-price"> <span class="price"> 1.400.000đ </span> <span
@@ -1129,7 +1129,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/gachoplat/p1.jpg" alt=""></a> </div>
                                         <!-- /.image -->
 
@@ -1138,7 +1138,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Gạch ốp lát Eurotile BST Đan
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
                                             Vi
                                             600*600mm DAV-H04</a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1159,10 +1159,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1182,7 +1182,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/gachoplat/p2.jpg" alt=""></a> </div>
                                         <!-- /.image -->
 
@@ -1191,7 +1191,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Gạch ốp lát Eurotile BST Đan
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
                                             Vi
                                             600*600mm DAV-H03</a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1212,10 +1212,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1235,7 +1235,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/gachoplat/p3.jpg"
                                                 data-echo="assets/images/products/gachoplat/p3.jpg" alt=""></a>
                                         </div>
@@ -1246,7 +1246,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Gạch ốp lát Eurotile BST Đan
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
                                             Vi
                                             600*600mm DAV-H06 </a></h3>
                                         <div class="rating rateit-small"></div>
@@ -1267,10 +1267,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1290,7 +1290,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/vatlieutho/ximang/haivan.png"
                                                 alt=""></a> </div>
                                         <!-- /.image -->
@@ -1300,7 +1300,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Xi măng Hải Vân</a></h3>
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Xi măng Hải Vân</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> 85.000đ </span> <span
@@ -1319,10 +1319,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1342,7 +1342,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/vatlieutho/satthep/thepgocL40.png"
                                                 alt=""></a> </div>
                                         <!-- /.image -->
@@ -1352,7 +1352,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Thép Góc L40</a></h3>
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Thép Góc L40</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> 320.000đ </span> <span
@@ -1371,10 +1371,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1394,7 +1394,7 @@
                             <div class="products">
                                 <div class="product">
                                     <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/vatlieutho/satthep/thepminhduc.jpg"
                                                 alt=""></a> </div>
                                         <!-- /.image -->
@@ -1404,7 +1404,7 @@
                                     <!-- /.product-image -->
 
                                     <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.html">Thép Minh Đức</a></h3>
+                                        <h3 class="name"><a href="chitietsanpham.jsp">Thép Minh Đức</a></h3>
                                         <div class="rating rateit-small"></div>
                                         <div class="description"></div>
                                         <div class="product-price"> <span class="price"> 320.000đ</span> <span
@@ -1423,10 +1423,10 @@
                                                         giỏ hàng</button>
                                                 </li>
                                                 <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.html" title="Wishlist"> <i
+                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
                                                         class="icon fa fa-heart"></i> </a>
                                                 </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html"
+                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                                     title="Compare"> <i class="fa fa-signal"
                                                                                         aria-hidden="true"></i> </a> </li>
                                             </ul>
@@ -1578,10 +1578,10 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a href="lienhe.html" title="Contact">Liên hệ đến Daisan</a></li>
-                            <li><a href="huongdandathang.html" title="Order">Hướng dẫn đặt hàng</a></li>
-                            <li><a href="cauhoithuonggap.html" title="FAQ">Câu hỏi thường gặp</a></li>
-                            <li class="last"><a href="chinhsachvadieukhoan.html" title="Hỗ trợ">Chính sách và
+                            <li class="first"><a href="lienhe.jsp" title="Contact">Liên hệ đến Daisan</a></li>
+                            <li><a href="huongdandathang.jsp" title="Order">Hướng dẫn đặt hàng</a></li>
+                            <li><a href="cauhoithuonggap.jsp" title="FAQ">Câu hỏi thường gặp</a></li>
+                            <li class="last"><a href="chinhsachvadieukhoan.jsp" title="Hỗ trợ">Chính sách và
                                 quy định chung</a></li>
                         </ul>
                     </div>
@@ -1597,13 +1597,13 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.html">Hướng dẫn thanh
+                            <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.jsp">Hướng dẫn thanh
                                 toán</a></li>
-                            <li><a title="Bảo hành" href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
-                            <li><a title="Chính sách đổi trả" href="chinhsachdoitra.html">Chính sách đổi trả</a>
+                            <li><a title="Bảo hành" href="chinhsachbaohanh.jsp">Chính sách bảo hành</a></li>
+                            <li><a title="Chính sách đổi trả" href="chinhsachdoitra.jsp">Chính sách đổi trả</a>
                             </li>
-                            <li><a title="Vận chuyển" href="chinhsachvanchuyen.html">Phương thức vận chuyển</a></li>
-                            <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.html">Bảo
+                            <li><a title="Vận chuyển" href="chinhsachvanchuyen.jsp">Phương thức vận chuyển</a></li>
+                            <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.jsp">Bảo
                                 mật thông tin</a>
                             </li>
                         </ul>
@@ -1621,10 +1621,10 @@
                     <div class="module-body">
                         <ul class='list-unstyled'>
                             <!-- <li class="first"><a href="#" title="About us">Shopping Guide</a></li> -->
-                            <li><a href="blog.html" title="Blog">Blog</a></li>
+                            <li><a href="blog.jsp" title="Blog">Blog</a></li>
                             <!-- <li><a href="#" title="Company">Công ty</a></li> -->
                             <!-- <li><a href="#" title="Investor Relations">Investor Relations</a></li> -->
-                            <li class=" last"><a href="lienhe.html" title="Suppliers">Liên hệ</a></li>
+                            <li class=" last"><a href="lienhe.jsp" title="Suppliers">Liên hệ</a></li>
                         </ul>
 
                     </div>

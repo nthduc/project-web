@@ -1,30 +1,21 @@
 package vn.edu.hcmuaf.fit.controller;
-import javax.servlet.*;
-import javax.servlet.http.*;
+
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import java.io.*;
+//import javax.servlet.http.HttpServerletRequest;
+//import javax.servlet.http.HttpServerletResponse;
+import java.io.IOException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-/**
- * Xử lí phần đăng kí tài khoản
- *
- * @author Bui Anh Tuan
- * @version 1.0
- * @since 2022-12-21
- */
-
-@WebServlet(name = "/Signup", urlPatterns = "/Signup")
+@WebServlet(name = "Signup",urlPatterns = "/Signup")
 public class Signup extends HttpServlet {
-
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("dangky.jsp").forward(request,response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
     }
-
-
-
 }
-

@@ -36,10 +36,9 @@ public class UserBean implements Serializable {
         this.order = order;
     }
 
-    public UserBean(String email,String name,String phone,String password){
+    public UserBean(String email,String name,String password){
         this.email = email;
         this.name = name;
-        this.phone = phone;
         this.password = password;
     }
 

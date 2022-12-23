@@ -55,12 +55,12 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                        <li><a href="thongtintaikhoan.html"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
                         </li>
-                        <li><a href="sanphamyeuthich.html"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                        <li><a href="giohang.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="thanhtoan.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="dangnhapdangky.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <li><a href="dangnhapdangky.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
                 <!-- /.cnt-account -->
@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo" ;"> <a href="home.html"> <img src="assets\images\daisan.png" alt="logo"
+                    <div class="logo" ;"> <a href="home.jsp"> <img src="assets\images\daisan.png" alt="logo"
                                                                     style="height: 55px; margin-top: -10px" "> </a> </div>
                 <!-- /.logo -->
                 <!-- ============================================================= LOGO : END ============================================================= --> </div>
@@ -110,27 +110,27 @@
                                     <ul class="dropdown-menu" role="menu">
 
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="gachoplat.html">- Gạch ốp lát</a></li>
+                                                                   href="gachoplat.jsp">- Gạch ốp lát</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                    href="category.html">- Đá ốp lát</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="son.html">- Sơn nội thất & ngoại thất</a>
+                                                                   href="son.jsp">- Sơn nội thất & ngoại thất</a>
                                         </li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="sango.html">- Sàn gỗ và phụ kiện</a></li>
+                                                                   href="sango.jsp">- Sàn gỗ và phụ kiện</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="tamoptuong.html">- Tấm ốp tường</a></li>
+                                                                   href="tamoptuong.jsp">- Tấm ốp tường</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vatlieutho.html">- Vật liệu thô</a></li>
+                                                                   href="vatlieutho.jsp">- Vật liệu thô</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vattunganhda.html">- Vật tư ngành đá</a></li>
+                                                                   href="vattunganhda.jsp">- Vật tư ngành đá</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                    href="">- Vật liệu mài & phụ kiện</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                    href="cuaso">- Cửa & cửa sổ, bản lề & phụ
                                             kiện</a></li>
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="nep.html">- Nẹp</a></li>
+                                                                   href="nep.jsp">- Nẹp</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -162,7 +162,7 @@
                             <div class="cart-item product-summary">
                                 <div class="row">
                                     <div class="col-xs-4">
-                                        <div class="image"> <a href="chitietsanpham.html"><img
+                                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                                 src="assets/images/products/gachoplat/p1.jpg"
                                                 alt=""></a> </div>
                                     </div>
@@ -183,9 +183,9 @@
                                 <div class="pull-right"> <span class="text">Tổng tiền :</span><span
                                         class='price'>420.850đ</span> </div>
                                 <div class="clearfix"></div>
-                                <a href="giohang.html"
+                                <a href="giohang.jsp"
                                    class="btn btn-upper btn-primary btn-block m-t-20">Xem giỏ hàng</a>
-                                <a href="thanhtoan.html"
+                                <a href="thanhtoan.jsp"
                                    class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
                             </div>
                             <!-- /.cart-total-->
@@ -222,7 +222,7 @@
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="home.html">Trang chủ</a> </li>
+                                <li class="active dropdown yamm-fw"> <a href="home.jsp">Trang chủ</a> </li>
                                 <li class="dropdown yamm mega-menu"> <a href="#" data-hover="dropdown"
                                                                         class="dropdown-toggle" data-toggle="dropdown">Danh Mục</a>
                                     <ul class="dropdown-menu container">
@@ -393,14 +393,14 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="hotdeal.html">Hot Deal <span
+                                    <a href="hotdeal.jsp">Hot Deal <span
                                             class="menu-label hot-menu hidden-xs">hot</span> </a>
                                 </li>
-                                <li class="dropdown"> <a href="blog.html">blog</a>
+                                <li class="dropdown"> <a href="blog.jsp">blog</a>
                                 </li>
-                                <li class="dropdown"> <a href="hangmoi.html">hàng mới <span
+                                <li class="dropdown"> <a href="hangmoi.jsp">hàng mới <span
                                         class="menu-label new-menu hidden-xs">new</span></a> </li>
-                                <li class="dropdown"> <a href="lienhe.html">Liên hệ</a> </li>
+                                <li class="dropdown"> <a href="lienhe.jsp">Liên hệ</a> </li>
 
                             </ul>
                             <!-- /.navbar-nav -->
@@ -428,7 +428,7 @@
     <div class="container">
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
-                <li><a href="home.html">Trang chủ</a></li>
+                <li><a href="home.jsp">Trang chủ</a></li>
                 <li class='active'>Thanh toán</li>
             </ul>
         </div><!-- /.breadcrumb-inner -->
@@ -490,7 +490,7 @@
                                 <button type="submit" class="btn btn-primary" style="margin-top: 10px; ">Xác
                                     nhận</button>
                                 <button class="btn btn-warning" style="margin-top: 10px; margin-left: 80px;"><a
-                                        href="giohang.html" style="color: white;"> Quay về giỏ hàng</a> </button>
+                                        href="giohang.jsp" style="color: white;"> Quay về giỏ hàng</a> </button>
                             </div>
                         </div>
 
@@ -564,7 +564,7 @@
                         </div>
                         <hr class="mb-4">
                         <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang"
-                                style="width:100px; margin-left: 180px;"><a href="xacnhandonhang.html"
+                                style="width:100px; margin-left: 180px;"><a href="xacnhandonhang.jsp"
                                                                             style="color: white;">Đặt hàng</a></button>
                     </div>
                 </div>
@@ -625,10 +625,10 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a href="lienhe.html" title="Contact">Liên hệ đến Daisan</a></li>
-                            <li><a href="huongdandathang.html" title="Order">Hướng dẫn đặt hàng</a></li>
-                            <li><a href="cauhoithuonggap.html" title="FAQ">Câu hỏi thường gặp</a></li>
-                            <li class="last"><a href="chinhsachvadieukhoan.html" title="Hỗ trợ">Chính sách và
+                            <li class="first"><a href="lienhe.jsp" title="Contact">Liên hệ đến Daisan</a></li>
+                            <li><a href="huongdandathang.jsp" title="Order">Hướng dẫn đặt hàng</a></li>
+                            <li><a href="cauhoithuonggap.jsp" title="FAQ">Câu hỏi thường gặp</a></li>
+                            <li class="last"><a href="chinhsachvadieukhoan.jsp" title="Hỗ trợ">Chính sách và
                                 quy định chung</a></li>
                         </ul>
                     </div>
@@ -644,13 +644,13 @@
 
                     <div class="module-body">
                         <ul class='list-unstyled'>
-                            <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.html">Hướng dẫn thanh
+                            <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.jsp">Hướng dẫn thanh
                                 toán</a></li>
-                            <li><a title="Bảo hành" href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
-                            <li><a title="Chính sách đổi trả" href="chinhsachdoitra.html">Chính sách đổi trả</a>
+                            <li><a title="Bảo hành" href="chinhsachbaohanh.jsp">Chính sách bảo hành</a></li>
+                            <li><a title="Chính sách đổi trả" href="chinhsachdoitra.jsp">Chính sách đổi trả</a>
                             </li>
-                            <li><a title="Vận chuyển" href="chinhsachvanchuyen.html">Phương thức vận chuyển</a></li>
-                            <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.html">Bảo
+                            <li><a title="Vận chuyển" href="chinhsachvanchuyen.jsp">Phương thức vận chuyển</a></li>
+                            <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.jsp">Bảo
                                 mật thông tin</a>
                             </li>
                         </ul>
@@ -668,10 +668,10 @@
                     <div class="module-body">
                         <ul class='list-unstyled'>
                             <!-- <li class="first"><a href="#" title="About us">Shopping Guide</a></li> -->
-                            <li><a href="blog.html" title="Blog">Blog</a></li>
+                            <li><a href="blog.jsp" title="Blog">Blog</a></li>
                             <!-- <li><a href="#" title="Company">Công ty</a></li> -->
                             <!-- <li><a href="#" title="Investor Relations">Investor Relations</a></li> -->
-                            <li class=" last"><a href="lienhe.html" title="Suppliers">Liên hệ</a></li>
+                            <li class=" last"><a href="lienhe.jsp" title="Suppliers">Liên hệ</a></li>
                         </ul>
 
                     </div>
