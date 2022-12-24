@@ -4,152 +4,110 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class UserBean implements Serializable {
+        private int user_ID;
+        private String role_ID;
+        private String username;
+        private String password;
+        private String email;
+        private String fullname;
+        private String gender;
+        private Date dob;
+        private String phone;
+        private String address;
 
-    private String id;
-    private String email;
-    private String name;
-    private String password;
-    private int role;
-    private String gender;
-    private Date dob;
-    private String phone;
-    private String address;
-    private String card;
-    private WishListBean wishListBean;
-    private CartBean cart;
-    private OrderBean order;
+    public UserBean(int anInt, int rsInt, String string, String rsString, String email, String fullname, String gender, java.sql.Date date, String phone, String address) {
+    }
 
-    public UserBean(){}
-    public UserBean(String id, String email, String name, String password, int role, String gender, String phone, String address, Date dob, String card, WishListBean wishListBean, CartBean cart, OrderBean order){
-        this.id = id;
-        this.email = email;
-        this.name = name;
+    public UserBean(int user_ID, String role_ID, String username, String password, String email, String fullname, String gender, Date dob, String phone, String address) {
+        this.user_ID = user_ID;
+        this.role_ID = role_ID;
+        this.username = username;
         this.password = password;
-        this.role = role;
+        this.email = email;
+        this.fullname = fullname;
         this.gender = gender;
+        this.dob = dob;
         this.phone = phone;
         this.address = address;
-        this.dob = dob;
-        this.card = card;
-        this.wishListBean = wishListBean;
-        this.cart = cart;
-        this.order = order;
     }
 
-    public UserBean(String email,String name,String password){
-        this.email = email;
-        this.name = name;
-        this.password = password;
+    public int getUser_ID() {
+        return user_ID;
     }
 
-    public UserBean(String id,String email,String password,int role){
-        this.id = id;
-        this.email = email;
-        this.password = password;
-        this.role = role;
+    public void setUser_ID(int user_ID) {
+        this.user_ID = ;
     }
 
-    public String getGender() {
-        return gender;
+    public String getRole_ID() {
+        return role_ID;
     }
 
-    public String getName() {
-        return name;
+    public void setRole_ID(String role_ID) {
+        this.role_ID = role_ID;
     }
 
-    public String getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public Date getDob() {
-        return dob;
-    }
-
-    public int getRole() {
-        return role;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getEmail() {
-        return email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public String getCard() {
-        return card;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public CartBean getCart() {
-        return cart;
-    }
-
-    public OrderBean getOrder() {
-        return order;
-    }
-
-    public WishListBean getWishList() {
-        return wishListBean;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setCard(String card) {
-        this.card = card;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public void setCart(CartBean cart) {
-        this.cart = cart;
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setOrder(OrderBean order) {
-        this.order = order;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setRole(int role) {
-        this.role = role;
+    public String getGender() {
+        return gender;
     }
 
     public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public void setWishList(WishListBean wishListBean) {
-        this.wishListBean = wishListBean;
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
