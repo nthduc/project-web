@@ -427,16 +427,17 @@
                 <input id="username"  name="username" type="text" placeholder="Tên" />
                 <input id="email" name="email" type="email" placeholder="Email" />
                 <input id="password"  name="password" type="password" placeholder="Mật khẩu" />
+                <input id="re-password"  name="re_password" type="password" placeholder="Nhập lại mật khẩu" />
                 <button type="submit">Đăng Ký</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="login" method="post">
                 <h1>Đăng nhập</h1>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Mật Khẩu" />
+                <input name="email" type="email" placeholder="Email" />
+                <input name="password" type="password" placeholder="Mật Khẩu" />
                 <a href="quenmatkhau.jsp">Quên mật khẩu?</a>
-                <button>Đăng nhập</button>
+                <button type="submit">Đăng nhập</button>
             </form>
         </div>
         <div class="overlay-container">
