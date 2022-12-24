@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class UserBean implements Serializable {
         private int user_ID;
-        private String role_ID;
+        private int role_ID;
         private String username;
         private String password;
         private String email;
@@ -18,7 +18,7 @@ public class UserBean implements Serializable {
     public UserBean(int anInt, int rsInt, String string, String rsString, String email, String fullname, String gender, java.sql.Date date, String phone, String address) {
     }
 
-    public UserBean(int user_ID, String role_ID, String username, String password, String email, String fullname, String gender, Date dob, String phone, String address) {
+    public UserBean(int user_ID, int role_ID, String username, String password, String email, String fullname, String gender, Date dob, String phone, String address) {
         this.user_ID = user_ID;
         this.role_ID = role_ID;
         this.username = username;
@@ -36,14 +36,14 @@ public class UserBean implements Serializable {
     }
 
     public void setUser_ID(int user_ID) {
-        this.user_ID = ;
+        this.user_ID = user_ID;
     }
 
-    public String getRole_ID() {
+    public int getRole_ID() {
         return role_ID;
     }
 
-    public void setRole_ID(String role_ID) {
+    public void setRole_ID(int role_ID) {
         this.role_ID = role_ID;
     }
 

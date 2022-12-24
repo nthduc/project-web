@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 public class UserService {
     private static UserService instance;
-    private  UserService(){
+    public UserService(){
     }
 
     public static UserService getInstance() {
@@ -39,16 +39,18 @@ public class UserService {
         }
         return null;
     }
-    public boolean themtaikhoan(UserBean user){
+    public void themtaikhoan(String username, String email, String password){
+        String query = "insert into users values(0,2,?,?,?,0,0,0,0,0)";
             try {
                 ConnectionDB.connect();
-                PreparedStatement ps = ConnectionDB.con.prepareStatement("insert into users values('"+user.getName()+","+user.getEmail()+","+user.getPassword()+"')");
-                return true;
+                PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
+                ps.setString(3,username);
+                ps.setString(4,email);
+                ps.setString(5,password);
+                ps.execute();
+
             }catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
             }
-        return false;
     }
 
 }
