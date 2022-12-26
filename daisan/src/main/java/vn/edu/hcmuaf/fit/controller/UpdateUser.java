@@ -48,7 +48,7 @@ public class UpdateUser extends HttpServlet {
             ps.setString(3,address);
             ps.setString(4,gender);
             ps.setDate(5, new java.sql.Date(dob.getTime()));
-            ps.setString(6,user.getId());
+            ps.setInt(6,(user.getUser_ID()));
 
             ps.executeUpdate();
             request.getRequestDispatcher("taikhoancuatoi.jsp").forward(request,response);

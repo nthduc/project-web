@@ -46,7 +46,7 @@
                                 thể muốn kiểm tra kết nối internet của mình. Đây là một mẹo nhỏ có thể giúp bạn đi
                                 đúng hướng.</p>
 
-                            <a class="btn btn-primary mt-3" href="trangchu.html"><i class="mdi mdi-reply mr-1"></i>
+                            <a class="btn btn-primary mt-3" href="trangchu.jsp"><i class="mdi mdi-reply mr-1"></i>
                                 Về trang chủ</a>
                         </div>
 

@@ -51,11 +51,11 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="thongtintaikhoan.html"><i class="icon fa fa-user"></i>Tài khoản của tôi</a></li>
-            <li><a href="sanphamyeuthich.html"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-            <li><a href="giohang.html"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-            <li><a href="thanhtoan.html"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-            <li><a href="dangnhapdangky.html"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a></li>
+            <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+            <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+            <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+            <li><a href="dangnhapdangky.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
           </ul>
         </div>
         <!-- /.cnt-account -->
@@ -86,7 +86,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
           <!-- ============================================================= LOGO ============================================================= -->
-          <div class="logo"> <a href="home.html"> <img src="assets\images\daisan.png" alt="logo"
+          <div class="logo"> <a href="home.jsp"> <img src="assets\images\daisan.png" alt="logo"
                                                        style="height: 55px; margin-top: -10px"> </a> </div>
           <!-- /.logo -->
           <!-- ============================================================= LOGO : END ============================================================= -->
@@ -104,27 +104,27 @@
                     mục<b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
 
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="gachoplat.html">- Gạch ốp lát</a>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="gachoplat.jsp">- Gạch ốp lát</a>
                       </li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="daoplat.html">- Đá ốp lát</a>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="daoplat.jsp">- Đá ốp lát</a>
                       </li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="son.html">- Sơn nội thất & ngoại
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="son.jsp">- Sơn nội thất & ngoại
                         thất</a>
                       </li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="sango.html">- Sàn gỗ và phụ
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="sango.jsp">- Sàn gỗ và phụ
                         kiện</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="tamoptuong.html">- Tấm ốp
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="tamoptuong.jsp">- Tấm ốp
                         tường</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="vatlieutho.html">- Vật liệu
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="vatlieutho.jsp">- Vật liệu
                         thô</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="vattunganhda.html">- Vật tư ngành
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="vattunganhda.jsp">- Vật tư ngành
                         đá</a></li>
                       <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Vật liệu mài &
                         phụ kiện</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="cuaso.html">- Cửa & cửa sổ,
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="cuaso.jsp">- Cửa & cửa sổ,
                         bản lề & phụ
                         kiện</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="nep.html">- Nẹp</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="nep.jsp">- Nẹp</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -154,7 +154,7 @@
                 <div class="cart-item product-summary">
                   <div class="row">
                     <div class="col-xs-4">
-                      <div class="image"> <a href="chitietsanpham.html"><img
+                      <div class="image"> <a href="chitietsanpham.jsp"><img
                               src="assets/images/products/gachoplat/p1.jpg" alt=""></a> </div>
                     </div>
                     <div class="col-xs-7">
@@ -173,7 +173,7 @@
                   <div class="pull-right"> <span class="text">Tổng tiền :</span><span class='price'>900.000đ.00</span>
                   </div>
                   <div class="clearfix"></div>
-                  <a href="thanhtoan.html" class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
+                  <a href="thanhtoan.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
                 </div>
                 <!-- /.cart-total-->
 
@@ -209,7 +209,7 @@
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
-                <li class="active dropdown yamm-fw"> <a href="home.html">Trang chủ</a> </li>
+                <li class="active dropdown yamm-fw"> <a href="home.jsp">Trang chủ</a> </li>
                 <li class="dropdown yamm mega-menu"> <a href="#" data-hover="dropdown" class="dropdown-toggle"
                                                         data-toggle="dropdown">Danh Mục</a>
                   <ul class="dropdown-menu container">
@@ -367,13 +367,13 @@
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <a href="hotdeal.html">Hot Deal <span class="menu-label hot-menu hidden-xs">hot</span> </a>
+                  <a href="hotdeal.jsp">Hot Deal <span class="menu-label hot-menu hidden-xs">hot</span> </a>
                 </li>
-                <li class="dropdown"> <a href="blog.html">blog</a>
+                <li class="dropdown"> <a href="blog.jsp">blog</a>
                 </li>
-                <li class="dropdown"> <a href="hangmoi.html">hàng mới <span
+                <li class="dropdown"> <a href="hangmoi.jsp">hàng mới <span
                         class="menu-label new-menu hidden-xs">new</span></a> </li>
-                <li class="dropdown"> <a href="lienhe.html">Liên hệ</a> </li>
+                <li class="dropdown"> <a href="lienhe.jsp">Liên hệ</a> </li>
 
               </ul>
               <!-- /.navbar-nav -->
@@ -403,7 +403,7 @@
   <div class="container">
     <div class="breadcrumb-inner">
       <ul class="list-inline list-unstyled">
-        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="home.jsp">Trang chủ</a></li>
         <li class='active'>Đá ốp lát</li>
       </ul>
     </div>
@@ -422,7 +422,7 @@
           <nav class="yamm megamenu-horizontal">
             <ul class="nav">
               <li class="dropdown menu-item">
-                <a href="gachoplat.html">
+                <a href="gachoplat.jsp">
                   <i><img src="assets/images/icons-products/gach-op-lat.jpeg" style="height: 24px; width: 24px" /></i>
                   Gạch ốp lát
                 </a>
@@ -431,7 +431,7 @@
               </li>
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="daoplat.html">
+              <li class="dropdown menu-item"> <a href="daoplat.jsp">
                 <i><img src="assets/images/icons-products/da-op-lat.jpeg" style="height: 24px; width: 24px" /></i>
                 Đá ốp lát
               </a>
@@ -443,7 +443,7 @@
               <!-- /.menu-item -->
 
               <li class="dropdown menu-item">
-                <a href="son.html">
+                <a href="son.jsp">
                   <i><img src="assets/images/icons-products/son-noi-ngoai-that.png"
                           style="height: 24px; width: 24px" /></i>
 
@@ -455,7 +455,7 @@
               </li>
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="sango.html">
+              <li class="dropdown menu-item"> <a href="sango.jsp">
                 <i><img src="assets/images/icons-products/san-go.jpeg" style="height: 24px; width: 24px" /></i>
                 Sàn gỗ và phụ kiện
               </a>
@@ -465,7 +465,7 @@
               </li>
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="tamoptuong.html">
+              <li class="dropdown menu-item"> <a href="tamoptuong.jsp">
                 <i><img src="assets/images/icons-products/tam-op-tuong.png" style="height: 24px; width: 24px" /></i>
                 Tấm ốp tường
               </a>
@@ -476,7 +476,7 @@
 
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="vatlieutho.html">
+              <li class="dropdown menu-item"> <a href="vatlieutho.jsp">
                 <i><img src="assets/images/icons-products/vat-lieu-tho.png" style="height: 24px; width: 24px" /></i>
                 Vật liệu thô
               </a>
@@ -485,7 +485,7 @@
               </li>
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="vattunganhda.html">
+              <li class="dropdown menu-item"> <a href="vattunganhda.jsp">
                 <i><img src="assets/images/icons-products/vat-tu-nganh-da.jpeg"
                         style="height: 24px; width: 24px" /></i>
                 Vật tư ngành đá
@@ -497,7 +497,7 @@
 
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="vatlieumai.html">
+              <li class="dropdown menu-item"> <a href="vatlieumai.jsp">
                 <i><img src="assets/images/icons-products/vat-lieu-mai.png" style="height: 24px; width: 24px" /></i>
                 Vật liệu mái & phụ kiện
               </a>
@@ -508,7 +508,7 @@
 
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="cuaso.html">
+              <li class="dropdown menu-item"> <a href="cuaso.jsp">
                 <i><img src="assets/images/icons-products/cua.png" style="height: 24px; width: 24px" /></i>
                 Cửa & cửa sổ, bản lề & phụ kiện
               </a>
@@ -519,7 +519,7 @@
 
               <!-- /.menu-item -->
 
-              <li class="dropdown menu-item"> <a href="nep.html">
+              <li class="dropdown menu-item"> <a href="nep.jsp">
                 <i><img src="assets/images/icons-products/nep.png" style="height: 24px; width: 24px" /></i>
                 Nẹp
               </a>
@@ -530,7 +530,7 @@
 
 
 
-              <li class="dropdown menu-item"> <a href="500.html">Bộ sưu tập Hot</a>
+              <li class="dropdown menu-item"> <a href="500.jsp">Bộ sưu tập Hot</a>
 
                 <!-- /.dropdown-menu -->
               </li>
@@ -956,7 +956,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p1.jpeg" alt=""></a> </div>
                           <!-- /.image -->
 
@@ -965,7 +965,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá ốp tường BVMV 15x30</a></h3>
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá ốp tường BVMV 15x30</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price">138.600đ </span> <span
@@ -982,9 +982,9 @@
                                         class="fa fa-shopping-cart"></i> </button>
 
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1003,7 +1003,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p2.jpeg"></a> </div>
                           <!-- /.image -->
 
@@ -1012,7 +1012,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá ghép Nghệ An vàng độ dày 1-1.5cm
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá ghép Nghệ An vàng độ dày 1-1.5cm
                           </a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
@@ -1030,9 +1030,9 @@
                                         class="fa fa-shopping-cart"></i> </button>
 
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1050,7 +1050,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p3.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1059,7 +1059,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá chẻ vàng Nghệ An ốp tường trang trí</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá chẻ vàng Nghệ An ốp tường trang trí</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1077,9 +1077,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1094,7 +1094,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p4.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1103,7 +1103,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá Ghép Đà Nẵng vàng-đen ốp tường trang trí
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá Ghép Đà Nẵng vàng-đen ốp tường trang trí
                           THK-H02</a></h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1121,9 +1121,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1138,7 +1138,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p5.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1147,7 +1147,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá chẻ đen muối Nghệ An ốp tường trang trí</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá chẻ đen muối Nghệ An ốp tường trang trí</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1165,9 +1165,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1183,7 +1183,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p6.jpeg" alt=""></a> </div>
                           <!-- /.image -->
 
@@ -1192,7 +1192,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá ghép Đà Nẵng vàng lai ốp tường trang
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá ghép Đà Nẵng vàng lai ốp tường trang
                             trí</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
@@ -1209,9 +1209,9 @@
                                 <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
                                         class="fa fa-shopping-cart"></i> </button>
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1229,7 +1229,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p7.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1238,7 +1238,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá ong đen, đá ong xám kích thước 5x30x1cm</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá ong đen, đá ong xám kích thước 5x30x1cm</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1256,9 +1256,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1273,7 +1273,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p8.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1282,7 +1282,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá Ghép Lai Châu đa sắc ốp tường trang trí</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá Ghép Lai Châu đa sắc ốp tường trang trí</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1300,9 +1300,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1316,7 +1316,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p9.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1325,7 +1325,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá chẻ đen muối Nghệ An ốp tường trang tríG</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá chẻ đen muối Nghệ An ốp tường trang tríG</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1343,9 +1343,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1359,7 +1359,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p10.png" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1368,7 +1368,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá mài vát cạnh vàng, đá soi cạnh trang trí sân
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá mài vát cạnh vàng, đá soi cạnh trang trí sân
                           vườn</a>
                         </h3>
                         <div class="rating rateit-small"></div>
@@ -1387,9 +1387,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1403,7 +1403,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p11.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1412,7 +1412,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá an niên bề mặt ANN G04</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá an niên bề mặt ANN G04</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1430,9 +1430,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1446,7 +1446,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p12.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1455,7 +1455,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá ong đen ( ít lỗ) ốp lát trang trí nhiều kích
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá ong đen ( ít lỗ) ốp lát trang trí nhiều kích
                           thước</a>
                         </h3>
                         <div class="rating rateit-small"></div>
@@ -1474,9 +1474,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1490,7 +1490,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p13.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1499,7 +1499,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá vọng cát bề mặt VOC H03</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá vọng cát bề mặt VOC H03</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1517,9 +1517,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1533,7 +1533,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p14.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1542,7 +1542,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá vọng cát bề mặt VOC H05</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá vọng cát bề mặt VOC H05</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1560,9 +1560,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1576,7 +1576,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p15.png" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1585,7 +1585,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá vọng cát bề mặt VOC H05</a>
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá vọng cát bề mặt VOC H05</a>
                         </h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1603,9 +1603,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1619,7 +1619,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p16.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1628,7 +1628,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá bóc xanh rêu Nghệ An ốp trang trí
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá bóc xanh rêu Nghệ An ốp trang trí
                         </a></h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1646,9 +1646,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1663,7 +1663,7 @@
                   <div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href="chitietsanpham.html"><img
+                        <div class="image"> <a href="chitietsanpham.jsp"><img
                                 src="assets/images/products/daoplat/p17.jpeg" alt=""></a> </div>
                         <!-- /.image -->
 
@@ -1672,7 +1672,7 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href="chitietsanpham.html">Đá chẻ trắng muối Nghệ An ốp tường trang
+                        <h3 class="name"><a href="chitietsanpham.jsp">Đá chẻ trắng muối Nghệ An ốp tường trang
                           trí</a></h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
@@ -1690,9 +1690,9 @@
                                       class="fa fa-shopping-cart"></i> </button>
 
                             </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                          title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                     class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                           </ul>
                         </div>
@@ -1708,7 +1708,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p18.jpeg" alt=""></a> </div>
                           <!-- /.image -->
 
@@ -1717,7 +1717,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá vọng cát bề mặt VOC H01</a>
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá vọng cát bề mặt VOC H01</a>
                           </h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
@@ -1735,9 +1735,9 @@
                                         class="fa fa-shopping-cart"></i> </button>
 
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1756,7 +1756,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p19.jpeg" alt=""></a> </div>
                           <!-- /.image -->
 
@@ -1765,7 +1765,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá Bazan ốp tường</a></h3>
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá Bazan ốp tường</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> 620.000đ </span> <span
@@ -1782,9 +1782,9 @@
                                         class="fa fa-shopping-cart"></i> </button>
 
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1803,7 +1803,7 @@
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="chitietsanpham.html"><img
+                          <div class="image"> <a href="chitietsanpham.jsp"><img
                                   src="assets/images/products/daoplat/p20.jpeg" alt=""></a> </div>
                           <!-- /.image -->
 
@@ -1812,7 +1812,7 @@
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="chitietsanpham.html">Đá an niên bề mặt ANN G01</a></h3>
+                          <h3 class="name"><a href="chitietsanpham.jsp">Đá an niên bề mặt ANN G01</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price">755.000đ </span> <span
@@ -1829,9 +1829,9 @@
                                         class="fa fa-shopping-cart"></i> </button>
 
                               </li>
-                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.html"
+                              <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
                                                            title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.html" title="Compare"> <i
+                              <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
                                       class="fa fa-signal" aria-hidden="true"></i> </a> </li>
                             </ul>
                           </div>
@@ -1989,10 +1989,10 @@
 
           <div class="module-body">
             <ul class='list-unstyled'>
-              <li class="first"><a href="lienhe.html" title="Contact">Liên hệ đến Daisan</a></li>
-              <li><a href="huongdandathang.html" title="Order">Hướng dẫn đặt hàng</a></li>
-              <li><a href="cauhoithuonggap.html" title="FAQ">Câu hỏi thường gặp</a></li>
-              <li class="last"><a href="chinhsachvadieukhoan.html" title="Hỗ trợ">Chính sách và
+              <li class="first"><a href="lienhe.jsp" title="Contact">Liên hệ đến Daisan</a></li>
+              <li><a href="huongdandathang.jsp" title="Order">Hướng dẫn đặt hàng</a></li>
+              <li><a href="cauhoithuonggap.jsp" title="FAQ">Câu hỏi thường gặp</a></li>
+              <li class="last"><a href="chinhsachvadieukhoan.jsp" title="Hỗ trợ">Chính sách và
                 quy định chung</a></li>
             </ul>
           </div>
@@ -2008,13 +2008,13 @@
 
           <div class="module-body">
             <ul class='list-unstyled'>
-              <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.html">Hướng dẫn thanh
+              <li class="first"><a title="Thanh toán" href="huongdanthanhtoan.jsp">Hướng dẫn thanh
                 toán</a></li>
-              <li><a title="Bảo hành" href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
-              <li><a title="Chính sách đổi trả" href="chinhsachdoitra.html">Chính sách đổi trả</a>
+              <li><a title="Bảo hành" href="chinhsachbaohanh.jsp">Chính sách bảo hành</a></li>
+              <li><a title="Chính sách đổi trả" href="chinhsachdoitra.jsp">Chính sách đổi trả</a>
               </li>
-              <li><a title="Vận chuyển" href="chinhsachvanchuyen.html">Phương thức vận chuyển</a></li>
-              <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.html">Bảo
+              <li><a title="Vận chuyển" href="chinhsachvanchuyen.jsp">Phương thức vận chuyển</a></li>
+              <li class="last"><a title="Bảo mật thông tin" href="chinhsachbaomatthongtin.jsp">Bảo
                 mật thông tin</a>
               </li>
             </ul>
@@ -2032,10 +2032,10 @@
           <div class="module-body">
             <ul class='list-unstyled'>
               <!-- <li class="first"><a href="#" title="About us">Shopping Guide</a></li> -->
-              <li><a href="blog.html" title="Blog">Blog</a></li>
+              <li><a href="blog.jsp" title="Blog">Blog</a></li>
               <!-- <li><a href="#" title="Company">Công ty</a></li> -->
               <!-- <li><a href="#" title="Investor Relations">Investor Relations</a></li> -->
-              <li class=" last"><a href="lienhe.html" title="Suppliers">Liên hệ</a></li>
+              <li class=" last"><a href="lienhe.jsp" title="Suppliers">Liên hệ</a></li>
             </ul>
 
           </div>
