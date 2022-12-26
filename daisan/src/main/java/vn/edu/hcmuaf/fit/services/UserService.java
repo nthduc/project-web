@@ -44,13 +44,41 @@ public class UserService {
             try {
                 ConnectionDB.connect();
                 PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
-                ps.setString(3,username);
-                ps.setString(4,email);
-                ps.setString(5,password);
-                ps.execute();
+                ps.setString(1,username);
+                ps.setString(2,password);
+                ps.setString(3,email);
+                ps.executeQuery();
 
             }catch (Exception e) {
             }
     }
+    public UserBean login(String username, String password){
+        String query = " select * from users where username = ? AND password =?";
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
+            ps.setString(1,username);
+            ps.setString(2,password);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                return new UserBean(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getDate(8),
+                        rs.getString(9),
+                        rs.getString(10));
+            }
+        }catch (Exception e) {
+        }
+        return null;
+    }
 
+    public static void main(String[] args) {
+        UserService us = new UserService();
+        System.out.println(us.checkUser("test"));
+    }
 }

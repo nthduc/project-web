@@ -424,7 +424,7 @@
         <div class="form-container sign-up-container">
             <form action="Signup" method="post">
                 <h1>Tạo tài khoản</h1>
-                <input id="username"  name="username" type="text" placeholder="Tên" />
+                <input id="username"  name="username" type="text" placeholder="Tên đăng nhập" />
                 <input id="email" name="email" type="email" placeholder="Email" />
                 <input id="password"  name="password" type="password" placeholder="Mật khẩu" />
                 <input id="re-password"  name="re_password" type="password" placeholder="Nhập lại mật khẩu" />
@@ -432,9 +432,9 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="login" method="post">
+            <form action="Login" method="post">
                 <h1>Đăng nhập</h1>
-                <input name="email" type="email" placeholder="Email" />
+                <input name="username" type="text" placeholder="Tên đăng nhập" />
                 <input name="password" type="password" placeholder="Mật Khẩu" />
                 <a href="quenmatkhau.jsp">Quên mật khẩu?</a>
                 <button type="submit">Đăng nhập</button>
