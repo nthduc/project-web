@@ -16,11 +16,11 @@ public class UserBean implements Serializable {
     private String address;
     private String card;
     private WishListBean wishListBean;
-    private CartBean cart;
+    private CartItemBean cart;
     private OrderBean order;
 
     public UserBean(){}
-    public UserBean(String id, String email, String name, String password, int role, String gender, String phone, String address, Date dob, String card, WishListBean wishListBean, CartBean cart, OrderBean order){
+    public UserBean(String id, String email, String name, String password, int role, String gender, String phone, String address, Date dob, String card, WishListBean wishListBean, CartItemBean cart, OrderBean order){
         this.id = id;
         this.email = email;
         this.name = name;
@@ -90,7 +90,7 @@ public class UserBean implements Serializable {
         return phone;
     }
 
-    public CartBean getCart() {
+    public CartItemBean getCart() {
         return cart;
     }
 
@@ -122,7 +122,7 @@ public class UserBean implements Serializable {
         this.dob = dob;
     }
 
-    public void setCart(CartBean cart) {
+    public void setCart(CartItemBean cart) {
         this.cart = cart;
     }
 
