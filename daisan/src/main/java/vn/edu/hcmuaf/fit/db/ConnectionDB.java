@@ -44,7 +44,39 @@ public class ConnectionDB {
 
     }
 
-    public static void main(String[] args) {
+    public static void closeConnection() {
+        // Close the connection
+        try {
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ResultSet executeQuery(String sql) {
+        // Execute a SQL query and return the result set
+        try {
+            PreparedStatement statement = conn.prepareStatement(sql);
+            return statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static boolean isConnected() {
+        // Check the connection status
+        try {
+            return !conn.isClosed();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
         LocalDate date = java.time.LocalDate.now();
 
         System.out.println(date);
@@ -52,6 +84,12 @@ public class ConnectionDB {
         LocalDate date1 =  date.plusDays(8);
 
         System.out.println(Date.valueOf(date1));
+
+        connect();
+        // Kiểm tra đã kết nối chưa
+        System.out.println("Đã kết nối DB" + isConnected());
+
+        closeConnection();
 
     }
 }
