@@ -31,7 +31,7 @@ public class DeleteBlog extends HttpServlet {
         try {
             ConnectionDB.connect();
 
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("delete from blog where blogid= ?");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("delete from blog where blogid= ?");
             ps.setString(1,blodid);
             ps.executeUpdate();
             response.sendRedirect("ManageBlog");

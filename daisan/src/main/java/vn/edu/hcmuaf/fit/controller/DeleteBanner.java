@@ -33,7 +33,7 @@ public class DeleteBanner extends HttpServlet {
         try {
             ConnectionDB.connect();
 
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("delete from banner where imgURL= ?");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("delete from banner where imgURL= ?");
             ps.setString(1,link);
             ps.executeUpdate();
             response.sendRedirect("ManageBanner");

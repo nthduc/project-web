@@ -32,7 +32,7 @@ public class WishList extends HttpServlet {
             String addID = request.getParameter("addid");
             String removeID = request.getParameter("removeid");
             if (addID != null){
-                PreparedStatement ps = ConnectionDB.con.prepareStatement("select * from wishlist where userid=?");
+                PreparedStatement ps = ConnectionDB.conn.prepareStatement("select * from wishlist where userid=?");
                 ps.setInt(1,user.getUser_ID());
                 ResultSet rs = ps.executeQuery();
                 int count = 0;
@@ -43,21 +43,21 @@ public class WishList extends HttpServlet {
                     }
                 }
                 if (count == 0){
-                    PreparedStatement ps1 = ConnectionDB.con.prepareStatement("insert into wishlist (userid,productid) values (?,?)");
+                    PreparedStatement ps1 = ConnectionDB.conn.prepareStatement("insert into wishlist (userid,productid) values (?,?)");
                     ps.setInt(1,user.getUser_ID());
                     ps1.setString(2,addID);
                     ps1.executeUpdate();
                 }
             }
             if (removeID != null){
-                PreparedStatement ps = ConnectionDB.con.prepareStatement("delete from wishlist where userid=? and productid=?");
+                PreparedStatement ps = ConnectionDB.conn.prepareStatement("delete from wishlist where userid=? and productid=?");
                 ps.setInt(1,user.getUser_ID());
                 ps.setString(2,removeID);
                 ps.executeUpdate();
             }
 
 
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("select * from wishlist where userid=?");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("select * from wishlist where userid=?");
             ps.setInt(1,user.getUser_ID());
             ResultSet rs = ps.executeQuery();
             while (rs.next()){

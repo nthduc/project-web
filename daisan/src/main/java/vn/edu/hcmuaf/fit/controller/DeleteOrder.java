@@ -31,11 +31,11 @@ public class DeleteOrder extends HttpServlet {
         try {
             ConnectionDB.connect();
 
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("delete from `order` where orderid= ?");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("delete from `order` where orderid= ?");
             ps.setString(1,orderid);
             ps.executeUpdate();
 
-            PreparedStatement ps1 = ConnectionDB.con.prepareStatement("delete from `orderdetail` where orderid= ?");
+            PreparedStatement ps1 = ConnectionDB.conn.prepareStatement("delete from `orderdetail` where orderid= ?");
             ps1.setString(1,orderid);
             ps1.executeUpdate();
 

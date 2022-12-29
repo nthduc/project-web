@@ -25,7 +25,7 @@ public class UserService {
         try {
             ConnectionDB.connect();
             System.out.print("1");
-            PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
             System.out.print("2");
             ps.setString(1,username);
             System.out.print("3");
@@ -53,23 +53,26 @@ public class UserService {
        
         return user;
     }
-    public void themtaikhoan(String username, String email, String password){
-        String query = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-        UserBean user = null;
+    public void themtaikhoan(int role,String username, String email, String password){
+
             try {
+                role = 2;
                 ConnectionDB.connect();
+                String query = "INSERT INTO users (role_ID,username, email, password) VALUES (?, ?, ?,?)";
                 System.out.print("add successful 3");
-                PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
+                PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
                 System.out.print("add successful 2");
-                ps.setString(1,username);
-                ps.setString(2,email);
-                ps.setString(3,password);
+                ps.setInt(1,role);
+                ps.setString(2,username);
+                ps.setString(3,email);
+                ps.setString(4,password);
                 System.out.print("add successful 1");
                 ps.executeUpdate();
                 System.out.print("add successful");
 //
             }catch (Exception e) {
                 System.out.print(" Unsuccessful");
+                e.printStackTrace();
             }
     }
     public UserBean login(String username, String password){
@@ -77,7 +80,7 @@ public class UserService {
         UserBean user = null;
         try {
             ConnectionDB.connect();
-            PreparedStatement ps = ConnectionDB.con.prepareStatement(query);
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
             ps.setString(1,username);
             ps.setString(2,password);
             try (ResultSet rs = ps.executeQuery()) {
@@ -102,8 +105,8 @@ public class UserService {
     public  void listUser(){
         try {
             ConnectionDB.connect();
-            Statement st =  ConnectionDB.con.createStatement();
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("select * from users");
+            Statement st =  ConnectionDB.conn.createStatement();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("select * from users");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + "  " + rs.getInt(2)
@@ -117,7 +120,7 @@ public class UserService {
         String query = "insert into users values(?,?,?,?,?,?,?,?,?,?)";
         try {
             ConnectionDB.connect();
-            PreparedStatement ps = ConnectionDB.con.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
             System.out.print("1");
             ps.setInt(1,user.getUser_ID());
             ps.setInt(2,user.getRole_ID());
@@ -154,7 +157,7 @@ public class UserService {
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
-        us.themtaikhoan("tester","test02@gmail.com","123");
+        us.themtaikhoan(2,"tester","test02@gmail.com","123");
 ////   us.listUser();
 //        UserBean user = new UserBean(1,2,"nam","123","12345@gmail.com","0","0",null,"0","0");
 //        us.add(user);

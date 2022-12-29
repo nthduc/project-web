@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
         if (user == null){
             request.getRequestDispatcher("dangnhapdangky.jsp").forward(request,response);
         }else{
-            response.sendRedirect("home");
+            response.sendRedirect("home.jsp");
         }
 
     }
