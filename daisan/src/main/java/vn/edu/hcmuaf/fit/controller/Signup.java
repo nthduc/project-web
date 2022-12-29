@@ -33,6 +33,7 @@ public class Signup extends HttpServlet {
                 UserBean u = us.checkUser(username);
                 if (u== null){
                         us.themtaikhoan(username,email,password);
+
                         response.sendRedirect("home.jsp");
                 }else{
                     response.sendRedirect("dangnhapdangky.jsp");

@@ -21,14 +21,14 @@ import javax.servlet.http.HttpServletResponse;
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String username = request.getParameter("username1");
+        String password = request.getParameter("password1");
         UserService us = new UserService();
         UserBean user = us.login(username,password);
         if (user == null){
             request.getRequestDispatcher("dangnhapdangky.jsp").forward(request,response);
         }else{
-            request.getRequestDispatcher("home").forward(request,response);
+            response.sendRedirect("home");
         }
 
     }

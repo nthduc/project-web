@@ -4,18 +4,18 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class UserBean implements Serializable {
-        private int user_ID;
-        private int role_ID;
-        private String username;
-        private String password;
-        private String email;
-        private String fullname;
-        private String gender;
-        private Date dob;
-        private String phone;
-        private String address;
+    private int user_ID;
+    private int role_ID;
+    private String username;
+    private String password;
+    private String email;
+    private String fullname;
+    private String gender;
+    private Date dob;
+    private String phone;
+    private String address;
 
-    public UserBean(int anInt, int rsInt, String string, String rsString, String email, String fullname, String gender, java.sql.Date date, String phone, String address) {
+    public UserBean(int anInt, int rsInt, String username, String string, String rsString, String email, String fullname, String gender, String date, String phone, String address) {
     }
 
     public UserBean(int user_ID, int role_ID, String username, String password, String email, String fullname, String gender, Date dob, String phone, String address) {
@@ -109,5 +109,26 @@ public class UserBean implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "UserBean{" +
+                "user_ID=" + user_ID +
+                ", role_ID=" + role_ID +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", fullname='" + fullname + '\'' +
+                ", gender='" + gender + '\'' +
+                ", dob=" + dob +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        UserBean userBean = new UserBean(1,2,"nam","123","12345@gmail.com","0","0",null,"0","0");
+        System.out.print(userBean);
     }
 }

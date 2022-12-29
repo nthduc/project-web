@@ -434,8 +434,8 @@
         <div class="form-container sign-in-container">
             <form action="Login" method="post">
                 <h1>Đăng nhập</h1>
-                <input name="username" type="text" placeholder="Tên đăng nhập" />
-                <input name="password" type="password" placeholder="Mật Khẩu" />
+                <input name="username1" type="text" placeholder="Tên đăng nhập" />
+                <input name="password1" type="password" placeholder="Mật Khẩu" />
                 <a href="quenmatkhau.jsp">Quên mật khẩu?</a>
                 <button type="submit">Đăng nhập</button>
             </form>
