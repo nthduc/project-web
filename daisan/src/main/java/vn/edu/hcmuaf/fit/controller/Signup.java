@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Signup extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 response.setContentType("text/html;charset=UTF-8");
+                int role =2;
                 String username = request.getParameter("username");
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
@@ -32,7 +33,8 @@ public class Signup extends HttpServlet {
                 UserService us = new UserService();
                 UserBean u = us.checkUser(username);
                 if (u== null){
-                        us.themtaikhoan(username,email,password);
+                        us.themtaikhoan(role,username,email,password);
+
                         response.sendRedirect("home.jsp");
                 }else{
                     response.sendRedirect("dangnhapdangky.jsp");

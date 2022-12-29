@@ -35,15 +35,15 @@ public class AddProduct extends HttpServlet {
 
         try {
             ConnectionDB.connect();
-            PreparedStatement ps = ConnectionDB.con.prepareStatement(sql);
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(sql);
             PreparedStatement ps1;
 
             String head = request.getParameter("keyid");
             if (head.equals("pt")){
-                ps1 = ConnectionDB.con.prepareStatement("SELECT * FROM product WHERE id LIKE CONCAT(?,'%') AND !(id LIKE 'pte%') ORDER BY id DESC LIMIT 1 ");
+                ps1 = ConnectionDB.conn.prepareStatement("SELECT * FROM product WHERE id LIKE CONCAT(?,'%') AND !(id LIKE 'pte%') ORDER BY id DESC LIMIT 1 ");
                 ps1.setString(1,head);
             } else {
-                ps1 = ConnectionDB.con.prepareStatement("SELECT * FROM product WHERE id LIKE CONCAT(?,'%') ORDER BY id DESC LIMIT 1 ");
+                ps1 = ConnectionDB.conn.prepareStatement("SELECT * FROM product WHERE id LIKE CONCAT(?,'%') ORDER BY id DESC LIMIT 1 ");
                 ps1.setString(1,head);
             }
 

@@ -32,7 +32,7 @@ public class Detail extends HttpServlet {
 
         try {
             ConnectionDB.connect();
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("select * from product where id=?");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("select * from product where id=?");
             ps.setString(1,productID);
             ResultSet rs = ps.executeQuery();
             ProductBean product1;

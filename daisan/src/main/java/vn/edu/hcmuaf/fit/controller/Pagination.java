@@ -25,7 +25,7 @@ public class Pagination {
 //        FROM product WHERE id LIKE '" + head + "%'";
         countSQL = countSQL.substring(0,countSQL.length()-9);
         int total = 0;
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(countSQL);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(countSQL);
         System.out.println("countSQL: " + countSQL);
         ps.setString(1,head);
         ResultSet rs = ps.executeQuery();
@@ -47,7 +47,7 @@ public class Pagination {
         String countSQL = "SELECT count(*) FROM product";
 
         int total = 0;
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(countSQL);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(countSQL);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             total = Integer.parseInt(rs.getString(1));
@@ -71,7 +71,7 @@ public class Pagination {
 //		String tmp = "SELECT * FROM product WHERE id LIKE '" + head +"%' " + "LIMIT ?,?";
 
         int total = 0;
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(countSQL);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(countSQL);
         ps.setString(1,head);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
@@ -83,7 +83,7 @@ public class Pagination {
 
         System.out.println(total/maxItem + " pages" + " + " + total%maxItem + " item");
 
-        PreparedStatement ps1 = ConnectionDB.con.prepareStatement("SELECT * " + query);
+        PreparedStatement ps1 = ConnectionDB.conn.prepareStatement("SELECT * " + query);
         System.out.println("full sql: " + "SELECT * " + query);
         ps1.setString(1, head);
         ps1.setInt(3, maxItem);
@@ -110,7 +110,7 @@ public class Pagination {
 //		String tmp = "SELECT * FROM product WHERE id LIKE '" + head +"%' " + "LIMIT ?,?";
 
         int total = 0;
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(countSQL);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(countSQL);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             total = Integer.parseInt(rs.getString(1));
@@ -121,7 +121,7 @@ public class Pagination {
 
         System.out.println(total/maxItem + " pages" + " + " + total%maxItem + " item");
 
-        PreparedStatement ps1 = ConnectionDB.con.prepareStatement(query);
+        PreparedStatement ps1 = ConnectionDB.conn.prepareStatement(query);
 //        ps1.setString(1, head);
         ps1.setInt(2, maxItem);
         ps1.setInt(1, (page-1)*maxItem);
@@ -131,7 +131,7 @@ public class Pagination {
             ProductBean product = new ProductBean(rs1.getString(1),rs1.getString(2),rs1.getString(3)
                     ,rs1.getInt(4),rs1.getInt(5),rs1.getString(6),rs1.getInt(7)
                     ,rs1.getString(8),rs1.getString(9));
-            PreparedStatement ps2 = ConnectionDB.con.prepareStatement("select quantity from container where productid=?");
+            PreparedStatement ps2 = ConnectionDB.conn.prepareStatement("select quantity from container where productid=?");
             ps2.setString(1,rs1.getString(1));
             ResultSet rs2 = ps2.executeQuery();
 

@@ -36,7 +36,7 @@ public class AddBanner extends HttpServlet {
             String title2 = request.getParameter("title2");
             String imgURL = request.getParameter("image");
 
-            PreparedStatement ps = ConnectionDB.con.prepareStatement("insert into banner (id,title1,title2,imgURL) values ('banner01',?,?,?)");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement("insert into banner (id,title1,title2,imgURL) values ('banner01',?,?,?)");
             ps.setString(1,title1);
             ps.setString(2,title2);
             ps.setString(3,imgURL);

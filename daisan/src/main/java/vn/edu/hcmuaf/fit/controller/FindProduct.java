@@ -15,7 +15,7 @@ public class FindProduct {
         ConnectionDB.connect();
         ProductBean product = null;
         String sql = "select * from product where id='" + id + "'";
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(sql);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while (rs.next()){
             product = new ProductBean(rs.getString(1),rs.getString(2),rs.getString(3)
@@ -29,7 +29,7 @@ public class FindProduct {
         ConnectionDB.connect();
         ArrayList<ItemBean> list = new ArrayList<>();
         String sql = "select productid,quantity from cart where cartid='" + cartID + "'";
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(sql);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while (rs.next()){
             ItemBean item = new ItemBean();
@@ -49,7 +49,7 @@ public class FindProduct {
         ConnectionDB.connect();
         boolean status = false;
         String sql = "select * from cart";
-        PreparedStatement ps = ConnectionDB.con.prepareStatement(sql);
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()){
@@ -63,10 +63,10 @@ public class FindProduct {
             }
         }
         if (status == true){
-            PreparedStatement ps1 = ConnectionDB.con.prepareStatement("UPDATE cart set quantity="+item.getQuantity()+" WHERE cartid='"+cartid+"' AND productid='"+item.getId()+"'");
+            PreparedStatement ps1 = ConnectionDB.conn.prepareStatement("UPDATE cart set quantity="+item.getQuantity()+" WHERE cartid='"+cartid+"' AND productid='"+item.getId()+"'");
             ps1.executeUpdate();
         } else {
-            PreparedStatement ps1 = ConnectionDB.con.prepareStatement("insert into cart (cartid,productid,quantity) values (?,?,?)");
+            PreparedStatement ps1 = ConnectionDB.conn.prepareStatement("insert into cart (cartid,productid,quantity) values (?,?,?)");
             ps1.setString(1,cartid);
             ps1.setString(2,item.getId());
             ps1.setInt(3,item.getQuantity());
@@ -76,7 +76,7 @@ public class FindProduct {
 
     public static void remove(String cartid,String id) throws SQLException, ClassNotFoundException {
         ConnectionDB.connect();
-        PreparedStatement ps = ConnectionDB.con.prepareStatement("delete from cart where cartid=? and productid=?");
+        PreparedStatement ps = ConnectionDB.conn.prepareStatement("delete from cart where cartid=? and productid=?");
         ps.setString(1,cartid);
         ps.setString(2,id);
         ps.executeUpdate();
