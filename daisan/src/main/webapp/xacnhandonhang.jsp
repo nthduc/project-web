@@ -6,6 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fnt" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
 <html lang="en">
 <!-- CONFIRMATION -->
 
@@ -55,12 +59,32 @@
       <div class="header-top-inner">
         <div class="cnt-account">
           <ul class="list-unstyled">
-            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
-            </li>
-            <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-            <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-            <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-            <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+            <c:choose>
+                            <c:when test="${sessionScope.acc == null}">
+                                <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                                </li>
+                            </c:when>
+                            <c:when test="${sessionScope.acc != null}">
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                                </c:when>
+                                <c:otherwise>
+
+                                </c:otherwise>
+                                </c:choose>
+                                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                            <c:choose>
+                                <c:when test="${sessionScope.acc == null}">
+                                    <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                                </c:when>
+                                <c:when test="${sessionScope.acc != null}">
+                                    <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
+                                </c:when>
+                                <c:otherwise>
+
+                                </c:otherwise>
+                            </c:choose>
           </ul>
         </div>
         <!-- /.cnt-account -->
