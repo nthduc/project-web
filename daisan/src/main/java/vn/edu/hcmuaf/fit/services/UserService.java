@@ -19,6 +19,7 @@ public class UserService {
         }
         return instance;
     }
+    //Kiểm tra tài khoản có tồn tại hay không?
     public UserBean checkUser(String username){
         UserBean user = null;
         String query = "select * from users where username = ?";
@@ -116,43 +117,14 @@ public class UserService {
             e.printStackTrace();
         }
     }
-    public void add(UserBean user){
-        String query = "insert into users values(?,?,?,?,?,?,?,?,?,?)";
-        try {
-            ConnectionDB.connect();
-            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
-            System.out.print("1");
-            ps.setInt(1,user.getUser_ID());
-            ps.setInt(2,user.getRole_ID());
-            ps.setString(3,user.getUsername());
-            ps.setString(4,user.getPassword());
-            ps.setString(5, user.getEmail());
-            ps.setString(6, user.getFullname());
-            ps.setString(7, user.getGender());
-            ps.setDate(8, (Date) user.getDob());
-            ps.setString(9, user.getPhone());
-            ps.setString(10, user.getAddress());
-            System.out.print("2");
-            try (ResultSet rs = ps.executeQuery()) {
-                if (rs.next()) {
-                    int user_ID = rs.getInt(1);
-                    int user_Role = rs.getInt(2);
-                    String name = rs.getString(3);
-                    String email = rs.getString(4);
-                    String password1 = rs.getString(5);
-                    String fullname = rs.getString(6);
-                    String gender = rs.getString(7);
-                    Date dob = rs.getDate(8);
-                    String phone = rs.getString(9);
-                    String address = rs.getString(10);
-
-                    user = new UserBean(user_ID,user_Role,name,email,password1,fullname,gender,dob,phone,address);
-                    System.out.print( user);
-                }}
-
-        }catch (Exception e) {
-            System.out.print("4");
+    public boolean checkUsernameAndPass(String username, String pass){
+        if (username == null){
+            return false;
         }
+        if (pass == null){
+            return false;
+        }
+        return true;
     }
     public static void main(String[] args) {
         UserService us = new UserService();
