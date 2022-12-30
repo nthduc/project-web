@@ -1,10 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: ACER
-  Date: 7/12/2022
-  Time: 7:40 AM
+  User: Admin
+  Date: 12/21/2022
+  Time: 4:54 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 
@@ -16,7 +17,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
-    <title>Daisan | Hướng dẫn đặt hàng</title>
+    <title>Daisan | Đăng nhập</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -88,119 +89,118 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo" ;"> <a href="home.jsp"> <img src="assets/images/daisan.png" alt="logo"
-                                                                    style="height: 55px; margin-top: -10px" "> </a> </div>
-                <!-- /.logo -->
-                <!-- ============================================================= LOGO : END ============================================================= --> </div>
-            <!-- /.logo-holder -->
+                    <div class="logo"> <a href="home.jsp"> <img src="assets/images/daisan.png" alt="logo"
+                                                                style="height: 55px; margin-top: -10px"> </a> </div>
+                    <!-- /.logo -->
+                    <!-- ============================================================= LOGO : END ============================================================= --> </div>
+                <!-- /.logo-holder -->
 
-            <div class=" col-xs-12 col-sm-12 col-md-7 top-search-holder">
-                <!-- /.contact-row -->
-                <!-- ============================================================= SEARCH AREA ============================================================= -->
-                <div class="search-area">
-                    <form>
-                        <div class="control-group">
-                            <ul class="categories-filter animate-dropdown">
-                                <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"
-                                                         href="category.html">Danh mục<b class="caret"></b></a>
-                                    <ul class="dropdown-menu" role="menu">
+                <div class=" col-xs-12 col-sm-12 col-md-7 top-search-holder">
+                    <!-- /.contact-row -->
+                    <!-- ============================================================= SEARCH AREA ============================================================= -->
+                    <div class="search-area">
+                        <form>
+                            <div class="control-group">
+                                <ul class="categories-filter animate-dropdown">
+                                    <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"
+                                                             href="category.html">Danh mục<b class="caret"></b></a>
+                                        <ul class="dropdown-menu" role="menu">
 
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="gachoplat.jsp">- Gạch ốp lát</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="daoplat.jsp">- Đá ốp lát</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="son.jsp">- Sơn nội thất & ngoại thất</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="sango.jsp">- Sàn gỗ và phụ kiện</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="tamoptuong.jsp">- Tấm ốp tường</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vatlieutho.jsp">- Vật liệu thô</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vattunganhda.jsp">- Vật tư ngành đá</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vatlieumai.jsp">- Vật liệu mài & phụ kiện</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="cuaso.jsp">- Cửa & cửa sổ, bản lề & phụ
-                                            kiện</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="nep.jsp">- Nẹp</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <input class="search-field" placeholder="Bạn muốn tìm gì đó...">
-                            <a class="search-button" href="#"></a>
-                        </div>
-                    </form>
-                </div>
-                <!-- /.search-area -->
-                <!-- ============================================================= SEARCH AREA : END ============================================================= -->
-            </div>
-            <!-- /.top-search-holder -->
-
-            <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
-                <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
-
-                <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
-                                                        data-toggle="dropdown">
-                    <div class="items-cart-inner">
-                        <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                        <div class="basket-item-count"><span class="count">1</span></div>
-                        <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span
-                                class="total-price"> <span class="sign">420.850</span><span
-                                class="value">đ</span> </span> </div>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="gachoplat.jsp">- Gạch ốp lát</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="daoplat.jsp">- Đá ốp lát</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="son.jsp">- Sơn nội thất & ngoại thất</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="sango.jsp">- Sàn gỗ và phụ kiện</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="tamoptuong.jsp">- Tấm ốp tường</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="vatlieutho.jsp">- Vật liệu thô</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="vattunganhda.jsp">- Vật tư ngành đá</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="vatlieumai.jsp">- Vật liệu mài & phụ kiện</a>
+                                            </li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="cuaso.jsp">- Cửa & cửa sổ, bản lề & phụ
+                                                kiện</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                       href="nep.jsp">- Nẹp</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <input class="search-field" placeholder="Bạn muốn tìm gì đó...">
+                                <a class="search-button" href="#"></a>
+                            </div>
+                        </form>
                     </div>
-                </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="cart-item product-summary">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p1.jpg"
-                                                alt=""></a>
+                    <!-- /.search-area -->
+                    <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                </div>
+                <!-- /.top-search-holder -->
+
+                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+                    <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
+                                                            data-toggle="dropdown">
+                        <div class="items-cart-inner">
+                            <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
+                            <div class="basket-item-count"><span class="count">1</span></div>
+                            <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span
+                                    class="total-price"> <span class="sign">420.850</span><span
+                                    class="value">đ</span> </span> </div>
+                        </div>
+                    </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="cart-item product-summary">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="image"> <a href="chitietsanpham.jsp"><img
+                                                    src="assets/images/products/gachoplat/p1.jpg"
+                                                    alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-7">
+                                            <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
+                                                600*600mm VOC-H01</a>
+                                            </h3>
+                                            <div class="price">420.850đ</div>
+                                        </div>
+                                        <div class="col-xs-1 action"> <a href="#"><i
+                                                class="fa fa-trash"></i></a>
                                         </div>
                                     </div>
-                                    <div class="col-xs-7">
-                                        <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
-                                            600*600mm VOC-H01</a>
-                                        </h3>
-                                        <div class="price">420.850đ</div>
-                                    </div>
-                                    <div class="col-xs-1 action"> <a href="#"><i
-                                            class="fa fa-trash"></i></a>
-                                    </div>
                                 </div>
-                            </div>
-                            <!-- /.cart-item -->
-                            <div class="clearfix"></div>
-                            <hr>
-                            <div class="clearfix cart-total">
-                                <div class="pull-right"> <span class="text">Tổng Cộng :</span><span
-                                        class='price'>420.850đ</span> </div>
+                                <!-- /.cart-item -->
                                 <div class="clearfix"></div>
-                                <a href="thanhtoan.jsp"
-                                   class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
-                            </div>
-                            <!-- /.cart-total-->
+                                <hr>
+                                <div class="clearfix cart-total">
+                                    <div class="pull-right"> <span class="text">Tổng Cộng :</span><span
+                                            class='price'>420.850đ</span> </div>
+                                    <div class="clearfix"></div>
+                                    <a href="thanhtoan.jsp"
+                                       class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
+                                </div>
+                                <!-- /.cart-total-->
 
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-menu-->
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-menu-->
+                    </div>
+                    <!-- /.dropdown-cart -->
+
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
-                <!-- /.dropdown-cart -->
-
-                <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+                <!-- /.top-cart-row -->
             </div>
-            <!-- /.top-cart-row -->
-        </div>
-        <!-- /.row -->
+            <!-- /.row -->
 
-    </div>
-    <!-- /.container -->
+        </div>
+        <!-- /.container -->
 
     </div>
     <!-- /.main-header -->
@@ -419,42 +419,261 @@
     <!-- ============================================== NAVBAR : END ============================================== -->
 
 </header>
-<div style="padding: 25px 120px">
-    <div style="padding: 10px 180px;" data-content-type="row" data-appearance="contained" data-element="main">
-        <div class="container-680" data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}"
-             data-element="inner"
-             style="justify-content: flex-start; display: flex; flex-direction: column; background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: scroll; border-style: none; border-width: 1px; border-radius: 0px; margin: 0px 0px 10px; padding: 10px;">
-            <div data-content-type="dynamic_block" data-appearance="default" data-element="main"
-                 style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;">
-
-            </div>
-            <h1 class="title-bold"
-                style="text-align: center; border-style: none; border-width: 1px; border-radius: 0px;">HƯỚNG DẪN ĐẶT
-                HÀNG</h1>
-            <div data-content-type="text" data-appearance="default" data-element="main"
-                 style="border-style: none; border-width: 1px; border-radius: 0px; margin: 0px; padding: 0px;">
-                <p>Bạn có thể mua sắm dễ dàng tại trang <a href="https://daisan.vn/">www.daisan.vn</a> với các bước
-                    đặt hàng đơn giản như sau:</p>
-                <p>1. Chọn sản phẩm</p>
-                <p>2. Thêm vào giỏ/ Mua hàng</p>
-                <p>3. Xem giỏ hàng</p>
-                <p>4. Nhập mã khuyến mãi (nếu có)</p>
-                <p>5. Thanh toán</p>
-                <p>6. Tick chọn vào ô&nbsp;Thông tin xuất hoá đơn điện tử (nếu cần)</p>
-                <p>7. Đăng nhập (hoặc Đăng ký nếu chưa có tài khoản)</p>
-                <p>8. Đặt hàng</p>
-                <p>Nhân viên webshop sẽ liên hệ bạn để giao hàng miễn phí trên toàn quốc trong vòng 3-5 ngày cho mọi
-                    giá trị đơn hàng!</p>
-                <p>Daisan cũng sẵn sàng phục vụ bạn qua các kênh sau:</p>
-                <p>• Cửa sổ Trò chuyện trực tuyến trên trang daisan.vn</p>
-                <p>• Email: webshop@daisan.vn</p>
-                <p>• Trang <a title="Facebook DAISAN Vật Liệu" href="https://www.facebook.com/daisanvn/"
-                              target="_blank" rel="noopener">Facebook DAISAN Vật liệu</a></p>
-                <p>• Hotline: <strong>1900 63 64 76</strong> (từ 8h - 21h)</p>
+<div class="signup">
+    <div class="containerForm" id="containerForm">
+<%--        <div class="form-container sign-up-container">--%>
+<%--            <form action="Signup" method="post">--%>
+<%--                <h1>Tạo tài khoản</h1>--%>
+<%--                <input id="username"  name="username" type="text" placeholder="Tên đăng nhập" />--%>
+<%--                <input id="email" name="email" type="email" placeholder="Email" />--%>
+<%--                <input id="password"  name="password" type="password" placeholder="Mật khẩu" />--%>
+<%--                <input id="re-password"  name="re_password" type="password" placeholder="Nhập lại mật khẩu" />--%>
+<%--                <button type="submit">Đăng Ký</button>--%>
+<%--            </form>--%>
+<%--        </div>--%>
+        <div class="form-container sign-in-container">
+            <form action="Login" method="post">
+                <h1>Đăng nhập</h1>
+                <p class="text-danger"> ${mess} </p>
+                <input name="username" type="text" placeholder="Tên đăng nhập" />
+                <input name="password" type="password" placeholder="Mật Khẩu" />
+                <a href="quenmatkhau.jsp">Quên mật khẩu?</a>
+                <button type="submit">Đăng nhập</button>
+                <p> Khách hàng mới? <a href="dangky.jsp" style=" color: rgb(21,126,210)">đăng ký ngay</a> </p>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+<%--                <div class="overlay-panel overlay-left">--%>
+<%--                    <h1>Chào mừng trở lại!</h1>--%>
+<%--                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>--%>
+<%--                    <button class="ghost" id="signIn">Đăng nhập</button>--%>
+<%--                </div>--%>
+                <div class="overlay-panel overlay-right">
+                  <h1>Chào mừng trở lại!</h1>
+                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+               </div>
             </div>
         </div>
     </div>
+
 </div>
+
+<style>
+    .signup {
+        background: #f6f5f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Montserrat', sans-serif;
+        height: 600px;
+        width: 100%;
+    }
+
+    .containerForm h1 {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .containerForm p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+    }
+
+    .containerForm a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+
+    .containerForm button {
+        border-radius: 20px;
+        border: 1px solid #FF4B2B;
+        background-color: #FF4B2B;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+    }
+
+    .containerForm button:active {
+        transform: scale(0.95);
+    }
+
+    .containerForm button:focus {
+        outline: none;
+    }
+
+    .containerForm button.ghost {
+        background-color: transparent;
+        border-color: #FFFFFF;
+    }
+
+    .containerForm form {
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px;
+        height: 100%;
+        text-align: center;
+    }
+
+    .containerForm input {
+        background-color: rgb(218, 216, 216);
+        border-radius: 20px;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    .containerForm {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 768px;
+        max-width: 100%;
+        min-height: 480px;
+    }
+
+    .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .sign-in-container {
+        left: 0;
+        width: 50%;
+        z-index: 2;
+    }
+
+    .containerForm.right-panel-active .sign-in-container {
+        transform: translateX(100%);
+    }
+
+    .sign-up-container {
+        left: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .containerForm.right-panel-active .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: show 0.6s;
+    }
+
+    @keyframes show {
+
+        0%,
+        49.99% {
+            opacity: 0;
+            z-index: 1;
+        }
+
+        50%,
+        100% {
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+
+    .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out;
+        z-index: 100;
+    }
+
+    .containerForm.right-panel-active .overlay-container {
+        transform: translateX(-100%);
+    }
+
+    .overlay {
+        background: #157ed2;
+        background: -webkit-linear-gradient(to right, #77aad3, #157ed2);
+        background: linear-gradient(to right, #77aad3, #157ed2);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        color: #FFFFFF;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .containerForm.right-panel-active .overlay {
+        transform: translateX(50%);
+    }
+
+    .overlay-panel {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    .overlay-left {
+        transform: translateX(-0%);
+    }
+
+    .container.right-panel-active .overlay-left {
+        transform: translateX(0);
+    }
+
+    .overlay-right {
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .container.right-panel-active .overlay-right {
+        transform: translateX(20%);
+    }
+</style>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('containerForm');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add('right-panel-active');
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove('right-panel-active');
+    });
+</script>
 <footer id="footer" class="footer color-bg">
     <div class="footer-bottom">
         <div class="container">
@@ -479,7 +698,6 @@
                                         class="fa fa-mobile fa-stack-1x fa-inverse"></i> </span> </div>
                                 <div class="media-body">
                                     <p>+(84)962351043<br>
-                                    </p>
                                 </div>
                             </li>
                             <li class="media">
@@ -505,6 +723,7 @@
                             <li class="first"><a href="lienhe.jsp" title="Contact">Liên hệ đến Daisan</a></li>
                             <li><a href="huongdandathang.jsp" title="Order">Hướng dẫn đặt hàng</a></li>
                             <li><a href="cauhoithuonggap.jsp" title="FAQ">Câu hỏi thường gặp</a></li>
+                            <li><a href="huongdantaotaikhoan.html" title="Account">Hướng dẫn tạo tài khoản</a></li>
                             <li class="last"><a href="chinhsachvadieukhoan.jsp" title="Hỗ trợ">Chính sách và
                                 quy định chung</a></li>
                         </ul>
@@ -550,45 +769,36 @@
                             <!-- <li><a href="#" title="Investor Relations">Investor Relations</a></li> -->
                             <li class=" last"><a href="lienhe.jsp" title="Suppliers">Liên hệ</a></li>
                         </ul>
-
                     </div>
-
                     <!-- /.module-body -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer-choose">
-        <div class="container-fluid">
-            <div class="footer-info p-3 p-md-0">
-                <div class="row row-sm justify-content-center">
-
-                    <div class="col-xl-4">
-                        <p class="text-b mt-3 mt-md-0">© 2009 DAISAN.,JSC</p>
-                        <p class="mb-2">Công Ty Cổ phần Đại Sàn. GPĐKKD: 0103884103 do sở KH &amp; ĐT TP Hà Nội cấp
-                            lần đầu ngày 29/06/2009.</p>
-                        <p class="mb-3">Trụ sở chính: 88 Láng Hạ, P. Láng Hạ, Q. Đống Đa, TP Hà Nội.</p>
-                        <p>
-                            <a href="http://online.gov.vn/Home/WebDetails/54203">
-                                <img src="assets/images/tb-bct.png" height="50">
-                            </a>
-                            <a href="http://online.gov.vn/Home/WebDetails/54203">
-                                <img src="assets/images/dk-bct.png" height="50">
-                            </a>
-                        </p>
-                    </div>
-                    <div class="col-xl-4">
-                        <p class="text-b">MIỀN BẮC</p>
-                        <p>Showroom: Số 40 Tố Hữu, Nhân Chính, Thanh Xuân, Hà Nội</p>
-                        <p>VPGD: Tầng 4, Số 40 Tố Hữu, Nhân Chính, Thanh Xuân, Hà Nội</p>
-                        <p>Email: <a href="mailto:info@daisan.vn">info@daisan.vn</a></p>
-                        <p class="text-b mt-3">MIỀN NAM</p>
-                        <p>VPGD: 57/1c, Khu phố 1, P. An Phú Đông, Q.12</p>
-                        <a class="hide">Điện thoại: 1800 6464 98</a> Email: <a
-                            href="mailto:info@daisan.vn">info@daisan.vn</a>
-                    </div>
-                </div>
-
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-padding social">
+                <ul class="link">
+                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="http://www.facebook.com"
+                                                title="Facebook"></a></li>
+                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="http://www.twitter.com"
+                                                title="Twitter"></a></li>
+                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="http://www.google.com"
+                                                        title="GooglePlus"></a></li>
+                    <li class="rss pull-left"><a target="_blank" rel="nofollow" href="https://rss.com/"
+                                                 title="RSS"></a></li>
+                    <li class="pinterest pull-left"><a target="_blank" rel="nofollow"
+                                                       href="https://www.pinterest.com" title="PInterest"></a></li>
+                    <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a>
+                    </li>
+                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="https://www.youtube.com/"
+                                                     title="Youtube"></a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="assets/images/tb-bct.png" width="99px" height="37.5px" style="float: right" />
+                <img src="assets/images/dk-bct.png" width="99px" height="37.5px"
+                     style="margin-right: 20px;float: right" />
             </div>
         </div>
     </div>
@@ -609,3 +819,4 @@
 </body>
 
 </html>
+

@@ -21,18 +21,29 @@ import javax.servlet.http.HttpServletResponse;
 public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("username1");
-        String password = request.getParameter("password1");
-        UserService us = new UserService();
-        UserBean user = us.login(username,password);
-        if (user == null){
-            request.getRequestDispatcher("dangnhapdangky.jsp").forward(request,response);
-        }else{
-            response.sendRedirect("home.jsp");
-        }
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+
+//        if (username.equals(null)) {
+//            request.setAttribute("mess", "Nhập thiếu tên đăng nhập hoặc mật khẩu");
+//            request.getRequestDispatcher("dangnhap.jsp").forward(request, response);
+//        } else {
+            UserService us = new UserService();
+            UserBean user = us.login(username, password);
+            if (user == null) {
+                request.setAttribute("mess", "Nhập sai tên đăng nhập hoặc mật khẩu");
+
+                request.getRequestDispatcher("dangnhap.jsp").forward(request, response);
+            } else {
+                response.sendRedirect("home.jsp");
+            }
+
+
+
+
 
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

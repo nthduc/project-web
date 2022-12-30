@@ -57,7 +57,7 @@
                         <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
                         <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                         <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <li><a href="dangnhapdangky.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                        <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                     </ul>
                 </div>
                 <!-- /.cnt-account -->
@@ -421,36 +421,36 @@
 </header>
 <div class="signup">
     <div class="containerForm" id="containerForm">
-        <div class="form-container sign-up-container">
-            <form action="Signup" method="post">
+<%--        <div class="form-container sign-up-container">--%>
+<%--            <form action="Signup" method="post">--%>
+<%--                <h1>Tạo tài khoản</h1>--%>
+<%--                <input id="username"  name="username" type="text" placeholder="Tên đăng nhập" />--%>
+<%--                <input id="email" name="email" type="email" placeholder="Email" />--%>
+<%--                <input id="password"  name="password" type="password" placeholder="Mật khẩu" />--%>
+<%--                <input id="re-password"  name="re_password" type="password" placeholder="Nhập lại mật khẩu" />--%>
+<%--                <button type="submit">Đăng Ký</button>--%>
+<%--            </form>--%>
+<%--        </div>--%>
+       <div class="form-container sign-in-container">
+           <form action="Signup" method="post">
                 <h1>Tạo tài khoản</h1>
+               <p class="text-danger"> ${mess} </p>
                 <input id="username"  name="username" type="text" placeholder="Tên đăng nhập" />
                 <input id="email" name="email" type="email" placeholder="Email" />
                 <input id="password"  name="password" type="password" placeholder="Mật khẩu" />
                 <input id="re-password"  name="re_password" type="password" placeholder="Nhập lại mật khẩu" />
                 <button type="submit">Đăng Ký</button>
             </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="Login" method="post">
-                <h1>Đăng nhập</h1>
-                <input name="username1" type="text" placeholder="Tên đăng nhập" />
-                <input name="password1" type="password" placeholder="Mật Khẩu" />
-                <a href="quenmatkhau.jsp">Quên mật khẩu?</a>
-                <button type="submit">Đăng nhập</button>
-            </form>
-        </div>
+      </div>
         <div class="overlay-container">
             <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Chào mừng trở lại!</h1>
-                    <p>Để giữ kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
-                    <button class="ghost" id="signIn">Đăng nhập</button>
-                </div>
+<%--                <div class="overlay-panel overlay-left">--%>
+<%--                    <h1>Xin chào bạn!</h1>&ndash;%&gt;--%>
+<%--                    <p>Nhập thông tin của bạn và bắt đầu trải nghiệm với chúng tôi.</p>--%>
+<%--                </div>--%>
                 <div class="overlay-panel overlay-right">
                     <h1>Xin chào bạn!</h1>
                     <p>Nhập thông tin của bạn và bắt đầu trải nghiệm với chúng tôi.</p>
-                    <button class="ghost" id="signUp">Đăng ký</button>
                 </div>
             </div>
         </div>

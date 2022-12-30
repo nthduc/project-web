@@ -28,7 +28,8 @@ public class Signup extends HttpServlet {
                 String password = request.getParameter("password");
                 String repass = request.getParameter("re_password");
             if (!password.equals(repass)){
-                response.sendRedirect("dangnhapdangky.jsp");
+                request.setAttribute("mess","Mật khẩu không trùng khớp");
+                request.getRequestDispatcher("dangky.jsp").forward(request,response);
             }else{
                 UserService us = new UserService();
                 UserBean u = us.checkUser(username);
@@ -37,7 +38,8 @@ public class Signup extends HttpServlet {
 
                         response.sendRedirect("home.jsp");
                 }else{
-                    response.sendRedirect("dangnhapdangky.jsp");
+                    request.setAttribute("mess","Tài khoản đã tồn tại");
+                    request.getRequestDispatcher("dangky.jsp").forward(request,response);
                 }
             }
     }
