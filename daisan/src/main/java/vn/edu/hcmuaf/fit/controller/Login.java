@@ -9,12 +9,13 @@ import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Xử lí phần đăng nhập
+ * Xử lí phần đăng nhập - Session phân quyền
  *
  * @author Bui Anh Tuan
- * @version 1.0
+ * @version 1.0,2.0
  * @since 2022-12-25
  */
 @WebServlet(name = "Login",urlPatterns = "/Login")
@@ -36,6 +37,7 @@ public class Login extends HttpServlet {
 
                 request.getRequestDispatcher("dangnhap.jsp").forward(request, response);
             } else {
+
                 response.sendRedirect("home.jsp");
             }
 
