@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * Xử lí phần đăng xuất
  *
- * @author Nguyen Thai Duc
+ * @author Bùi Anh Tuấn
  * @version 1.0
  * @since 2022-12-11
  */
@@ -23,9 +23,7 @@ public class Logout extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-
-        session.removeAttribute("user");
-        session.removeAttribute("cart");
+        session.removeAttribute("acc");
         response.sendRedirect("home.jsp");
     }
 
