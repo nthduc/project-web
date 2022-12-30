@@ -73,7 +73,7 @@
                                     <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                                 </c:when>
                                 <c:when test="${sessionScope.acc != null}">
-                                    <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
+                                    <li><a href="/Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
                                 </c:when>
                                 <c:otherwise>
 
