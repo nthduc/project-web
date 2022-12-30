@@ -53,43 +53,33 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                    <c:choose>
-                        <c:when test="${sessionScope.user == null}">
-                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
-                        </li>
-                        </c:when>
-                        <c:when test="${sessionScope.user != null}">
-                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                            <c:choose>
+                            <c:when test="${sessionScope.acc == null}">
+                                <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                                </li>
                             </c:when>
-                            <c:otherwise>
+                            <c:when test="${sessionScope.acc != null}">
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                                </c:when>
+                                <c:otherwise>
 
-                            </c:otherwise>
-                    </c:choose>
+                                </c:otherwise>
+                                </c:choose>
+                                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                            <c:choose>
+                                <c:when test="${sessionScope.acc == null}">
+                                    <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
+                                </c:when>
+                                <c:when test="${sessionScope.acc != null}">
+                                    <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
+                                </c:when>
+                                <c:otherwise>
 
-                    <c:choose>
-                        <c:when test="${sessionScope.user == null}">
-                        <li><a href="dangnhap.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                        </c:when>
-                        <c:when test="${sessionScope.user != null}">
-                            <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                        </c:when>
-                        <c:otherwise>
+                                </c:otherwise>
+                            </c:choose>
 
-                        </c:otherwise>
-                        </c:choose>
-                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                        <c:choose>
-                        <c:when test="${sessionScope.user == null}">
-                        <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
-                        </c:when>
-                            <c:when test="${sessionScope.user != null}">
-                                <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
-                            </c:when>
-                            <c:otherwise>
-
-                            </c:otherwise>
-                        </c:choose>
                     </ul>
                 </div>
                 <!-- /.cnt-account -->
