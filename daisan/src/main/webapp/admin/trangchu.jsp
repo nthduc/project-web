@@ -459,7 +459,7 @@
               </div>
               <h4 class="header-title">Báo cáo thu nhập</h4>
               <p class="text-muted">Dữ liệu tính từ 1/10/2022 - 31/10/2022 </p>
-              <h2 class="mb-4">987.654.321<span class=" text-primary">vnđ</span></h2>
+              <h2 class="mb-4">${sessionScope.totalAdmin}<span class=" text-primary">vnđ</span></h2>
 
               <div class="row mb-4">
                 <div class="col-6">
