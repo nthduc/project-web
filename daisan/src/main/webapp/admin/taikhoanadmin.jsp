@@ -345,19 +345,19 @@
               <div class="text-left mt-3">
                 <h4 class="font-13 text-uppercase">Giới thiệu :</h4>
                 <p class="text-muted font-13 mb-3">
-                  Chào mình là Đức ^_^
+                  Chào mình là ${sessionScope.useradmin.username} ^_^
                 </p>
                 <p class="text-muted mb-2 font-13"><strong>Họ tên :</strong> <span
-                        class="ml-2">Nguyễn Thái Đứcc</span></p>
+                        class="ml-2">${sessionScope.useradmin.fullname}</span></p>
 
                 <p class="text-muted mb-2 font-13"><strong>Số điện thoại :</strong><span
-                        class="ml-2">0962351043</span></p>
+                        class="ml-2">${sessionScope.useradmin.phone}</span></p>
 
                 <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span
-                        class="ml-2 ">nguyenthaiduc0212@gmail.com</span></p>
+                        class="ml-2 ">${sessionScope.useradmin.email}</span></p>
 
                 <p class="text-muted mb-1 font-13"><strong>Địa chỉ :</strong> <span
-                        class="ml-2">Việt Nam</span></p>
+                        class="ml-2">${sessionScope.useradmin.address}</span></p>
               </div>
 
               <ul class="social-list list-inline mt-3 mb-0">
