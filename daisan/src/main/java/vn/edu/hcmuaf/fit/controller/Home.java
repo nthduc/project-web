@@ -23,15 +23,15 @@ public class Home extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String sql = "SELECT * FROM product LIMIT 55,18";
-        String sql1 = "SELECT * FROM product LIMIT 1,6";
-        String sql2 = "SELECT * FROM product LIMIT 36,6";
-        String sql3 = "SELECT * FROM product LIMIT 98,5";
-        String sql4 = "SELECT * FROM product LIMIT 10,6";
-        String sql5 = "SELECT * FROM product LIMIT 30,8";
-        String sql6 = "SELECT * FROM product LIMIT 1,9";
-        String sql7 = "SELECT * FROM product LIMIT 4,3";
-        String sql8 = "SELECT * FROM product LIMIT 7,3";
+        String sql = "SELECT * FROM products LIMIT 55,18";
+        String sql1 = "SELECT * FROM products LIMIT 1,6";
+        String sql2 = "SELECT * FROM products LIMIT 36,6";
+        String sql3 = "SELECT * FROM products LIMIT 98,5";
+        String sql4 = "SELECT * FROM products LIMIT 10,6";
+        String sql5 = "SELECT * FROM products LIMIT 30,8";
+        String sql6 = "SELECT * FROM products LIMIT 1,9";
+        String sql7 = "SELECT * FROM products LIMIT 4,3";
+        String sql8 = "SELECT * FROM products LIMIT 7,3";
         ArrayList<ProductBean> listProducts = new ArrayList<>();
         ArrayList<ProductBean> listProducts1 = new ArrayList<>();
         ArrayList<ProductBean> listProducts2 = new ArrayList<>();
@@ -108,7 +108,7 @@ public class Home extends HttpServlet {
 
             ArrayList<BannerBean> listBanner = new ArrayList<>();
 
-            PreparedStatement ps9 = ConnectionDB.conn.prepareStatement("select * from banner where id = ?");
+            PreparedStatement ps9 = ConnectionDB.conn.prepareStatement("select * from banners where id = ?");
             ps9.setString(1,"banner01");
             ResultSet rs9 = ps9.executeQuery();
 
