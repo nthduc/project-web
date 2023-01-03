@@ -887,26 +887,30 @@
 
                 <div id="hero">
                     <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
-                        <div class="item" style="background-image: url(assets/images/sliders/slider1.jpg);">
+<c:forEach items="${sessionScope.listBanner}" var="item">
+                        <div class="item" style="background-image: url(${item.img_URL});">
                             <div class="container-fluid">
                                 <div class="caption bg-color vertical-center text-left">
-
+                                    <div class="slider-header fadeInDown-1">${item.title}</div>
+                                    <div class="big-text fadeInDown-1"> <span class="highlight">${item.content}</span> </div>
+                                    <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Mua Ngay</a> </div>
                                 </div>
                                 <!-- /.caption -->
                             </div>
                             <!-- /.container-fluid -->
                         </div>
+</c:forEach>
                         <!-- /.item -->
-                        <div class="item" style="background-image: url(assets/images/sliders/slider2.jpg);">
-                            <div class="container-fluid">
-                                <div class="caption bg-color vertical-center text-left">
+<%--                        <div class="item" style="background-image: url(assets/images/sliders/slider2.jpg);">--%>
+<%--                            <div class="container-fluid">--%>
+<%--                                <div class="caption bg-color vertical-center text-left">--%>
 
-                                </div>
-                                <!-- /.caption -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </div>
-                        <!-- /.item -->
+<%--                                </div>--%>
+<%--                                <!-- /.caption -->--%>
+<%--                            </div>--%>
+<%--                            <!-- /.container-fluid -->--%>
+<%--                        </div>--%>
+<%--                        <!-- /.item -->--%>
 
 
 

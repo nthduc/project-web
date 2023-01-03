@@ -3,26 +3,30 @@ package vn.edu.hcmuaf.fit.bean;
 import java.io.Serializable;
 
 public class BannerBean implements Serializable {
-    private int id;
+
+
+    private int banner_ID;
     private String title;
     private String content;
-    private String imgURL;
+    private String img_URL;
 
-    public BannerBean() {};
 
-    public BannerBean(int id, String title, String content, String imgURL) {
-        this.id = id;
+    public BannerBean() {
+    }
+
+    public BannerBean(int banner_ID, String title, String content, String img_URL) {
+        this.banner_ID = banner_ID;
         this.title = title;
         this.content = content;
-        this.imgURL = imgURL;
+        this.img_URL = img_URL;
     }
 
-    public int getId() {
-        return id;
+    public int getBanner_ID() {
+        return banner_ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBanner_ID(int banner_ID) {
+        this.banner_ID = banner_ID;
     }
 
     public String getTitle() {
@@ -41,21 +45,22 @@ public class BannerBean implements Serializable {
         this.content = content;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public String getImg_URL() {
+        return img_URL;
     }
 
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
+    public void setImg_URL(String img_URL) {
+        this.img_URL = img_URL;
     }
 
     @Override
     public String toString() {
         return "BannerBean{" +
-                "id=" + id +
+                "banner_ID=" + banner_ID +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
-                ", imgURL='" + imgURL + '\'' +
+                ", img_URL='" + img_URL + '\'' +
                 '}';
     }
 }
+
