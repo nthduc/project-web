@@ -3,49 +3,50 @@ package vn.edu.hcmuaf.fit.bean;
 import java.io.Serializable;
 
 public class BannerBean implements Serializable {
-    private String id;
-    private String title1;
-    private String title2;
-    private String imgURL;
+    private int banner_ID;
+    private String title;
+    private String content;
+    private String img_URL;
 
-    public BannerBean() {};
-
-    public BannerBean(String id, String title1, String title2, String imgURL) {
-        this.id = id;
-        this.title1 = title1;
-        this.title2 = title2;
-        this.imgURL = imgURL;
+    public BannerBean() {
     }
 
-    public String getId() {
-        return id;
+    public BannerBean(int banner_ID, String title, String content, String img_URL) {
+        this.banner_ID = banner_ID;
+        this.title = title;
+        this.content = content;
+        this.img_URL = img_URL;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public int getBanner_ID() {
+        return banner_ID;
     }
 
-    public String getTitle1() {
-        return title1;
+    public void setBanner_ID(int banner_ID) {
+        this.banner_ID = banner_ID;
     }
 
-    public void setTitle1(String title1) {
-        this.title1 = title1;
+    public String getTitle() {
+        return title;
     }
 
-    public String getTitle2() {
-        return title2;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setTitle2(String title2) {
-        this.title2 = title2;
+    public String getContent() {
+        return content;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
+    public String getImg_URL() {
+        return img_URL;
+    }
+
+    public void setImg_URL(String img_URL) {
+        this.img_URL = img_URL;
     }
 }

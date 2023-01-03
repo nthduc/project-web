@@ -30,7 +30,7 @@ public class ManageBanner extends HttpServlet {
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
-                BannerBean banner = new BannerBean(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4));
+                BannerBean banner = new BannerBean(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4));
                 listBanner.add(banner);
             }
             session.setAttribute("bannerList",listBanner);

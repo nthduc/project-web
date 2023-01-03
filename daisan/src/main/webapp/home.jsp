@@ -1143,11 +1143,11 @@
                 <div id="hero">
                     <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 <c:forEach items="${sessionScope.listBanner}" var="item">
-                        <div class="item" style="background-image: url(${item.imgURL});">
+                        <div class="item" style="background-image: url(${item.img_URL});">
                             <div class="container-fluid">
                                 <div class="caption bg-color vertical-center text-left">
-                                    <div class="slider-header fadeInDown-1">${item.title1}</div>
-                                    <div class="big-text fadeInDown-1"> <span class="highlight">${item.title2}</span> </div>
+                                    <div class="slider-header fadeInDown-1">${item.title}</div>
+                                    <div class="big-text fadeInDown-1"> <span class="highlight">${item.content}</span> </div>
                                     <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Mua Ngay</a> </div>
                                 </div>
                                 <!-- /.caption -->
