@@ -108,12 +108,12 @@ public class Home extends HttpServlet {
 
             ArrayList<BannerBean> listBanner = new ArrayList<>();
 
-            PreparedStatement ps9 = ConnectionDB.conn.prepareStatement("select * from banners where id = ?");
+            PreparedStatement ps9 = ConnectionDB.conn.prepareStatement("select * from banners where banner_ID = ?");
             ps9.setString(1,"banner01");
             ResultSet rs9 = ps9.executeQuery();
 
             while (rs9.next()){
-                listBanner.add(new BannerBean(rs9.getString(1),rs9.getString(2),rs9.getString(3),rs9.getString(4)));
+                listBanner.add(new BannerBean(rs9.getInt(1),rs9.getString(2),rs9.getString(3),rs9.getString(4)));
             }
             session.setAttribute("listBanner",listBanner);
             request.getRequestDispatcher("home.jsp").forward(request,response);
