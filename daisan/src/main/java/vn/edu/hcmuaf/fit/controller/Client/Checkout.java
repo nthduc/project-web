@@ -1,16 +1,20 @@
-package vn.edu.hcmuaf.fit.controller;
-
-import vn.edu.hcmuaf.fit.services.BlogService;
+package vn.edu.hcmuaf.fit.controller.Client;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.*;
 
-@WebServlet(name = "/Blog", urlPatterns = "/Blog")
-public class Blog extends HttpServlet {
+/**
+ * Xử lí phần thanh toán
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-06
+ */
 
-    private static BlogService blogService;
+@WebServlet(name = "/Checkout", urlPatterns = "/Checkout")
+public class Checkout extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -18,7 +22,10 @@ public class Blog extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        blogService.Blog();
+
+
+
+        request.getRequestDispatcher("thanhtoan.jsp").forward(request,response);
     }
 
 }

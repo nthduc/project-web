@@ -92,11 +92,9 @@ public class Pagination {
         while (rs1.next()) {
             //System.out.println(rs1.getString(1));
 
-            ProductBean product = new ProductBean(rs1.getString(1),rs1.getString(2),rs1.getString(3)
-                    ,rs1.getInt(4),rs1.getInt(5),rs1.getString(6),rs1.getInt(7)
-                    ,rs1.getString(8),rs1.getString(9));
 
-            pagedProduct.add(product);
+
+//            pagedProduct.add(product);
 
         }
         return pagedProduct;
@@ -128,18 +126,18 @@ public class Pagination {
         ResultSet rs1 = ps1.executeQuery();
         while (rs1.next()) {
             //System.out.println(rs1.getString(1));
-            ProductBean product = new ProductBean(rs1.getString(1),rs1.getString(2),rs1.getString(3)
-                    ,rs1.getInt(4),rs1.getInt(5),rs1.getString(6),rs1.getInt(7)
-                    ,rs1.getString(8),rs1.getString(9));
-            PreparedStatement ps2 = ConnectionDB.conn.prepareStatement("select quantity from container where productid=?");
-            ps2.setString(1,rs1.getString(1));
-            ResultSet rs2 = ps2.executeQuery();
-
-            while (rs2.next()){
-                product.setQuantity(rs2.getInt(1));
-            }
-
-            pagedProduct.add(product);
+//            ProductBean product = new ProductBean(rs1.getString(1),rs1.getString(2),rs1.getString(3)
+//                    ,rs1.getInt(4),rs1.getInt(5),rs1.getString(6),rs1.getInt(7)
+//                    ,rs1.getString(8),rs1.getString(9));
+//            PreparedStatement ps2 = ConnectionDB.conn.prepareStatement("select quantity from container where productid=?");
+//            ps2.setString(1,rs1.getString(1));
+//            ResultSet rs2 = ps2.executeQuery();
+//
+//            while (rs2.next()){
+//                product.setQuantity(rs2.getInt(1));
+//            }
+//
+//            pagedProduct.add(product);
 
         }
         return pagedProduct;
