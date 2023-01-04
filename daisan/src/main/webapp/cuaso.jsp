@@ -1,5 +1,8 @@
 <%@ page import="vn.edu.hcmuaf.fit.services.ProductService" %>
 <%@ page import="vn.edu.hcmuaf.fit.bean.ProductBean" %>
+<%@page import="java.util.ArrayList"%>
+<%--<%@page buffer="8192kb" autoFlush="true" %>--%>
+
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: ACER
@@ -974,16 +977,22 @@
                 <div class="search-result-container ">
                     <div id="myTabContent" class="tab-content category-list">
                         <div class="tab-pane active " id="grid-container">
+
                             <div class="category-product">
                                 <div class="row">
-<%--                                    <% List<ProductBean> list = (List<ProductBean>) request.getAttribute("listP");%>--%>
-                                <c:forEach items="${sessionScope.list}" var="p">
+
+<%--                                <c:forEach items="${list}" var="p">--%>
                                     <div class="col-sm-6 col-md-4 wow fadeInUp">
                                         <div class="products">
                                             <div class="product">
+<%--                                                <% List<ProductBean> list = (ArrayList<ProductBean>) request.getAttribute("listP");--%>
+
+<%--                                                    for(ProductBean p:list){--%>
+<%--                                                %>--%>
+<c:forEach items="${requestScope.listP}" var="p">
                                                 <div class="product-image">
                                                     <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="${p.imgURL}" alt=""></a> </div>
+                                                            src=${p.imgURL} alt=""></a> </div>
                                                     <!-- /.image -->
 
                                                     <div class="tag new"><span>mới</span></div>
@@ -991,7 +1000,7 @@
                                                 <!-- /.product-image -->
 
                                                 <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">${p.name}</a></h3>
+                                                    <h3 class="name"><a href="chitietsanpham.jsp">${p.description}</a></h3>
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
                                                     <div class="product-price"> <span class="price"> ${p.price}đ </span> <span
@@ -1018,17 +1027,22 @@
                                                 </div>
                                                 <!-- /.cart -->
                                             </div>
+                                            </c:forEach>
+<%--                                            <%}%>--%>
                                             <!-- /.product -->
 
                                         </div>
                                         <!-- /.products -->
-                                    </div
-                                    </c:forEach>
+                                    </div>
+
+<%--                                    </c:forEach>--%>
                                     <!-- /.item -->
 
                                 </div>
+
                                 <!-- /.row -->
                             </div>
+
                             <!-- /.category-product -->
 
                         </div>

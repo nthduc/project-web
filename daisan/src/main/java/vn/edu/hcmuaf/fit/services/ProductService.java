@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.fit.services;
 import vn.edu.hcmuaf.fit.bean.ProductBean;
 import vn.edu.hcmuaf.fit.db.ConnectionDB;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -70,9 +71,11 @@ public class ProductService {
     }
     public static void main(String[] args) {
         ProductService pro = new ProductService();
-
+        List<ProductBean> list1 = pro.getAllProduct();
         List<ProductBean> list = pro.getNewProduct();
-        for (ProductBean p:list) {
+        HttpServletRequest request = null;
+
+        for (ProductBean p:list1) {
             System.out.println(p);
         }
 

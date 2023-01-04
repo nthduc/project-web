@@ -53,32 +53,32 @@
             <div class="header-top-inner">
                 <div class="cnt-account">
                     <ul class="list-unstyled">
-                            <c:choose>
+                        <c:choose>
+                        <c:when test="${sessionScope.acc == null}">
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                            </li>
+                        </c:when>
+                        <c:when test="${sessionScope.acc != null}">
+                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                            </c:when>
+                            <c:otherwise>
+
+                            </c:otherwise>
+                            </c:choose>
+                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <c:choose>
                             <c:when test="${sessionScope.acc == null}">
-                                <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
-                                </li>
+                                <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                             </c:when>
                             <c:when test="${sessionScope.acc != null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
-                                </c:when>
-                                <c:otherwise>
+                                <li><a href="/Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
+                            </c:when>
+                            <c:otherwise>
 
-                                </c:otherwise>
-                                </c:choose>
-                                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                            <c:choose>
-                                <c:when test="${sessionScope.acc == null}">
-                                    <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
-                                </c:when>
-                                <c:when test="${sessionScope.acc != null}">
-                                    <li><a href="/Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
-                                </c:when>
-                                <c:otherwise>
-
-                                </c:otherwise>
-                            </c:choose>
+                            </c:otherwise>
+                        </c:choose>
 
                     </ul>
                 </div>
@@ -112,7 +112,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <div class="logo"> <a href="home.jsp"> <img src="assets/images/daisan.png" alt="logo"
-                                                                 style="height: 55px; margin-top: -10px"> </a> </div>
+                                                                style="height: 55px; margin-top: -10px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
                 </div>
@@ -754,41 +754,296 @@
                                 class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
                             <div class="item">
                                 <div class="products special-product">
-<%--                                    <c:forEach items="${listP}" var="p">--%>
-                                        <div class="product">
-                                            <div class="product-micro">
-                                                <div class="row product-micro-row">
-                                                    <div class="col col-xs-5">
-                                                        <div class="product-image">
-                                                            <div class="image"> <a href="#"> <img
-                                                                    src="${p.imgURL}"
-                                                                    alt=""> </a> </div>
-                                                            <!-- /.image -->
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/gach/p1.jpg"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
 
-                                                        </div>
-                                                        <!-- /.product-image -->
                                                     </div>
-                                                    <!-- /.col -->
-                                                    <div class="col col-xs-7">
-                                                        <div class="product-info">
-                                                            <h3 class="name"><a href="#">${p.name}</a></h3>
-                                                            <div class="rating rateit-small"></div>
-                                                            <div class="product-price"> <span class="price"> ${p.price}đ
-                                                                </span> </div>
-                                                            <!-- /.product-price -->
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- /.col -->
+                                                    <!-- /.product-image -->
                                                 </div>
-                                                <!-- /.product-micro-row -->
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Gạch ốp lát Eurotile BST Đan Vi
+                                                            600*600mm DAV-H03</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 420.850đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
                                             </div>
-                                            <!-- /.product-micro -->
-
+                                            <!-- /.product-micro-row -->
                                         </div>
-<%--                                    </c:forEach>--%>
+                                        <!-- /.product-micro -->
 
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/gach/p2.jpg"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
 
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Gạch ốp lát Eurotile BST Đan Vi
+                                                            600*600mm DAV-H04</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price">
+                                                                    420.850đ</span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/gach/p3.jpg"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Gạch ốp lát Eurotile BST Đan Vi
+                                                            600*600mm DAV-H02</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 420.850đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products special-product">
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/da/p1.jpeg"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Đá sọc dưa mài cát</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 290.000đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/da/p2.jpeg"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Đá sọc dưa mài hone phun
+                                                            cát</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 290.000đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/da/p2.png" alt="">
+                                                        </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Mosaic Xà Cừ Khảm Trai 300x300
+                                                            MS01</a></h3>
+                                                        <!-- <div class="rating rateit-small"></div> -->
+                                                        <div class="product-price"> <span class="price"> 2.200.000đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products special-product">
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/ximang/p1.png"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Xi Măng Vicem Hà Tiên Đa
+                                                            Dụng</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 84.500đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/ximang/p2.png"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Xi Măng Holcim Đa Dụng</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 84.500đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
+                                        <!-- /.product-micro -->
+
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-micro">
+                                            <div class="row product-micro-row">
+                                                <div class="col col-xs-5">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="#"> <img
+                                                                src="assets/images/furnitures/ximang/p3.png"
+                                                                alt=""> </a> </div>
+                                                        <!-- /.image -->
+
+                                                    </div>
+                                                    <!-- /.product-image -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col col-xs-7">
+                                                    <div class="product-info">
+                                                        <h3 class="name"><a href="#">Xi Măng Phú Thọ Đa Dụng</a>
+                                                        </h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="product-price"> <span class="price"> 80.000đ
+                                                                </span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.product-micro-row -->
+                                        </div>
                                         <!-- /.product-micro -->
 
                                     </div>
@@ -887,30 +1142,30 @@
 
                 <div id="hero">
                     <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
-<c:forEach items="${sessionScope.listBanner}" var="item">
-                        <div class="item" style="background-image: url(${item.img_URL});">
-                            <div class="container-fluid">
-                                <div class="caption bg-color vertical-center text-left">
-                                    <div class="slider-header fadeInDown-1">${item.title}</div>
-                                    <div class="big-text fadeInDown-1"> <span class="highlight">${item.content}</span> </div>
-                                    <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Mua Ngay</a> </div>
+                        <c:forEach items="${sessionScope.listBanner}" var="item">
+                            <div class="item" style="background-image: url(${item.img_URL});">
+                                <div class="container-fluid">
+                                    <div class="caption bg-color vertical-center text-left">
+                                        <div class="slider-header fadeInDown-1">${item.title}</div>
+                                        <div class="big-text fadeInDown-1"> <span class="highlight">${item.content}</span> </div>
+                                        <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Mua Ngay</a> </div>
+                                    </div>
+                                    <!-- /.caption -->
                                 </div>
-                                <!-- /.caption -->
+                                <!-- /.container-fluid -->
                             </div>
-                            <!-- /.container-fluid -->
-                        </div>
-</c:forEach>
+                        </c:forEach>
                         <!-- /.item -->
-<%--                        <div class="item" style="background-image: url(assets/images/sliders/slider2.jpg);">--%>
-<%--                            <div class="container-fluid">--%>
-<%--                                <div class="caption bg-color vertical-center text-left">--%>
+                        <%--                        <div class="item" style="background-image: url(assets/images/sliders/slider2.jpg);">--%>
+                        <%--                            <div class="container-fluid">--%>
+                        <%--                                <div class="caption bg-color vertical-center text-left">--%>
 
-<%--                                </div>--%>
-<%--                                <!-- /.caption -->--%>
-<%--                            </div>--%>
-<%--                            <!-- /.container-fluid -->--%>
-<%--                        </div>--%>
-<%--                        <!-- /.item -->--%>
+                        <%--                                </div>--%>
+                        <%--                                <!-- /.caption -->--%>
+                        <%--                            </div>--%>
+                        <%--                            <!-- /.container-fluid -->--%>
+                        <%--                        </div>--%>
+                        <%--                        <!-- /.item -->--%>
 
 
 
@@ -5727,7 +5982,7 @@
                                 <div class="blog-post">
                                     <div class="blog-post-image">
                                         <div class="image"> <a href="blog.jsp"><img src="assets/images/blog/1.jpeg"
-                                                                                     alt="" style="height: 218px;"></a> </div>
+                                                                                    alt="" style="height: 218px;"></a> </div>
                                     </div>
                                     <!-- /.blog-post-image -->
 
@@ -5749,7 +6004,7 @@
                                 <div class="blog-post">
                                     <div class="blog-post-image">
                                         <div class="image"> <a href="blog.jsp"><img src="assets/images/blog/2.jpeg"
-                                                                                     alt="" style="height: 218px;"></a> </div>
+                                                                                    alt="" style="height: 218px;"></a> </div>
                                     </div>
                                     <!-- /.blog-post-image -->
 
@@ -5773,7 +6028,7 @@
                                 <div class="blog-post">
                                     <div class="blog-post-image">
                                         <div class="image"> <a href="blog.jsp"><img src="assets/images/blog/3.jpeg"
-                                                                                     style="height: 218px;" alt=""></a> </div>
+                                                                                    style="height: 218px;" alt=""></a> </div>
                                     </div>
                                     <!-- /.blog-post-image -->
 
@@ -5796,7 +6051,7 @@
                                 <div class="blog-post">
                                     <div class="blog-post-image">
                                         <div class="image"> <a href="blog.jsp"><img src="assets/images/blog/4.jpeg"
-                                                                                     alt="" style="height: 218px;"></a> </div>
+                                                                                    alt="" style="height: 218px;"></a> </div>
                                     </div>
                                     <!-- /.blog-post-image -->
 
@@ -5818,7 +6073,7 @@
                                 <div class="blog-post">
                                     <div class="blog-post-image">
                                         <div class="image"> <a href="blog.jsp"><img src="assets/images/blog/5.jpeg"
-                                                                                     alt="" style="height: 218px;"></a> </div>
+                                                                                    alt="" style="height: 218px;"></a> </div>
                                     </div>
 
 
