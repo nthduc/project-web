@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="home.jsp"> <img src="assets/images/daisan.png" alt="logo"
+                    <div class="logo"> <a href="/Home"> <img src="assets/images/daisan.png" alt="logo"
                                                                  style="height: 55px; margin-top: -10px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
@@ -155,7 +155,7 @@
                                                                        href="category.html">- Vật liệu mài &
                                                 phụ kiện</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="cuaso.jsp">- Cửa & cửa sổ,
+                                                                       href="dssanpham.jsp">- Cửa & cửa sổ,
                                                 bản lề & phụ
                                                 kiện</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
@@ -250,7 +250,7 @@
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="home.jsp">Trang chủ</a> </li>
+                                <li class="active dropdown yamm-fw"> <a href="/Home">Trang chủ</a> </li>
                                 <li class="dropdown yamm mega-menu"> <a href="#" data-hover="dropdown"
                                                                         class="dropdown-toggle" data-toggle="dropdown">Danh Mục</a>
                                     <ul class="dropdown-menu container">
@@ -447,7 +447,7 @@
     <div class="container">
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
-                <li><a href="home.jsp">Trang chủ</a></li>
+                <li><a href="/Home">Trang chủ</a></li>
                 <li class='active' style="width: 110px">Chi Tiết Blog</li>
             </ul>
         </div><!-- /.breadcrumb-inner -->
