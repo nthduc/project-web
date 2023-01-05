@@ -16,6 +16,6 @@
 </head>
 <body>
 <h1>LOADING...</h1>
-<c:redirect url="/home.jsp"/>
+<c:redirect url="/Home"/>
 </body>
 </html>

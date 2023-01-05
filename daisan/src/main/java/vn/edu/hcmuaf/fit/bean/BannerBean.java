@@ -3,10 +3,13 @@ package vn.edu.hcmuaf.fit.bean;
 import java.io.Serializable;
 
 public class BannerBean implements Serializable {
+
+
     private int banner_ID;
     private String title;
     private String content;
     private String img_URL;
+
 
     public BannerBean() {
     }
@@ -49,4 +52,15 @@ public class BannerBean implements Serializable {
     public void setImg_URL(String img_URL) {
         this.img_URL = img_URL;
     }
+
+    @Override
+    public String toString() {
+        return "BannerBean{" +
+                "banner_ID=" + banner_ID +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", img_URL='" + img_URL + '\'' +
+                '}';
+    }
 }
+

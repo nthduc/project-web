@@ -129,8 +129,8 @@ public class UserService {
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
-        us.themtaikhoan(2,"tester","test02@gmail.com","123");
-////   us.listUser();
+//        us.themtaikhoan(2,"tester","test02@gmail.com","123");
+           us.listUser();
 //        UserBean user = new UserBean(1,2,"nam","123","12345@gmail.com","0","0",null,"0","0");
 //        us.add(user);
 //       System.out.println(us.login("anhtuan","123456"));

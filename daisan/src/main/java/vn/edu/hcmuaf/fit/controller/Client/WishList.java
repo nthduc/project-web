@@ -1,7 +1,8 @@
-package vn.edu.hcmuaf.fit.controller;
+package vn.edu.hcmuaf.fit.controller.Client;
 
 import vn.edu.hcmuaf.fit.bean.ProductBean;
 import vn.edu.hcmuaf.fit.bean.UserBean;
+import vn.edu.hcmuaf.fit.controller.FindProduct;
 import vn.edu.hcmuaf.fit.db.ConnectionDB;
 
 import javax.servlet.*;
