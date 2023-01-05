@@ -47,6 +47,10 @@ public class UserBean implements Serializable {
         this.address = address;
     }
 
+    public UserBean() {
+
+    }
+
     public int getUser_ID() {
         return user_ID;
     }
