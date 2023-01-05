@@ -1,14 +1,18 @@
-<%--
+<%@ page import="vn.edu.hcmuaf.fit.services.ProductService" %>
+<%@ page import="vn.edu.hcmuaf.fit.bean.ProductBean" %>
+<%@page import="java.util.ArrayList"%>
+<%--<%@page buffer="8192kb" autoFlush="true" %>--%>
+
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: ACER
   Date: 7/12/2022
-  Time: 8:33 AM
+  Time: 8:16 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fnt" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <html lang="en">
 
 <head>
@@ -19,7 +23,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
-    <title>WEB VẬT LIỆU | Website Bán Vật Liệu Xây Dựng</title>
+    <title>DAISAN | Cửa sổ và phụ kiện</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -110,7 +114,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo"> <a href="home.jsp"> <img src="assets\images\daisan.png" alt="logo"
+                    <div class="logo"> <a href="/Home"> <img src="assets\images\daisan.png" alt="logo"
                                                                  style="height: 55px; margin-top: -10px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
@@ -130,7 +134,7 @@
 
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="gachoplat.jsp">- Gạch ốp lát</a>
                                             </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Đá ốp lát</a>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="daoplat.jsp">- Đá ốp lát</a>
                                             </li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="son.jsp">- Sơn nội thất & ngoại
                                                 thất</a>
@@ -145,10 +149,10 @@
                                                 đá</a></li>
                                             <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Vật liệu mài &
                                                 phụ kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Cửa & cửa sổ,
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="dssanpham.jsp">- Cửa & cửa sổ,
                                                 bản lề & phụ
                                                 kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Nẹp</a></li>
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="nep.jsp">- Nẹp</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -179,8 +183,7 @@
                                     <div class="row">
                                         <div class="col-xs-4">
                                             <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                    src="assets/images/products/gachoplat/p1.jpg" alt=""></a>
-                                            </div>
+                                                    src="assets/images/products/gachoplat/p1.jpg" alt=""></a> </div>
                                         </div>
                                         <div class="col-xs-7">
                                             <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
@@ -188,15 +191,14 @@
                                             </h3>
                                             <div class="price">420.850đ</div>
                                         </div>
-                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a>
-                                        </div>
+                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a> </div>
                                     </div>
                                 </div>
                                 <!-- /.cart-item -->
                                 <div class="clearfix"></div>
                                 <hr>
                                 <div class="clearfix cart-total">
-                                    <div class="pull-right"> <span class="text">Tổng tiền :</span><span class='price'>420.850đ</span>
+                                    <div class="pull-right"> <span class="text">Tổng tiền :</span><span class='price'>900.000đ.00</span>
                                     </div>
                                     <div class="clearfix"></div>
                                     <a href="thanhtoan.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
@@ -228,14 +230,14 @@
                 <div class="navbar-header">
                     <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed"
                             type="button">
-                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                        <span class="sr-only">Chuyển Điều Hướng</span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
                 <div class="nav-bg-class">
                     <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                         <div class="nav-outer">
                             <ul class="nav navbar-nav">
-                                <li class="active dropdown yamm-fw"> <a href="home.jsp">Trang chủ</a> </li>
+                                <li class="active dropdown yamm-fw"> <a href="/Home">Trang chủ</a> </li>
                                 <li class="dropdown yamm mega-menu"> <a href="#" data-hover="dropdown" class="dropdown-toggle"
                                                                         data-toggle="dropdown">Danh Mục</a>
                                     <ul class="dropdown-menu container">
@@ -429,8 +431,8 @@
     <div class="container">
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
-                <li><a href="home.jsp">Trang chủ</a></li>
-                <li class='active'>Mái</li>
+                <li><a href="/Home">Trang chủ</a></li>
+                <li class='active' style="width: 160px">${name}</li>
             </ul>
         </div>
         <!-- /.breadcrumb-inner -->
@@ -447,119 +449,18 @@
                     <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Tất cả sản phẩm </div>
                     <nav class="yamm megamenu-horizontal">
                         <ul class="nav">
-                            <li class="dropdown menu-item">
-                                <a href="gachoplat.jsp">
-                                    <i><img src="assets/images/icons-products/gach-op-lat.jpeg" style="height: 24px; width: 24px" /></i>
-                                    Gạch ốp lát
-                                </a>
+                            <c:forEach items="${Tag}" var="tag">
+                                <li class="dropdown menu-item">
+                                    <a href="/products?tag_ID=${tag.tag_ID}">
+                                        <i><img src="${tag.imgURL}"
+                                                style="height: 24px; width: 24px" /></i>
+                                            ${tag.name}
+                                    </a>
 
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="daoplat.jsp">
-                                <i><img src="assets/images/icons-products/da-op-lat.jpeg" style="height: 24px; width: 24px" /></i>
-                                Đá ốp lát
-                            </a>
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-
-                                <!-- /.dropdown-menu -->
-                                <!-- ================================== MEGAMENU VERTICAL ================================== -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item">
-                                <a href="son.jsp">
-                                    <i><img src="assets/images/icons-products/son-noi-ngoai-that.png"
-                                            style="height: 24px; width: 24px" /></i>
-
-                                    Sơn nội thất & ngoại thất
-                                </a>
-                                <!-- <ul class="dropdown-menu mega-menu" style="height:530px !important;">
-
-                                            /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="sango.jsp">
-                                <i><img src="assets/images/icons-products/san-go.jpeg" style="height: 24px; width: 24px" /></i>
-                                Sàn gỗ và phụ kiện
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="tamoptuong.jsp">
-                                <i><img src="assets/images/icons-products/tam-op-tuong.png" style="height: 24px; width: 24px" /></i>
-                                Tấm ốp tường
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="vatlieutho.jsp">
-                                <i><img src="assets/images/icons-products/vat-lieu-tho.png" style="height: 24px; width: 24px" /></i>
-                                Vật liệu thô
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="vattunganhda.jsp">
-                                <i><img src="assets/images/icons-products/vat-tu-nganh-da.jpeg"
-                                        style="height: 24px; width: 24px" /></i>
-                                Vật tư ngành đá
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="vatlieumai.jsp">
-                                <i><img src="assets/images/icons-products/vat-lieu-mai.png" style="height: 24px; width: 24px" /></i>
-                                Vật liệu mái & phụ kiện
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="cuaso.jsp">
-                                <i><img src="assets/images/icons-products/cua.png" style="height: 24px; width: 24px" /></i>
-                                Cửa & cửa sổ, bản lề & phụ kiện
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-                            <!-- /.menu-item -->
-
-                            <li class="dropdown menu-item"> <a href="nep.jsp">
-                                <i><img src="assets/images/icons-products/nep.png" style="height: 24px; width: 24px" /></i>
-                                Nẹp
-                            </a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
-
-
-
-                            <li class="dropdown menu-item"> <a href="500.jsp">Bộ sưu tập Hot</a>
-
-                                <!-- /.dropdown-menu -->
-                            </li>
-                            <!-- /.menu-item -->
+                                    <!-- /.dropdown-menu -->
+                                </li>
+                                <!-- /.menu-item -->
+                            </c:forEach>
 
                         </ul>
                         <!-- /.nav -->
@@ -975,14 +876,17 @@
                 <div class="search-result-container ">
                     <div id="myTabContent" class="tab-content category-list">
                         <div class="tab-pane active " id="grid-container">
+
                             <div class="category-product">
                                 <div class="row">
+
+                                <c:forEach items="${ListC}" var="p">
                                     <div class="col-sm-6 col-md-4 wow fadeInUp">
                                         <div class="products">
                                             <div class="product">
                                                 <div class="product-image">
                                                     <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p1.jpg" alt=""></a> </div>
+                                                            src=${p.imgURL} alt=""></a> </div>
                                                     <!-- /.image -->
 
                                                     <div class="tag new"><span>mới</span></div>
@@ -990,11 +894,11 @@
                                                 <!-- /.product-image -->
 
                                                 <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Lama L104</a></h3>
+                                                    <h3 class="name"><a href="chitietsanpham.jsp">${p.name}</a></h3>
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 600.000đ </span> <span
-                                                            class="price-before-discount">640.000đ</span> </div>
+                                                    <div class="product-price"> <span class="price"> ${p.price}đ </span> <span
+                                                            class="price-before-discount">${p.salePrice}đ</span> </div>
                                                     <!-- /.product-price -->
 
                                                 </div>
@@ -1017,851 +921,22 @@
                                                 </div>
                                                 <!-- /.cart -->
                                             </div>
+<%--                                            </c:forEach>--%>
+<%--                                            <%}%>--%>
                                             <!-- /.product -->
 
                                         </div>
                                         <!-- /.products -->
                                     </div>
-                                    <!-- /.item -->
 
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p2.jpeg" alt=""></a> </div>
-                                                    <!-- /.image -->
-
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">Ngói lợp 22</a></h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 10.000đ </span> <span
-                                                            class="price-before-discount">15.000đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p3.jpeg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói giả đá Acem Xanh ghi 601</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price">160.000đ </span> <span
-                                                        class="price-before-discount">170.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p4.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Tấm lợp Sóng ngói ASA thế hệ mới</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 100.000đ</span> <span
-                                                        class="price-before-discount">150.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p5.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói Vảy Cá Lớn</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 167.000đ </span> <span
-                                                        class="price-before-discount">200.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p6.jpeg" alt=""></a> </div>
-                                                    <!-- /.image -->
-
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">Ngói Vảy Cá Lớn</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 670.000đ </span> <span
-                                                            class="price-before-discount">1.000.000đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p7.png"
-                                                    alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class=" tag new"><span>new</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu sóng trơn Acem 71014 Đỏ</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 70.000đ </span> <span
-                                                        class="price-before-discount">80.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p8.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Đồng Tâm LOPNLNS706</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 41.000đ </span> <span
-                                                        class="price-before-discount">50.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p9.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Lama L104t </a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 800,000đ </span> <span
-                                                        class="price-before-discount">830.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p10.png" alt=""></a> </div>
-
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói cổ NG-01</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 100.000đ </span> <span
-                                                        class="price-before-discount">200.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p11.png" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu sóng trơn Acem 847 Xanh lá</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 140.000 đ </span> <span
-                                                        class="price-before-discount">200.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p12.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói cuối mái</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price">220.850đ </span> <span
-                                                        class="price-before-discount">340.000</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p13.jpeg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói cuối mái RubyRD07 </a>
-                                                </h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 167.000 đ </span> <span
-                                                        class="price-before-discount">200.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p14.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Nhật Bản Ruby RD09</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 120.000đ </span> <span
-                                                        class="price-before-discount">150.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p15.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp"> Ngói màu Ruby RD12 màu xám ghi
-                                                </a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 80.000đ </span> <span
-                                                        class="price-before-discount">90.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p16.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Ruby RD01 màu đỏ cam</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 80.000đ </span> <span
-                                                        class="price-before-discount">100.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="product">
-                                            <div class="product-image">
-                                                <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                        src="assets/images/products/vatlieumai/p17.jpg" alt=""></a> </div>
-                                                <!-- /.image -->
-
-                                                <div class="tag new"><span>mới</span></div>
-                                            </div>
-                                            <!-- /.product-image -->
-
-                                            <div class="product-info text-left">
-                                                <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu NP 14</a></h3>
-                                                <div class="rating rateit-small"></div>
-                                                <div class="description"></div>
-                                                <div class="product-price"> <span class="price"> 120.000đ </span> <span
-                                                        class="price-before-discount">140.000đ</span> </div>
-                                                <!-- /.product-price -->
-
-                                            </div>
-                                            <!-- /.product-info -->
-                                            <div class="cart clearfix animate-effect">
-                                                <div class="action">
-                                                    <ul class="list-unstyled">
-                                                        <li class="add-cart-button btn-group">
-                                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                    class="fa fa-shopping-cart"></i> </button>
-
-                                                        </li>
-                                                        <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                     title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                        <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.action -->
-                                            </div>
-                                            <!-- /.cart -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p18.jpg" alt=""></a> </div>
-                                                    <!-- /.image -->
-
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp"> Ngói màu Đồng Tâm LOPNLLS508</a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 80,000đ </span> <span
-                                                            class="price-before-discount">90.000đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p19.jpg" alt=""></a> </div>
-                                                    <!-- /.image -->
-
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">gói màu Ruby RD05 màu xanh mực</a></h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 80,000đ </span> <span
-                                                            class="price-before-discount">100.000đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    <!-- /.item -->
-
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                            src="assets/images/products/vatlieumai/p20.jpg" alt=""></a> </div>
-                                                    <!-- /.image -->
-
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">Ngói màu Đồng Tâm LOPNLLS905 </a>
-                                                    </h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> 75.000đ </span> <span
-                                                            class="price-before-discount">80.000đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-                                            <!-- /.product -->
-
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
+                                    </c:forEach>
                                     <!-- /.item -->
 
                                 </div>
+
                                 <!-- /.row -->
                             </div>
+
                             <!-- /.category-product -->
 
                         </div>

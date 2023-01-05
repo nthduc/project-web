@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.controller;
+package vn.edu.hcmuaf.fit.controller.Client;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -6,15 +6,15 @@ import javax.servlet.annotation.WebServlet;
 import java.io.*;
 
 /**
- * Xử lí phần thanh toán
+ * Xử lí phần đăng xuất
  *
- * @author Nguyen Thai Duc
+ * @author Bùi Anh Tuấn
  * @version 1.0
- * @since 2022-12-06
+ * @since 2022-12-11
  */
 
-@WebServlet(name = "/Checkout", urlPatterns = "/Checkout")
-public class Checkout extends HttpServlet {
+@WebServlet(name = "/Logout", urlPatterns = "/Logout")
+public class Logout extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
@@ -22,10 +22,13 @@ public class Checkout extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-        request.getRequestDispatcher("thanhtoan.jsp").forward(request,response);
+        HttpSession session = request.getSession();
+        session.removeAttribute("acc");
+        response.sendRedirect("home.jsp");
     }
 
+
+    public String getServletInfo() {
+        return "....";
+    }
 }

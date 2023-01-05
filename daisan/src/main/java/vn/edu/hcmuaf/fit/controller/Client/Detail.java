@@ -1,4 +1,4 @@
-package vn.edu.hcmuaf.fit.controller;
+package vn.edu.hcmuaf.fit.controller.Client;
 
 import vn.edu.hcmuaf.fit.bean.ProductBean;
 import vn.edu.hcmuaf.fit.db.ConnectionDB;
@@ -36,13 +36,13 @@ public class Detail extends HttpServlet {
             ps.setString(1,productID);
             ResultSet rs = ps.executeQuery();
             ProductBean product1;
-
-            while (rs.next()){
-                product1 = new ProductBean(rs.getString(1),rs.getString(2),rs.getString(3)
-                        ,rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7)
-                        ,rs.getString(8),rs.getString(9));
-                session.setAttribute("product", product1);
-            }
+//
+//            while (rs.next()){
+//                product1 = new ProductBean(rs.getString(1),rs.getString(2),rs.getString(3)
+//                        ,rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7)
+//                        ,rs.getString(8),rs.getString(9));
+//                session.setAttribute("product", product1);
+//            }
 
 
 

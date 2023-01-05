@@ -18,9 +18,9 @@ public class FindProduct {
         PreparedStatement ps = ConnectionDB.conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while (rs.next()){
-            product = new ProductBean(rs.getString(1),rs.getString(2),rs.getString(3)
-                    ,rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7)
-                    ,rs.getString(8),rs.getString(9));
+//            product = new ProductBean(rs.getString(1),rs.getString(2),rs.getString(3)
+//                    ,rs.getInt(4),rs.getInt(5),rs.getString(6),rs.getInt(7)
+//                    ,rs.getString(8),rs.getString(9));
         }
         return product;
     }
