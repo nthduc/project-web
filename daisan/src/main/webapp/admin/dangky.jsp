@@ -44,21 +44,27 @@
               <h3 class="text-primary mb-4 mt-3">ĐĂNG KÝ TÀI KHOẢN</h3>
             </div>
 
-            <form action="#">
+            <form action="/registeradmin" method="post">
 
               <div class="form-group">
+                <input type="hidden" name="role" id="role" value="1">
                 <label for="fullname">Họ tên</label>
-                <input class="form-control" type="text" id="fullname" placeholder="Nhập họ tên"
-                       required="">
+                <input class="form-control" type="text" id="fullname" name="fullname" placeholder="Nhập họ tên"
+                       required>
+              </div>
+              <div class="form-group">
+                <label for="fullname">Tài khoản</label>
+                <input class="form-control" type="text" id="username" name="username" placeholder="Nhập tên tài khoản"
+                       required>
               </div>
               <div class="form-group">
                 <label for="emailaddress">Email</label>
-                <input class="form-control" type="email" id="emailaddress" required=""
+                <input class="form-control" type="email" id="emailaddress" name="emailaddress" required
                        placeholder="Nhập email">
               </div>
               <div class="form-group">
                 <label for="password">Mật khẩu</label>
-                <input class="form-control" type="password" required="" id="password"
+                <input class="form-control" type="password" required="" id="password" name="password"
                        placeholder="Nhập password">
               </div>
               <div class="form-group">
@@ -70,7 +76,7 @@
                 </div>
               </div>
               <div class="form-group mb-0 text-center">
-                <button class="btn btn-primary btn-block" type="submit"> Đăng ký </button>
+                <input class="btn btn-primary btn-block" type="submit" value="Đăng ký">
               </div>
 
             </form>
