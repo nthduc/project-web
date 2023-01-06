@@ -28,14 +28,17 @@ public class AdminLogin extends HttpServlet {
         String password = request.getParameter("password");
 
         UserBean user = UserService.getInstance().loginAdmin(username, password,emailaddress);
-        System.out.println(user.getRole_ID());
         // check neu co role = 1 va tai khoan
+        if(user == null || user.getUser_ID() != 1){
+            request.getRequestDispatcher("/admin/dangnhap.jsp?message=error").forward(request, response);
+
+        }
         if (user != null && user.getRole_ID() == 1) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            response.sendRedirect(request.getContextPath() + "/admin/trangchu.jsp");
+            request.getRequestDispatcher("/admin/trangchu.jsp").forward(request, response);
         } else {
-            response.sendRedirect(request.getContextPath() + "/admin/dangnhap.jsp");
+            request.getRequestDispatcher("/admin/dangnhap.jsp?message=error").forward(request, response);
         }
     }
 }

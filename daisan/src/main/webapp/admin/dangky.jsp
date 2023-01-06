@@ -136,7 +136,22 @@
 
 <!-- App js -->
 <script src="assets/js/app.min.js"></script>
+<script>
+  document.getElementById('form').addEventListener('submit', function(event) {
+    // Get all the form inputs
+    var inputs = document.getElementsByTagName('input');
 
+    // Loop through all the inputs and check if any of them are empty
+    for (var i = 0; i < inputs.length; i++) {
+      if (!inputs[i].value) {
+        // If an input is empty, show an error message and prevent the form from being submitted
+        event.preventDefault();
+        document.getElementById('error-message').innerHTML = 'All fields are required';
+        return;
+      }
+    }
+  });
+</script>
 </body>
 
 </html>
