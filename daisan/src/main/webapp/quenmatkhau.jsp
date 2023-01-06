@@ -444,13 +444,14 @@
 <div class="forgot">
     <div class="containerForm" id="containerForm">
         <div class="form-container forgot-container">
-            <form action="#">
+            <form  action="/forgotpassword" method="post" onsubmit="return validateForm()">
                 <h1>Quên mật khẩu</h1>
                 <p>Bạn hãy nhập email đã được đăng ký để đổi mật khẩu</p>
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Mật khẩu" />
                 <input type="password" placeholder="Nhập lại Mật khẩu" />
                 <button type="submit">Gửi</button>
+                <div id="error-message"></div>
             </form>
         </div>
         <div class="overlay-container">
@@ -815,6 +816,16 @@
 <script src="assets/js/bootstrap-select.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+<script>
+    function validateForm() {
+        var email = document.forms[0]["email"].value;
+        if (email == "") {
+            document.getElementById("error-message").innerHTML = "Email is required";
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 
 </html>
