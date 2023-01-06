@@ -64,7 +64,7 @@
                                 </li>
                             </c:when>
                             <c:when test="${sessionScope.acc != null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.fullname}</a>
                                 </c:when>
                                 <c:otherwise>
 
@@ -132,27 +132,10 @@
                                         mục<b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
 
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="gachoplat.jsp">- Gạch ốp lát</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="daoplat.jsp">- Đá ốp lát</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="son.jsp">- Sơn nội thất & ngoại
-                                                thất</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="sango.jsp">- Sàn gỗ và phụ
-                                                kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="tamoptuong.jsp">- Tấm ốp
-                                                tường</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="vatlieutho.jsp">- Vật liệu
-                                                thô</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="vattunganhda.jsp">- Vật tư ngành
-                                                đá</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Vật liệu mài &
-                                                phụ kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="dssanpham.jsp">- Cửa & cửa sổ,
-                                                bản lề & phụ
-                                                kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="nep.jsp">- Nẹp</a></li>
+                                            <c:forEach items="${Tag}" var="tag">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                           href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
+                                            </c:forEach>
                                         </ul>
                                     </li>
                                 </ul>
@@ -885,7 +868,7 @@
                                         <div class="products">
                                             <div class="product">
                                                 <div class="product-image">
-                                                    <div class="image"> <a href="chitietsanpham.jsp"><img
+                                                    <div class="image"> <a href="productDetail?product_id=${p.id}"><img
                                                             src=${p.imgURL} alt=""></a> </div>
                                                     <!-- /.image -->
 
@@ -894,7 +877,7 @@
                                                 <!-- /.product-image -->
 
                                                 <div class="product-info text-left">
-                                                    <h3 class="name"><a href="chitietsanpham.jsp">${p.name}</a></h3>
+                                                    <h3 class="name"><a href="productDetail?product_id=${p.id}">${p.name}</a></h3>
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
                                                     <div class="product-price"> <span class="price"> ${p.price}đ </span> <span

@@ -60,7 +60,7 @@
                                 </li>
                             </c:when>
                             <c:when test="${sessionScope.acc != null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.name}</a>
                                 </c:when>
                                 <c:otherwise>
 
@@ -128,29 +128,10 @@
                                                              href="category.html">Danh mục<b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
 
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="gachoplat.jsp">- Gạch ốp lát</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="daoplat.jsp">- Đá ốp lát</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="son.jsp">- Sơn nội thất & ngoại thất</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="sango.jsp">- Sàn gỗ và phụ kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="tamoptuong.jsp">- Tấm ốp tường</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vatlieutho.jsp">- Vật liệu thô</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vattunganhda.jsp">- Vật tư ngành đá</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vatlieumai.jsp">- Vật liệu mài & phụ kiện</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="dssanpham.jsp">- Cửa & cửa sổ, bản lề & phụ
-                                                kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="nep.jsp">- Nẹp</a></li>
+                                            <c:forEach items="${Tag}" var="tag">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                           href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
+                                            </c:forEach>
                                         </ul>
                                     </li>
                                 </ul>
