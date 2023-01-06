@@ -63,7 +63,7 @@
                                 </li>
                             </c:when>
                             <c:when test="${sessionScope.acc != null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${name}</a>
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.name}</a>
                                 </c:when>
                                 <c:otherwise>
 

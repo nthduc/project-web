@@ -69,7 +69,32 @@ public class ProductService {
         }
         return listPro;
     }
-
+//    lấy sản phẩm bằng ID
+    public ProductBean getProductByID(int id) {
+        String query = " Select * from products where  product_ID =?";
+        ProductBean product = null;
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setInt(1,id);
+            try(ResultSet rs = ps.executeQuery()){
+                while (rs.next()) {
+                    int pro_ID = rs.getInt(1);
+                    String name = rs.getString(2);
+                    String Url = rs.getString(3);
+                    int price = rs.getInt(4);
+                    int saleprice = rs.getInt(5);
+                    String des = rs.getString(6);
+                    int status = rs.getInt(7);
+                    String company = rs.getString(8);
+                    int tag_ID = rs.getInt(9);
+                    product =  new ProductBean(pro_ID,name,Url,price,saleprice,des,status,company,tag_ID);
+                }}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
     //    default status = 1 -- Lấy danh sách sản phẩm mới
     public List<ProductBean> getNewProduct() {
         String query = " Select * from products where status = 1 limit 20";
@@ -95,7 +120,7 @@ public class ProductService {
         }
         return listPro;
     }
-//    lấy sản phảm yêu thích
+//    lấy sản phảm yêu thích default id = 3
     public List<ProductBean> getFavorProduct() {
         String query = " Select * from products where status = 3 limit 20";
         List<ProductBean> listPro = new ArrayList<>();
@@ -120,7 +145,7 @@ public class ProductService {
         }
         return listPro;
     }
-//    Lấy sản phẩm bán chạy
+//    Lấy sản phẩm bán chạy default id =4
     public List<ProductBean> getTopProduct() {
         String query = " Select * from products where status = 4 limit 20";
         List<ProductBean> listPro = new ArrayList<>();

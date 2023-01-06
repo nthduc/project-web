@@ -129,37 +129,10 @@
                                         mục<b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
 
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="gachoplat.jsp">- Gạch ốp lát</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="daoplat.jsp">- Đá ốp lát</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="son.jsp">- Sơn nội thất & ngoại
-                                                thất</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="sango.jsp">- Sàn gỗ và phụ
-                                                kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="tamoptuong.jsp">- Tấm ốp
-                                                tường</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vatlieutho.jsp">- Vật liệu
-                                                thô</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="vattunganhda.jsp">- Vật tư ngành
-                                                đá</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="category.html">- Vật liệu mài &
-                                                phụ kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="dssanpham.jsp">- Cửa & cửa sổ,
-                                                bản lề & phụ
-                                                kiện</a></li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                       href="nep.jsp">- Nẹp</a></li>
+                                            <c:forEach items="${Tag}" var="tag">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                           href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
+                                            </c:forEach>
                                         </ul>
                                     </li>
                                 </ul>
@@ -448,8 +421,8 @@
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="#">Trang chủ</a></li>
-                <li style="width: 130px;"><a href="#">Chi tiết sản phẩm</a></li>
-                <li class='active' style="width: 130px;">Xi măng Hà Tiên</li>
+                <li style="width: 120px;"><a href="#">Chi tiết sản phẩm</a></li>
+                <li class='active' style="width:auto;">${namePro}</li>
             </ul>
         </div><!-- /.breadcrumb-inner -->
     </div><!-- /.container -->
@@ -464,166 +437,57 @@
                     <div class="sidebar-widget hot-deals wow fadeInUp outer-bottom-xs">
                         <h3 class="section-title">Đang giảm giá</h3>
                         <div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-ss">
-                            <div class="item">
-                                <div class="products">
-                                    <div class="hot-deal-wrapper">
-                                        <div class="image"> <img src="assets/images/hot-deals/hot1.jpg" alt="">
-                                        </div>
-                                        <div class="sale-offer-tag"><span>34%<br>
-                                                    off</span></div>
-                                        <div class="timing-wrapper">
-                                            <div class="box-wrapper">
-                                                <div class="date box"> <span class="key">120</span> <span
-                                                        class="value">Days</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="hour box"> <span class="key">20</span> <span
-                                                        class="value">HRS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="minutes box"> <span class="key">36</span> <span
-                                                        class="value">MINS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper hidden-md">
-                                                <div class="seconds box"> <span class="key">60</span> <span
-                                                        class="value">SEC</span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.hot-deal-wrapper -->
-
-                                    <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Bê Tông Cống tròn D300</a>
-                                        </h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="product-price"> <span class="price"> 1.200.000đ </span> <span
-                                                class="price-before-discount">1.620.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <div class="add-cart-button btn-group">
-                                                <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                        type="button">
-                                                    <i class="fa fa-shopping-cart"></i> </button>
-                                                <button class="btn btn-primary cart-btn" type="button">Thêm vào giỏ
-                                                    hàng</button>
+                            <c:forEach items="${Sale}" var="s">
+                                <div class="item">
+                                    <div class="products">
+                                        <div class="hot-deal-wrapper">
+                                            <div class="image"> <img src="${s.imgURL}" alt="" href="productDetail?product_id=${s.id}"> </div>
+                                            <div class="sale-offer-tag"><span>34%<br>
+                                                off</span></div>
+                                            <div class="timing-wrapper">
+                                                <div class="box-wrapper">
+                                                    <div class="date box"> <span class="key">120</span> <span
+                                                            class="value">Days</span> </div>
+                                                </div>
+                                                <div class="box-wrapper">
+                                                    <div class="hour box"> <span class="key">20</span> <span
+                                                            class="value">HRS</span> </div>
+                                                </div>
+                                                <div class="box-wrapper">
+                                                    <div class="minutes box"> <span class="key">36</span> <span
+                                                            class="value">MINS</span> </div>
+                                                </div>
+                                                <div class="box-wrapper hidden-md">
+                                                    <div class="seconds box"> <span class="key">60</span> <span
+                                                            class="value">SEC</span> </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <!-- /.action -->
+                                        <!-- /.hot-deal-wrapper -->
+
+                                        <div class="product-info text-left m-t-20">
+                                            <h3 class="name"><a href="productDetail?product_id=${s.id}">${s.name}</a></h3>
+                                            <div class="rating rateit-small"></div>
+                                            <div class="product-price"> <span class="price"> ${s.salePrice}đ </span> <span
+                                                    class="price-before-discount">${s.price}đ</span> </div>
+                                            <!-- /.product-price -->
+
+                                        </div>
+                                        <!-- /.product-info -->
+
+                                        <div class="cart clearfix animate-effect">
+                                            <div class="action">
+                                                <div class="add-cart-button btn-group">
+                                                    <button class="btn btn-primary cart-btn" type="button" href="" style="margin-left: 30px">Thêm vào giỏ
+                                                        hàng</button>
+                                                </div>
+                                            </div>
+                                            <!-- /.action -->
+                                        </div>
+                                        <!-- /.cart -->
                                     </div>
-                                    <!-- /.cart -->
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="products">
-                                    <div class="hot-deal-wrapper">
-                                        <div class="image"> <img src="assets/images//hot-deals/hot2.jpeg" alt="">
-                                        </div>
-                                        <div class="sale-offer-tag"><span>50%<br>
-                                                    off</span></div>
-                                        <div class="timing-wrapper">
-                                            <div class="box-wrapper">
-                                                <div class="date box"> <span class="key">120</span> <span
-                                                        class="value">DAYS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="hour box"> <span class="key">20</span> <span
-                                                        class="value">HRS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="minutes box"> <span class="key">36</span> <span
-                                                        class="value">MINS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper hidden-md">
-                                                <div class="seconds box"> <span class="key">60</span> <span
-                                                        class="value">SEC</span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.hot-deal-wrapper -->
-
-                                    <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Cửa gỗ nhựa composite KOS
-                                            49</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="product-price"> <span class="price"> 2.500.000đ </span> <span
-                                                class="price-before-discount">4.200.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <div class="add-cart-button btn-group">
-                                                <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                        type="button">
-                                                    <i class="fa fa-shopping-cart"></i> </button>
-                                                <button class="btn btn-primary cart-btn" type="button">Thêm vào giỏ
-                                                    hàng</button>
-                                            </div>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="products">
-                                    <div class="hot-deal-wrapper">
-                                        <div class="image"> <img src="assets/images/hot-deals/hot3.jpeg"> </div>
-                                        <div class="sale-offer-tag"><span>35%<br>
-                                                    off</span></div>
-                                        <div class="timing-wrapper">
-                                            <div class="box-wrapper">
-                                                <div class="date box"> <span class="key">120</span> <span
-                                                        class="value">Days</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="hour box"> <span class="key">20</span> <span
-                                                        class="value">HRS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper">
-                                                <div class="minutes box"> <span class="key">36</span> <span
-                                                        class="value">MINS</span> </div>
-                                            </div>
-                                            <div class="box-wrapper hidden-md">
-                                                <div class="seconds box"> <span class="key">60</span> <span
-                                                        class="value">SEC</span> </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- /.hot-deal-wrapper -->
-
-                                    <div class="product-info text-left m-t-20">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">
-                                            Cửa gỗ nhựa composite KOS 1602</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="product-price"> <span class="price"> 1.400.000đ </span> <span
-                                                class="price-before-discount">2.800.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <div class="add-cart-button btn-group">
-                                                <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                        type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                <button class="btn btn-primary cart-btn" type="button">Thêm vào giỏ
-                                                    hàng</button>
-                                            </div>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                            </div>
+                            </c:forEach>
 
                         </div>
                         <!-- /.sidebar-widget -->
@@ -700,163 +564,24 @@
                                 <div id="owl-single-product">
                                     <div class="single-product-gallery-item" id="slide1">
                                         <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
+                                           href="${Pro.imgURL}">
                                             <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
+                                                 data-echo="${Pro.imgURL}">
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
 
-                                    <div class="single-product-gallery-item" id="slide2">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
 
-                                    <div class="single-product-gallery-item" id="slide3">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
-
-                                    <div class="single-product-gallery-item" id="slide4">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
-
-                                    <div class="single-product-gallery-item" id="slide5">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
-
-                                    <div class="single-product-gallery-item" id="slide6">
-                                        <a data-lightbox="image-1" data-title="Gallery"
-                                           href="assets/images/products/vatlieutho/ximang/p1.png">
-                                            <img class="img-responsive" alt="" src="assets/images/blank.gif"
-                                                 data-echo="assets/images/products/vatlieutho/ximang/p1.png">
-                                        </a>
-                                    </div><!-- /.single-product-gallery-item -->
 
 
                                 </div><!-- /.single-product-slider -->
 
 
-                                <div class="single-product-gallery-thumbs gallery-thumbs">
-
-                                    <div id="owl-single-product-thumbnails">
-                                        <div class="item">
-                                            <a class="horizontal-thumb active" data-target="#owl-single-product"
-                                               data-slide="1" href="#slide1">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p17.jpg">
-                                            </a>
-                                        </div>
-
-                                        <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="2" href="#slide2">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p18.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="3" href="#slide3">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p19.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="4" href="#slide4">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p20.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="5" href="#slide5">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p21.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="6" href="#slide6">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p22.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="7" href="#slide7">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p23.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="8" href="#slide8">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p24.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="item">
-
-                                            <a class="horizontal-thumb" data-target="#owl-single-product"
-                                               data-slide="9" href="#slide9">
-                                                <img class="img-responsive" width="85" alt=""
-                                                     src="assets/images/blank.gif"
-                                                     data-echo="assets/images/products/p25.jpg">
-                                            </a>
-                                        </div>
-                                    </div><!-- /#owl-single-product-thumbnails -->
-
-
-
-                                </div><!-- /.gallery-thumbs -->
 
                             </div><!-- /.single-product-gallery -->
                         </div><!-- /.gallery-holder -->
                         <div class='col-sm-6 col-md-7 product-info-block'>
                             <div class="product-info">
-                                <h1 class="name">Xi Măng Vicem Hà Tiên Đa Dụng</h1>
-
-                                <div class="rating-reviews m-t-20">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="rating rateit-small"></div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="reviews">
-                                                <a href="#" class="lnk">(12 đánh giá)</a>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.row -->
-                                </div><!-- /.rating-reviews -->
+                                <h1 class="name">${Pro.name}</h1>
 
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
@@ -867,18 +592,28 @@
                                         </div>
                                         <div class="col-sm-9">
                                             <div class="stock-box">
-                                                <span class="value">Còn hàng</span>
+                                                <span class="value">${s}</span>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div><!-- /.stock-container -->
+                                <div class="stock-container info-container m-t-10">
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="stock-box">
+                                                <span class="label">Công ty :</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="stock-box">
+                                                <span class="value">${Pro.company}</span>
                                             </div>
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.stock-container -->
 
                                 <div class="description-container m-t-20">
-                                    Xi Măng Vicem Hà Tiên Đa Dụng được đóng bao 50kg và có các loại vỏ bao: PP, PK,
-                                    KPK, bao giấy (tùy theo địa bàn). Tất cả các nhà máy xi măng của Vicem Hà Tiên
-                                    đều sản xuất được sản phẩm xi măng đa dụng với chất lượng chuẩn hóa đồng nhất.
-                                    Sản phẩm được phân phối qua hệ thống phân phối hiện có của Hà Tiên, có bán tại
-                                    các cửa hàng vật liệu xây dựng kể từ ngày 29 tháng 03 năm 2012
+                                    ${Pro.description}
                                 </div><!-- /.description-container -->
 
                                 <div class="price-container info-container m-t-20">
@@ -887,27 +622,12 @@
 
                                         <div class="col-sm-6">
                                             <div class="price-box">
-                                                <span class="price">84.000đ</span>
-                                                <span class="price-strike">90.000đ</span>
+                                                <span class="price">${Pro.salePrice}đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="price-strike">${Pro.price}đ</span>
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-6">
-                                            <div class="favorite-button m-t-10">
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                   data-placement="right" title="Yêu Thích" href="#">
-                                                    <i class="fa fa-heart"></i>
-                                                </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                   data-placement="right" title="So Sánh" href="#">
-                                                    <i class="fa fa-signal"></i>
-                                                </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                   data-placement="right" title="E-mail" href="#">
-                                                    <i class="fa fa-envelope"></i>
-                                                </a>
-                                            </div>
-                                        </div>
+
 
                                     </div><!-- /.row -->
                                 </div><!-- /.price-container -->
@@ -919,22 +639,16 @@
                                             <span class="label">Số lượng</span>
                                         </div>
 
-                                        <div class="col-sm-2">
+                                        <div class="col-sm-4" style="padding-top: 6px">
                                             <div class="cart-quantity">
-                                                <div class="quant-input">
-                                                    <div class="arrows">
-                                                        <div class="arrow plus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-asc"></i></span></div>
-                                                        <div class="arrow minus gradient"><span class="ir"><i
-                                                                class="icon fa fa-sort-desc"></i></span></div>
-                                                    </div>
-                                                    <input type="text" value="1">
+                                                <div class="buttons_added" >
+                                                    <input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number" value="1">
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-7">
-                                            <a href="#" class="btn btn-primary"><i
+                                        <div class="col-sm-6">
+                                            <a href="#" class="btn btn-primary ${act}"><i
                                                     class="fa fa-shopping-cart inner-right-vs"></i> Thêm vào giỏ
                                                 hàng</a>
                                         </div>
@@ -953,519 +667,69 @@
                     </div><!-- /.row -->
                 </div>
 
-                <div class="product-tabs inner-bottom-xs  wow fadeInUp">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <ul id="product-tabs" class="nav nav-tabs nav-tab-cell">
-                                <li class="active"><a data-toggle="tab" href="#description">Mô tả</a></li>
-                                <li><a data-toggle="tab" href="#specifications">Quy cách</a></li>
-                                <li><a data-toggle="tab" href="#careinstruction">HD bảo quản</a></li>
-                                <li><a data-toggle="tab" href="#review">Đánh giá</a></li>
-                            </ul><!-- /.nav-tabs #product-tabs -->
-                        </div>
-                        <div class="col-sm-9">
-
-                            <div class="tab-content">
-
-                                <div id="description" class="tab-pane in active">
-                                    <div class="product-tab">
-                                        <p class="text">Với mục tiêu tham vọng chiếm lĩnh thị trường – Lớn mạnh và
-                                            vững mạnh, Vicem Hà Tiên luôn tìm hiểu và học hỏi từ các nước có ngành
-                                            sản xuất xi măng hàng đầu với mục đích hoàn thiện các dòng sản phẩm mới
-                                            đáp ứng nhu cầu thị trường. Với phương châm các dòng sản phẩm mới này sẽ
-                                            mãi " thách thức thời gian "
-
-                                            Vì vậy Xi Măng Vicem Hà Tiên Đa Dụng ra đời với yêu cầu đổ bê tông móng,
-                                            sàn, cột, đà HOẶC trộn vữa xây, vữa tô HOẶC ốp gạch đá HOẶC cán nền tất
-                                            cả trong một sản phẩm. Xi Măng Vicem Hà Tiên Đa Dụng được sản xuất theo
-                                            TCVN 6260:2009 PCB40, cũng phù hợp với Tiêu chuẩn Mỹ ASTM C1157, với
-                                            cường độ nén R28 ≥ 40Mpa.
-                                        </p>
-                                    </div>
-                                </div><!-- /.tab-pane -->
-
-                                <div id="review" class="tab-pane">
-                                    <div class="product-tab">
-
-                                        <div class="product-reviews">
-                                            <h4 class="title">Đánh giá khách hàng</h4>
-
-                                            <div class="reviews">
-                                                <div class="review">
-                                                    <div class="review-title"><span class="summary">Sản phẩm quá
-                                                                tốt</span><span class="date"><i
-                                                            class="fa fa-calendar"></i><span>1 ngày
-                                                                    trước</span></span></div>
-                                                    <div class="text">Sản phẩm đã giúp chúng tôi có 1 sân vườn oke
-                                                        yeah yea</div>
-                                                </div>
-
-                                            </div><!-- /.reviews -->
-                                        </div><!-- /.product-reviews -->
-
-
-
-                                        <div class="product-add-review">
-                                            <h4 class="title">Cho tôi biết cảm giác của bạn</h4>
-                                            <div class="review-table">
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                        <tr>
-                                                            <th class="cell-label">&nbsp;</th>
-                                                            <th>1 sao</th>
-                                                            <th>2 sao</th>
-                                                            <th>3 sao</th>
-                                                            <th>4 sao</th>
-                                                            <th>5 sao</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <tr>
-                                                            <td class="cell-label">Chất lượng</td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="1"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="2"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="3"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="4"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="5"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="cell-label">Giá</td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="1"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="2"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="3"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="4"></td>
-                                                            <td><input type="radio" name="quality" class="radio"
-                                                                       value="5"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table><!-- /.table .table-bordered -->
-                                                </div><!-- /.table-responsive -->
-                                            </div><!-- /.review-table -->
-
-                                            <div class="review-form">
-                                                <div class="form-container">
-                                                    <form role="form" class="cnt-form">
-
-                                                        <div class="row">
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputName">Họ tên <span
-                                                                            class="astk">*</span></label>
-                                                                    <input type="text" class="form-control txt"
-                                                                           id="exampleInputName" placeholder="">
-                                                                </div><!-- /.form-group -->
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputSummary">Tiêu đề <span
-                                                                            class="astk">*</span></label>
-                                                                    <input type="text" class="form-control txt"
-                                                                           id="exampleInputSummary" placeholder="">
-                                                                </div><!-- /.form-group -->
-                                                            </div>
-
-                                                            <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputReview">Đánh giá <span
-                                                                            class="astk">*</span></label>
-                                                                    <textarea class="form-control txt txt-review"
-                                                                              id="exampleInputReview" rows="4"
-                                                                              placeholder=""></textarea>
-                                                                </div><!-- /.form-group -->
-                                                            </div>
-                                                        </div><!-- /.row -->
-
-                                                        <div class="action text-right">
-                                                            <button class="btn btn-primary btn-upper">Gửi đánh
-                                                                giá</button>
-                                                        </div><!-- /.action -->
-
-                                                    </form><!-- /.cnt-form -->
-                                                </div><!-- /.form-container -->
-                                            </div><!-- /.review-form -->
-
-                                        </div><!-- /.product-add-review -->
-
-                                    </div><!-- /.product-tab -->
-                                </div><!-- /.tab-pane -->
-
-                                <div id="specifications" class="tab-pane">
-                                    <div class="product-tag">
-
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Sản phẩm</b>Vật Liệu Thô </p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Bộ sưu tập</b> Xi măng</p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Kích cỡ</b> H75xDia80</p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Màu sắc</b> Black-Dark-wood</p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Chất liệu</b> Xi măng
-                                            Xuất xứ Việt Nam
-                                            Đơn vị PCS</p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Xuất xứ</b> Việt Nam</p>
-                                        <p><b class="cc" style="display: inline-block;
-											min-width: 100px;">Đơn vị </b> Vicem Hà Tiên</p>
-                                    </div><!-- /.product-tab -->
-                                </div><!-- /.tab-pane -->
-                                <div id="careinstruction" class="tab-pane">
-                                    <div class="product-tag">
-                                        <ol>
-                                            <li>
-                                                <p>Tránh va đập mạnh</p>
-                                            </li>
-                                            <li>
-                                                <p>Tránh để nơi ẩm ướt</p>
-                                            </li>
-                                            <li>
-                                                <p>Không để những chỗ sắt nhọn</p>
-                                            </li>
-                                            <li>
-                                                <p>Tránh tiếp xúc với nhiệt độ cao</p>
-                                            </li>
-                                        </ol>
-
-
-                                    </div><!-- /.product-tab -->
-                                </div><!-- /.tab-pane -->
-                            </div><!-- /.tab-content -->
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.product-tabs -->
-
                 <!-- ============================================== UPSELL PRODUCTS ============================================== -->
                 <section class="section featured-product wow fadeInUp">
                     <h3 class="section-title">Sản phẩm yêu thích</h3>
                     <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p1.jpg" alt=""></a> </div>
-                                        <!-- /.image -->
+                        <c:forEach items="${Like}" var="like">
+                            <div class="item item-carousel">
+                                <div class="products">
+                                    <div class="product">
+                                        <div class="product-image">
+                                            <div class="image"> <a href="productDetail?product_id=${like.id}"><img
+                                                    src="${like.imgURL}"
+                                                    alt=""></a> </div>
+                                            <!-- /.image -->
 
-                                        <div class="tag hot"><span>hot</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
-                                            Vi
-                                            600*600mm DAV-H04</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price">420.850đ </span> <span
-                                                class="price-before-discount">500.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
+                                            <div class="tag hot"><span>hot</span></div>
                                         </div>
-                                        <!-- /.action -->
+                                        <!-- /.product-image -->
+
+                                        <div class="product-info text-left">
+                                            <h3 class="name"><a href="productDetail?product_id=${like.id}">${like.name}</a></h3>
+                                            <div class="rating rateit-small"></div>
+                                            <div class="description"></div>
+                                            <div class="product-price"> <span class="price"> ${like.salePrice}đ </span> <span
+                                                    class="price-before-discount">${like.price}đ</span> </div>
+                                            <!-- /.product-price -->
+
+                                        </div>
+                                        <!-- /.product-info -->
+                                        <div class="cart clearfix animate-effect">
+                                            <div class="action">
+                                                <ul class="list-unstyled">
+                                                    <li class="add-cart-button btn-group">
+                                                        <button class="btn btn-primary icon" data-toggle="dropdown"
+                                                                type="button"> <i class="fa fa-shopping-cart"></i> </button>
+                                                        <button class="btn btn-primary cart-btn" type="button">Thêm vào
+                                                            giỏ hàng</button>
+                                                    </li>
+                                                    <li class="lnk wishlist"> <a class="add-to-cart"
+                                                                                 href="chitietsanpham.jsp" title="Wishlist"> <i
+                                                            class="icon fa fa-heart"></i> </a>
+                                                    </li>
+                                                    <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
+                                                                        title="Compare"> <i class="fa fa-signal"
+                                                                                            aria-hidden="true"></i> </a> </li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.action -->
+                                        </div>
+                                        <!-- /.cart -->
                                     </div>
-                                    <!-- /.cart -->
+                                    <!-- /.product -->
+
                                 </div>
-                                <!-- /.product -->
-
+                                <!-- /.products -->
                             </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
+                            <!-- /.item -->
+                        </c:forEach>
 
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p2.jpg" alt=""></a> </div>
-                                        <!-- /.image -->
-
-                                        <div class="tag new"><span>mới</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
-                                            Vi
-                                            600*600mm DAV-H03</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price"> 420.850đ </span> <span
-                                                class="price-before-discount">500.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p3.jpg"
-                                                data-echo="assets/images/products/gachoplat/p3.jpg" alt=""></a>
-                                        </div>
-                                        <!-- /.image -->
-
-                                        <div class="tag sale"><span>sale</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Gạch ốp lát Eurotile BST Đan
-                                            Vi
-                                            600*600mm DAV-H06 </a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price"> 420.850đ </span> <span
-                                                class="price-before-discount">500.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/vatlieutho/ximang/haivan.png"
-                                                alt=""></a> </div>
-                                        <!-- /.image -->
-
-                                        <div class="tag hot"><span>hot</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Xi măng Hải Vân</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price"> 85.000đ </span> <span
-                                                class="price-before-discount">90.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/vatlieutho/satthep/thepgocL40.png"
-                                                alt=""></a> </div>
-                                        <!-- /.image -->
-
-                                        <div class="tag new"><span>mới</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Thép Góc L40</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price"> 320.000đ </span> <span
-                                                class="price-before-discount">380.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item item-carousel">
-                            <div class="products">
-                                <div class="product">
-                                    <div class="product-image">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/vatlieutho/satthep/thepminhduc.jpg"
-                                                alt=""></a> </div>
-                                        <!-- /.image -->
-
-                                        <div class="tag sale"><span>sale</span></div>
-                                    </div>
-                                    <!-- /.product-image -->
-
-                                    <div class="product-info text-left">
-                                        <h3 class="name"><a href="chitietsanpham.jsp">Thép Minh Đức</a></h3>
-                                        <div class="rating rateit-small"></div>
-                                        <div class="description"></div>
-                                        <div class="product-price"> <span class="price"> 320.000đ</span> <span
-                                                class="price-before-discount">400.000đ</span> </div>
-                                        <!-- /.product-price -->
-
-                                    </div>
-                                    <!-- /.product-info -->
-                                    <div class="cart clearfix animate-effect">
-                                        <div class="action">
-                                            <ul class="list-unstyled">
-                                                <li class="add-cart-button btn-group">
-                                                    <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                                                    <button class="btn btn-primary cart-btn" type="button">Thêm vào
-                                                        giỏ hàng</button>
-                                                </li>
-                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                             href="chitietsanpham.jsp" title="Wishlist"> <i
-                                                        class="icon fa fa-heart"></i> </a>
-                                                </li>
-                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                        aria-hidden="true"></i> </a> </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /.action -->
-                                    </div>
-                                    <!-- /.cart -->
-                                </div>
-                                <!-- /.product -->
-
-                            </div>
-                            <!-- /.products -->
-                        </div>
                         <!-- /.item -->
                     </div>
                     <!-- /.home-owl-carousel -->
-                </section><!-- /.section -->
+                </section>
+                <!-- /.section -->
                 <!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
 
             </div><!-- /.col -->

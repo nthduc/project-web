@@ -1,6 +1,8 @@
 package vn.edu.hcmuaf.fit.controller.Client;
 
+import vn.edu.hcmuaf.fit.bean.TagBean;
 import vn.edu.hcmuaf.fit.bean.UserBean;
+import vn.edu.hcmuaf.fit.services.TagService;
 import vn.edu.hcmuaf.fit.services.UserService;
 
 import javax.servlet.ServletException;
@@ -8,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 //import javax.servlet.http.HttpServerletRequest;
 //import javax.servlet.http.HttpServerletResponse;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,6 +30,9 @@ public class Signup extends HttpServlet {
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
                 String repass = request.getParameter("re_password");
+                TagService tag = new TagService();
+                List<TagBean> listTag = tag.getAllTag();
+                request.setAttribute("Tag",listTag);
             if (!password.equals(repass)){
                 request.setAttribute("mess","Mật khẩu không trùng khớp");
                 request.getRequestDispatcher("dangky.jsp").forward(request,response);
@@ -42,6 +48,7 @@ public class Signup extends HttpServlet {
                     request.getRequestDispatcher("dangky.jsp").forward(request,response);
                 }
             }
+           request.getRequestDispatcher("dangky.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
