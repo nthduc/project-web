@@ -124,41 +124,21 @@
                 <!-- /.contact-row -->
                 <!-- ============================================================= SEARCH AREA ============================================================= -->
                 <div class="search-area">
-                    <form>
+                    <form action="Search" method="get">
                         <div class="control-group">
                             <ul class="categories-filter animate-dropdown">
                                 <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"
-                                                         href="category.html">Danh mục<b class="caret"></b></a>
+                                                         href="">Danh mục<b class="caret"></b></a>
                                     <ul class="dropdown-menu" role="menu">
-
+                                        <c:forEach items="${Tag}" var="tag">
                                         <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="gachoplat.jsp">- Gạch ốp lát</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="daoplat.jsp">- Đá ốp lát</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="son.jsp">- Sơn nội thất & ngoại thất</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="sango.jsp">- Sàn gỗ và phụ kiện</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="tamoptuong.jsp">- Tấm ốp tường</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vatlieutho.jsp">- Vật liệu thô</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vattunganhda.jsp">- Vật tư ngành đá</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="vatlieumai.jsp">- Vật liệu mài & phụ kiện</a>
-                                        </li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="dssanpham.jsp">- Cửa & cửa sổ, bản lề & phụ
-                                            kiện</a></li>
-                                        <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                   href="nep.jsp">- Nẹp</a></li>
+                                                                   href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
+                                        </c:forEach>
                                     </ul>
                                 </li>
                             </ul>
-                            <input class="search-field" placeholder="Bạn muốn tìm gì đó...">
-                            <a class="search-button" href="#"></a>
+                            <input style="height: 44.4px; border: none;width:430px " name="txt"  type="text" placeholder="Bạn muốn tìm gì đó...">
+                            <button type="submit" style="margin-left: 60px; height: 40px; width: 40px"><i class="fa fa-search"></i></button>
                         </div>
                     </form>
                 </div>

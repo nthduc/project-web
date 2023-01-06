@@ -23,7 +23,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="MediaCenter, Template, eCommerce">
     <meta name="robots" content="all">
-    <title>DAISAN | ${name}</title>
+    <title>DAISAN </title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -59,31 +59,31 @@
                 <div class="cnt-account">
                     <ul class="list-unstyled">
                         <c:choose>
+                        <c:when test="${sessionScope.acc == null}">
+                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                            </li>
+                        </c:when>
+                        <c:when test="${sessionScope.acc != null}">
+                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.fullname}</a>
+                            </c:when>
+                            <c:otherwise>
+
+                            </c:otherwise>
+                            </c:choose>
+                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
+                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
+                        <c:choose>
                             <c:when test="${sessionScope.acc == null}">
-                                <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
-                                </li>
+                                <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
                             </c:when>
                             <c:when test="${sessionScope.acc != null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.fullname}</a>
-                                </c:when>
-                                <c:otherwise>
+                                <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
+                            </c:when>
+                            <c:otherwise>
 
-                                </c:otherwise>
-                                </c:choose>
-                                        <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
-                                        <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
-                            <c:choose>
-                                <c:when test="${sessionScope.acc == null}">
-                                    <li><a href="dangnhap.jsp"><i class="icon fa fa-lock"></i>Đăng nhập</a></li>
-                                </c:when>
-                                <c:when test="${sessionScope.acc != null}">
-                                    <li><a href="Logout"><i class="icon fa fa-lock"></i>Đăng xuất</a></li>
-                                </c:when>
-                                <c:otherwise>
-
-                                </c:otherwise>
-                            </c:choose>
+                            </c:otherwise>
+                        </c:choose>
                     </ul>
                 </div>
                 <!-- /.cnt-account -->
@@ -115,7 +115,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
                     <div class="logo"> <a href="/Home"> <img src="assets\images\daisan.png" alt="logo"
-                                                                 style="height: 55px; margin-top: -10px"> </a> </div>
+                                                             style="height: 55px; margin-top: -10px"> </a> </div>
                     <!-- /.logo -->
                     <!-- ============================================================= LOGO : END ============================================================= -->
                 </div>
@@ -414,7 +414,7 @@
         <div class="breadcrumb-inner">
             <ul class="list-inline list-unstyled">
                 <li><a href="/Home">Trang chủ</a></li>
-                <li class='active' style="width: 160px">${name}</li>
+                <li class='active' style="width: auto">Kết quả tìm kiếm với "${wordS}"</li>
             </ul>
         </div>
         <!-- /.breadcrumb-inner -->
@@ -862,54 +862,54 @@
                             <div class="category-product">
                                 <div class="row">
 
-                                <c:forEach items="${ListC}" var="p">
-                                    <div class="col-sm-6 col-md-4 wow fadeInUp">
-                                        <div class="products">
-                                            <div class="product">
-                                                <div class="product-image">
-                                                    <div class="image"> <a href="productDetail?product_id=${p.id}"><img
-                                                            src=${p.imgURL} alt=""></a> </div>
-                                                    <!-- /.image -->
+                                    <c:forEach items="${ListS}" var="p">
+                                        <div class="col-sm-6 col-md-4 wow fadeInUp">
+                                            <div class="products">
+                                                <div class="product">
+                                                    <div class="product-image">
+                                                        <div class="image"> <a href="productDetail?product_id=${p.id}"><img
+                                                                src=${p.imgURL} alt=""></a> </div>
+                                                        <!-- /.image -->
 
-                                                    <div class="tag new"><span>mới</span></div>
-                                                </div>
-                                                <!-- /.product-image -->
-
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="productDetail?product_id=${p.id}">${p.name}</a></h3>
-                                                    <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> ${p.price}đ </span> <span
-                                                            class="price-before-discount">${p.salePrice}đ</span> </div>
-                                                    <!-- /.product-price -->
-
-                                                </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-
-                                                            </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                                                        </ul>
+                                                        <div class="tag new"><span>mới</span></div>
                                                     </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
-                                            </div>
-<%--                                            </c:forEach>--%>
-<%--                                            <%}%>--%>
-                                            <!-- /.product -->
+                                                    <!-- /.product-image -->
 
+                                                    <div class="product-info text-left">
+                                                        <h3 class="name"><a href="productDetail?product_id=${p.id}">${p.name}</a></h3>
+                                                        <div class="rating rateit-small"></div>
+                                                        <div class="description"></div>
+                                                        <div class="product-price"> <span class="price"> ${p.price}đ </span> <span
+                                                                class="price-before-discount">${p.salePrice}đ</span> </div>
+                                                        <!-- /.product-price -->
+
+                                                    </div>
+                                                    <!-- /.product-info -->
+                                                    <div class="cart clearfix animate-effect">
+                                                        <div class="action">
+                                                            <ul class="list-unstyled">
+                                                                <li class="add-cart-button btn-group">
+                                                                    <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
+                                                                            class="fa fa-shopping-cart"></i> </button>
+
+                                                                </li>
+                                                                <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
+                                                                                             title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+                                                                <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
+                                                                        class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- /.action -->
+                                                    </div>
+                                                    <!-- /.cart -->
+                                                </div>
+                                                    <%--                                            </c:forEach>--%>
+                                                    <%--                                            <%}%>--%>
+                                                <!-- /.product -->
+
+                                            </div>
+                                            <!-- /.products -->
                                         </div>
-                                        <!-- /.products -->
-                                    </div>
 
                                     </c:forEach>
                                     <!-- /.item -->
@@ -1170,3 +1170,4 @@
 </body>
 
 </html>
+
