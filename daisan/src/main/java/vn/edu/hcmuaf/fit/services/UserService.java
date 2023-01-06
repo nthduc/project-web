@@ -70,13 +70,41 @@ public class UserService {
                 System.out.print("add successful 1");
                 ps.executeUpdate();
                 System.out.print("add successful");
-//
+
             }catch (Exception e) {
                 System.out.print(" Unsuccessful");
                 e.printStackTrace();
             }
     }
+    public int themtaikhoanadmin(int role, String username, String email, String password, String fullname){
+        System.out.println(role);
+        System.out.println(username);
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println(fullname);
+
+
+        String query = "INSERT INTO users (role_ID,username, email, password,fullname) VALUES (?, ?, ?, ?, ?)";
+        int affectedRows = 0;
+
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setInt(1,role);
+            ps.setString(2,username);
+            ps.setString(3,email);
+            ps.setString(4,password);
+            ps.setString(5,fullname);
+            affectedRows = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows;
+    }
     public UserBean login(String username, String password){
+        System.out.println(username);
+        System.out.println(password);
         String query = " select * from users where username = ? AND password =?";
         UserBean user = null;
         try {
@@ -100,6 +128,43 @@ public class UserService {
                     user = new UserBean(user_ID,user_Role,name,email,password1,fullname,gender,dob,phone,address);
                 }}
         }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+    public UserBean loginAdmin(String username, String password,String email){
+        System.out.println(username);
+        System.out.println(password);
+        System.out.println(email);
+        String query = " select * from users where username = ? AND email =? AND password = ?";
+        UserBean user = null;
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+
+            ps.setString(1,username);
+            ps.setString(2,email);
+            ps.setString(3,password);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    int user_ID = rs.getInt(1);
+                    int user_Role = rs.getInt(2);
+                    String name = rs.getString(3);
+                    String email1 = rs.getString(4);
+                    String password1 = rs.getString(5);
+                    String fullname = rs.getString(6);
+                    String gender = rs.getString(7);
+                    Date dob = rs.getDate(8);
+                    String phone = rs.getString(9);
+                    String address = rs.getString(10);
+
+                    user = new UserBean(user_ID,user_Role,name,email1,password1,fullname,gender,dob,phone,address);
+                }}
+        }catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Có lỗi xảy ra không thể Truy vấn Database LoginAdmin");
         }
         return user;
     }
