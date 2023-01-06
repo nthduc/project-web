@@ -10,7 +10,13 @@ import javax.servlet.http.HttpSession;
 
 import vn.edu.hcmuaf.fit.services.UserService;
 import vn.edu.hcmuaf.fit.bean.UserBean;
-
+/**
+ * Login Admin
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-31
+ */
 @WebServlet("/admin/login")
 public class AdminLogin extends HttpServlet {
     private static final long serialVersionUID = 1L;
