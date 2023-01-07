@@ -3,10 +3,9 @@ package vn.edu.hcmuaf.fit.services;
 import vn.edu.hcmuaf.fit.bean.UserBean;
 import vn.edu.hcmuaf.fit.db.ConnectionDB;
 
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserService {
     private static UserService instance;
@@ -191,6 +190,45 @@ public class UserService {
         }
         return true;
     }
+
+    public List<UserBean> getCustomers() {
+        // Define a list to hold the customers
+        List<UserBean> customers = new ArrayList<>();
+
+        // Connect to the database
+        try {
+            ConnectionDB.connect();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Define the SQL query to get the customers
+        String sql = "SELECT * FROM users WHERE role_ID = 2";
+        PreparedStatement statement;
+        try {
+            statement = ConnectionDB.conn.prepareStatement(sql);
+            ResultSet result = statement.executeQuery();
+
+            // Loop through the result set and add each customer to the list
+            while (result.next()) {
+                UserBean customer = new UserBean();
+                customer.setUser_ID(result.getInt("user_ID"));
+                customer.setFullname(result.getString("fullname"));
+                customer.setUsername(result.getString("username"));
+                customer.setEmail(result.getString("email"));
+                customer.setRole_ID(result.getInt("role_ID"));
+                customers.add(customer);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        // Close the database connection
+        ConnectionDB.closeConnection();
+
+        // Return the list of customers
+        return customers;
+    }
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
@@ -200,5 +238,6 @@ public class UserService {
 //        us.add(user);
 //       System.out.println(us.login("anhtuan","123456"));
     }
+
 
 }

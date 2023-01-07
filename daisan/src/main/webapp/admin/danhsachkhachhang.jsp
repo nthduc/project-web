@@ -1,4 +1,6 @@
-<%-- Created by IntelliJ IDEA. User: ACER Date: 8/12/2022 Time: 7:20 AM To change this template use File | Settings |
+<%@ page import="vn.edu.hcmuaf.fit.bean.UserBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.services.UserService" %><%-- Created by IntelliJ IDEA. User: ACER Date: 8/12/2022 Time: 7:20 AM To change this template use File | Settings |
     File Templates. --%>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -394,158 +396,19 @@
 
 
                                                         <tbody>
+                                                        <%
+                                                            List<UserBean> customers = UserService.getInstance().getCustomers();
+                                                            for (UserBean customer : customers) { %>
+
                                                             <tr>
-                                                                <td>Nguyễn Tấn Dũng</td>
-                                                                <td>nguyentandung</td>
-                                                                <td>Việt Nam</td>
+                                                                <td> <%=customer.getFullname()%></td>
+                                                                <td><%=customer.getUsername()%></td>
+                                                                <td><%=customer.getAddress()%></td>
                                                                 <td>61</td>
                                                                 <td>2022/04/25</td>
                                                                 <td>3208</td>
                                                             </tr>
-                                                            <tr>
-                                                                <td>Đinh Thị Tuyết Mai</td>
-                                                                <td>dinhthituyetmai</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>22</td>
-                                                                <td>2022/07/25</td>
-                                                                <td>1707</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Văn Minh</td>
-                                                                <td>tranvanminh12</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>30</td>
-                                                                <td>2022/01/12</td>
-                                                                <td>8600</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Phan Thành Danh</td>
-                                                                <td>phanthanhdanh2</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>22</td>
-                                                                <td>2022/03/29</td>
-                                                                <td>4330</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Quốc Huy</td>
-                                                                <td>tranquochuy32</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>33</td>
-                                                                <td>2022/11/28</td>
-                                                                <td>1620</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trương Hữu Phước</td>
-                                                                <td>truonghuuphuoc33</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>34</td>
-                                                                <td>2022/12/02</td>
-                                                                <td>3720</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Hoàng Nghi</td>
-                                                                <td>hoangnghi32</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>31</td>
-                                                                <td>2022/08/06</td>
-                                                                <td>1375</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Hoàng Minh</td>
-                                                                <td>hoangminh23</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>24</td>
-                                                                <td>2022/10/14</td>
-                                                                <td>3275</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Hoàng Vinh</td>
-                                                                <td>hoangvinh32</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>39</td>
-                                                                <td>2022/09/15</td>
-                                                                <td>2055</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Văn Đời</td>
-                                                                <td>vandoi1</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>23</td>
-                                                                <td>2022/12/13</td>
-                                                                <td>1035</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Phan Thị Duyên</td>
-                                                                <td>duyen24</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>30</td>
-                                                                <td>2022/12/19</td>
-                                                                <td>9056</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trương Tấn Sang</td>
-                                                                <td>sang4343</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>22</td>
-                                                                <td>2022/03/03</td>
-                                                                <td>3425</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Trần Minh Hiếu</td>
-                                                                <td>hiu424</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>36</td>
-                                                                <td>2022/10/16</td>
-                                                                <td>4704</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Văn Thân</td>
-                                                                <td>vanthan</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>43</td>
-                                                                <td>2022/12/18</td>
-                                                                <td>3135</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Nguyễn Kiều Oanh</td>
-                                                                <td>kieuoanh12</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>19</td>
-                                                                <td>2022/03/17</td>
-                                                                <td>3857</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Thị Tuyết</td>
-                                                                <td>tuyet323</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>66</td>
-                                                                <td>2022/11/27</td>
-                                                                <td>1985</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Gia Bảo</td>
-                                                                <td>bao433</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>64</td>
-                                                                <td>2022/06/09</td>
-                                                                <td>7250</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Khánh Ly</td>
-                                                                <td>ly12</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>59</td>
-                                                                <td>2022/04/10</td>
-                                                                <td>2375</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Trần Ý Nhi</td>
-                                                                <td>ynhi</td>
-                                                                <td>Việt Nam</td>
-                                                                <td>41</td>
-                                                                <td>2022/10/13</td>
-                                                                <td>1325</td>
-                                                            </tr>
+                                                        <%}%>
 
                                                         </tbody>
                                                     </table>
