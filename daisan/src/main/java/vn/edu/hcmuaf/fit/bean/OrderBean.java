@@ -5,31 +5,46 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class OrderBean implements Serializable {
-    private String orderID;
+    private int order_ID;
+    private int user_ID;
     private InfoBean info;
-    private int status;
-    private int totalPrice;
+    private int num_item;
+    private String payment;
+    private String status;
+    private int price;
     private Date receptDate;
     private Date deliveryDate;
-    private String email;
     private ArrayList<ItemBean> list;
 
     public OrderBean() {
+
     }
 
-    public OrderBean(String orderID, InfoBean info, int status, int totalPrice) {
-        this.orderID = orderID;
-        this.info = info;
+    public OrderBean(int order_ID, int user_ID, int num_item, int price, String payment, Date deliveryDate, Date receptDate, String status) {
+        this.order_ID = order_ID;
+        this.user_ID = user_ID;
+        this.num_item = num_item;
+        this.price = price;
+        this.payment = payment;
+        this.deliveryDate = deliveryDate;
+        this.receptDate = receptDate;
         this.status = status;
-        this.totalPrice = totalPrice;
     }
 
-    public String getOrderID() {
-        return orderID;
+    public int getOrder_ID() {
+        return order_ID;
     }
 
-    public void setOrderID(String orderID) {
-        this.orderID = orderID;
+    public void setOrder_ID(int order_ID) {
+        this.order_ID = order_ID;
+    }
+
+    public int getUser_ID() {
+        return user_ID;
+    }
+
+    public void setUser_ID(int user_ID) {
+        this.user_ID = user_ID;
     }
 
     public InfoBean getInfo() {
@@ -40,20 +55,36 @@ public class OrderBean implements Serializable {
         this.info = info;
     }
 
-    public int getStatus() {
+    public int getNum_item() {
+        return num_item;
+    }
+
+    public void setNum_item(int num_item) {
+        this.num_item = num_item;
+    }
+
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public int getPrice() {
+        return price;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public Date getReceptDate() {
@@ -70,14 +101,6 @@ public class OrderBean implements Serializable {
 
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public ArrayList<ItemBean> getList() {
