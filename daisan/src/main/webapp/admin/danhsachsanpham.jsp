@@ -1,4 +1,6 @@
-<%-- Created by IntelliJ IDEA. User: ACER Date: 8/12/2022 Time: 7:20 AM To change this template use File | Settings |
+<%@ page import="vn.edu.hcmuaf.fit.bean.ProductBean" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.services.ProductService" %><%-- Created by IntelliJ IDEA. User: ACER Date: 8/12/2022 Time: 7:20 AM To change this template use File | Settings |
     File Templates. --%>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -499,7 +501,10 @@
 
 
 
-
+                                                                        <%
+                                                                            List<ProductBean> products = ProductService.getInstance().getAllProducts();
+                                                                            for (ProductBean product : products) {
+                                                                        %>
                                                                             <tr role="row" class="odd">
                                                                                 <td tabindex="0"
                                                                                     class="dt-checkboxes-cell">
@@ -511,7 +516,7 @@
                                                                                     </div>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <img src="../assets/images/products/gachoplat/p1.jpg"
+                                                                                    <img src="../<%= product.getImgURL() %>"
                                                                                         alt="contact-img"
                                                                                         title="contact-img"
                                                                                         class="rounded mr-3"
@@ -520,11 +525,7 @@
                                                                                     <h5
                                                                                         class="m-0 d-inline-block align-middle">
                                                                                         <a href="#"
-                                                                                            class="text-dark">Gạch ốp
-                                                                                            lát
-                                                                                            Eurotile BST Vọng Cát
-                                                                                            600*600mm
-                                                                                            VOC-H03</a></h5>
+                                                                                            class="text-dark"><%= product.getName()%></a></h5>
                                                                                 </td>
                                                                                 <td>
                                                                                     <span class="badge badge-success"><i
@@ -532,14 +533,14 @@
                                                                                         4.9</span>
                                                                                 </td>
                                                                                 <td>
-                                                                                    Gạch ốp lát
+                                                                                    <%= product.getTag_ID()%>
                                                                                 </td>
                                                                                 <td>
                                                                                     09 Tháng 3, 2022
                                                                                 </td>
                                                                                 <td class="sorting_1">
                                                                                     <div>
-                                                                                        420.850đ
+                                                                                        <%= product.getSalePrice() %>
                                                                                     </div>
                                                                                 </td>
 
@@ -622,429 +623,8 @@
                                                                                     </ul>
                                                                                 </td>
                                                                             </tr>
-                                                                            <tr role="row" class="even">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/gachoplat/p2.jpg"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#"
-                                                                                            class="text-dark">Gạch ốp
-                                                                                            lát
-                                                                                            Eurotile BST Vọng Cát
-                                                                                            600*600mm H01</a></h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-warning"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        3.1</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Gạch ốp lát
-                                                                                </td>
-                                                                                <td>
-                                                                                    05 Tháng 2, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        420.850đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    60
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-success">Active</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr role="row" class="odd">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/vatlieutho/ximang/haivan.png"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#" class="text-dark">Xi
-                                                                                            măng Hải
-                                                                                            Vân</a>
-                                                                                    </h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-success"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        4.3</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Vật Liệu Thô
-                                                                                </td>
-                                                                                <td>
-                                                                                    02 tháng 1, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        90.000đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    58
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-danger">Deactive</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr role="row" class="even">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/vatlieutho/ximang/hoanglong.png"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#" class="text-dark">Xi
-                                                                                            măng Hoàng
-                                                                                            Long</a>
-                                                                                    </h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-success"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        4.9</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Vật Liệu Thô
-                                                                                </td>
-                                                                                <td>
-                                                                                    27 tháng 9, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        89.000đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    98
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-success">Active</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr role="row" class="odd">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/daoplat/p1.jpeg"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#"
-                                                                                            class="text-dark">Mosaic Xà
-                                                                                            Cừ Khảm
-                                                                                            Trai 300x300 MS07</a></h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-danger"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        2.5</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Đá ốp lát
-                                                                                </td>
-                                                                                <td>
-                                                                                    23 tháng 6, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        1.850.000đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    85
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-danger">Deactive</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr role="row" class="even">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/gachoplat/p3.jpg"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#"
-                                                                                            class="text-dark">Gạch ốp
-                                                                                            lát
-                                                                                            Eurotile BST Vọng Cát
-                                                                                            600*600mm H01</a>
-                                                                                    </h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-warning"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        3.4</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Gạch ốp lát
-                                                                                </td>
-                                                                                <td>
-                                                                                    21 Tháng 4, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        2.500.000đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    88
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-success">Active</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr role="row" class="odd">
-                                                                                <td tabindex="0"
-                                                                                    class="dt-checkboxes-cell">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox">
-                                                                                        <input type="checkbox"
-                                                                                            class="custom-control-input dt-checkboxes"><label
-                                                                                            class="custom-control-label">&nbsp;</label>
-                                                                                    </div>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <img src="../assets/images/products/vatlieutho/satthep/thepgocL40.png"
-                                                                                        alt="contact-img"
-                                                                                        title="contact-img"
-                                                                                        class="rounded mr-3"
-                                                                                        height="48">
-
-                                                                                    <h5
-                                                                                        class="m-0 d-inline-block align-middle">
-                                                                                        <a href="#"
-                                                                                            class="text-dark">Thép góc
-                                                                                            L40
-                                                                                            <Var></Var></a></h5>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span class="badge badge-success"><i
-                                                                                            class="mdi mdi-star"></i>
-                                                                                        4.5</span>
-                                                                                </td>
-                                                                                <td>
-                                                                                    Vật Liệu Thô
-                                                                                </td>
-                                                                                <td>
-                                                                                    19 Tháng 12, 2022
-                                                                                </td>
-                                                                                <td class="sorting_1">
-                                                                                    <div>
-                                                                                        550.000đ
-                                                                                    </div>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    82
-                                                                                </td>
-                                                                                <td>
-                                                                                    <span
-                                                                                        class="badge badge-soft-success">Active</span>
-                                                                                </td>
-
-                                                                                <td>
-                                                                                    <ul
-                                                                                        class="list-inline table-action m-0">
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-eye"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-square-edit-outline"></i></a>
-                                                                                        </li>
-                                                                                        <li class="list-inline-item">
-                                                                                            <a href="javascript:void(0);"
-                                                                                                class="action-icon"> <i
-                                                                                                    class="mdi mdi-delete"></i></a>
-                                                                                        </li>
-                                                                                    </ul>
-                                                                                </td>
-                                                                            </tr>
+                                                                       <%}%>
+                                                                            
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
