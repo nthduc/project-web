@@ -42,7 +42,7 @@ public class Signup extends HttpServlet {
                 if (u== null){
                         us.themtaikhoan(role,username,email,password);
 
-                        response.sendRedirect("home.jsp");
+                        response.sendRedirect("Home");
                 }else{
                     request.setAttribute("mess","Tài khoản đã tồn tại");
                     request.getRequestDispatcher("dangky.jsp").forward(request,response);

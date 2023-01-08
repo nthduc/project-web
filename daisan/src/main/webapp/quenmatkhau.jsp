@@ -426,7 +426,7 @@
         <div class="form-container forgot-container">
             <form  action="/forgotpassword" method="post" >
                 <h1>Quên mật khẩu</h1>
-                <p>Bạn hãy nhập tên đăng nhập và email đã được đăng ký để nhận mật khẩu</p>
+                <p>${mess}</p>
                 <input name="uname" type="text" placeholder="Tên đăng nhập" />
                 <input name="email" type="email" placeholder="Email" />
                 <button type="submit">Gửi</button>
@@ -437,7 +437,7 @@
             <div class="overlay">
                 <div class="overlay-panel overlay-right">
                     <h1>Xin chào bạn!</h1>
-                    <p>Nhập thông tin của bạn và bắt đầu trải nghiệm với chúng tôi.</p>
+                    <p>Nhập thông tin tài khoản của bạn để lấy lại mật khẩu.</p>
                 </div>
             </div>
         </div>

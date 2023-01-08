@@ -127,10 +127,11 @@
                                     <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"
                                                              href="">Danh mục<b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
+
                                             <c:forEach items="${Tag}" var="tag">
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                        href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
-                                            </c:forEach>
+                            </c:forEach>
                                         </ul>
                                     </li>
                                 </ul>

@@ -127,9 +127,11 @@
                                     <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"
                                                              href="">Danh mục<b class="caret"></b></a>
                                         <ul class="dropdown-menu" role="menu">
+
                                             <c:forEach items="${Tag}" var="tag">
                                             <li role="presentation"><a role="menuitem" tabindex="-1"
                                                                        href="/products?tag_ID=${tag.tag_ID}">${tag.name}</a></li>
+
                                             </c:forEach>
                                         </ul>
                                     </li>
@@ -461,7 +463,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- /.hot-deal-wrapper -->
+
 
                                         <div class="product-info text-left m-t-20">
                                             <h3 class="name"><a href="productDetail?product_id=${s.id}">${s.name}</a></h3>
@@ -472,6 +474,7 @@
 
                                         </div>
                                         <!-- /.product-info -->
+
 
                                         <div class="cart clearfix animate-effect">
                                             <div class="action">
@@ -567,7 +570,6 @@
                                                  data-echo="${Pro.imgURL}">
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
-
 
 
 
