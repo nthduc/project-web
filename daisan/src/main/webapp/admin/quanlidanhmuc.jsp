@@ -70,11 +70,13 @@
 
 
       <li class="dropdown notification-list">
+        <c:choose>
+        <c:when test="${sessionScope.user != null}">
         <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
-           href="#" role="button" aria-haspopup="false" aria-expanded="false">
-          <img src="assets/images/users/duc.jpg" alt="user-image" class="rounded-circle">
+           href="taikhoanadmin.jsp" role="button" aria-haspopup="false" aria-expanded="false">
+          <img src="assets\images\users\duc.jpg" alt="user-image" class="rounded-circle">
           <span class="pro-user-name ml-1">
-                            Nguyễn Đức <i class="mdi mdi-chevron-down"></i>
+                            ${sessionScope.user.fullname} <i class="mdi mdi-chevron-down"></i>
                         </span>
         </a>
         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
@@ -105,6 +107,34 @@
           </a>
 
         </div>
+        </c:when>
+          <c:when test="${sessionScope.user == null}">
+
+          <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
+             href="taikhoanadmin.jsp" role="button" aria-haspopup="false" aria-expanded="false">
+
+            <span class="pro-user-name ml-1">
+                            Tài Khoản <i class="mdi mdi-chevron-down"></i>
+                        </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+            <!-- item-->
+            <a href="dangnhap.jsp" class="dropdown-item notify-item">
+              <i class="remixicon-account-circle-line"></i>
+              <span>Đăng Nhập</span>
+            </a>
+
+            <!-- item-->
+            <a href="dangky.jsp" class="dropdown-item notify-item">
+              <i class="remixicon-lock-unlock-line"></i>
+              <span>Đăng ký</span>
+            </a>
+          </div>
+          </c:when>
+          <c:otherwise>
+
+          </c:otherwise>
+        </c:choose>
       </li>
 
     </ul>

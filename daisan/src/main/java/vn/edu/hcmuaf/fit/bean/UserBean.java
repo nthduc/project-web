@@ -151,4 +151,5 @@ public class UserBean implements Serializable {
         UserBean userBean = new UserBean(1,2,"nam","123","12345@gmail.com","0","0",null,"0","0");
         System.out.print(userBean);
     }
+
 }

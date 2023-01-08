@@ -44,17 +44,31 @@
                             <h3 class="text-primary mb-4 mt-3">ĐĂNG NHẬP HỆ THỐNG</h3>
                         </div>
 
-                        <form action="#">
-
+                        <form action="/admin/login" method="post" id="loginForm" onsubmit="return validateForm()">
+                            <%
+                                String message = request.getParameter("message");
+                                if (message != null && message.equals("error")) {
+                            %>
+                            <div class="alert alert-danger" role="alert">
+                                Đăng nhập thất bại
+                            </div>
+                            <%
+                                }
+                            %>
                             <div class="form-group mb-3">
                                 <label for="emailaddress">Email</label>
-                                <input class="form-control" type="email" id="emailaddress" required=""
+                                <input class="form-control" type="email" id="emailaddress" name="emailaddress" required
                                        placeholder="Nhập email">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="username">Tài khoản</label>
+                                <input class="form-control" type="text" id="username" name="username" required
+                                       placeholder="Nhập Tài khoản">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="password">Mật khẩu</label>
-                                <input class="form-control" type="password" required="" id="password"
+                                <input class="form-control" type="password" required="" id="password" name="password"
                                        placeholder="Nhập password">
                             </div>
 
@@ -67,7 +81,7 @@
                             </div>
 
                             <div class="form-group mb-0 text-center">
-                                <button class="btn btn-primary btn-block" type="submit"> Đăng nhập </button>
+                                <input class="btn btn-primary btn-block" type="submit" value="Đăng Nhập">
                             </div>
 
                         </form>
@@ -128,6 +142,46 @@
 
 <!-- App js -->
 <script src="assets/js/app.min.js"></script>
+<script>
+    function validateForm() {
+        // Get the form element
+        var form = document.getElementById("loginForm");
+
+        // Get the email address field
+        var email = form.elements["emailaddress"];
+        // Check if the email address is empty
+        if (email.value == "") {
+            // If it's empty, display an error message and return false
+            alert("Email address is required");
+            email.focus();
+            return false;
+        }
+
+        // Get the username field
+        var username = form.elements["username"];
+        // Check if the username is empty
+        if (username.value == "") {
+            // If it's empty, display an error message and return false
+            alert("Username is required");
+            username.focus();
+            return false;
+        }
+
+        // Get the password field
+        var password = form.elements["password"];
+        // Check if the password is empty
+        if (password.value == "") {
+            // If it's empty, display an error message and return false
+            alert("Password is required");
+            password.focus();
+            return false;
+        }
+
+        // If all the fields are filled out, submit the form
+        return true;
+    }
+
+</script>
 
 </body>
 
