@@ -424,12 +424,12 @@
 <div class="forgot">
     <div class="containerForm" id="containerForm">
         <div class="form-container forgot-container">
-            <form  action="/forgotpassword" method="post" >
+            <form  action="/forgotPassword" method="post" >
                 <h1>Quên mật khẩu</h1>
                 <p>Bạn hãy nhập tên đăng nhập và email đã được đăng ký để nhận mật khẩu</p>
                 <input name="uname" type="text" placeholder="Tên đăng nhập" />
                 <input name="email" type="email" placeholder="Email" />
-                <button type="submit">Gửi</button>
+                <input type="submit" value="Gửi"/>
                 <div id="error-message"></div>
             </form>
         </div>
