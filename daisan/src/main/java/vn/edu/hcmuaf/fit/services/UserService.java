@@ -229,6 +229,39 @@ public class UserService {
         // Return the list of customers
         return customers;
     }
+
+    public UserBean checkAccountExistEmail(String username, String email) {
+        UserBean user = null;
+        String query = "SELECT * FROM users WHERE username = ? AND email = ?";
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setString(1, username);
+            ps.setString(2, email);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    int user_ID = rs.getInt(1);
+                    int user_Role = rs.getInt(2);
+                    String name = rs.getString(3);
+                    String emailAddress = rs.getString(4);
+                    String password = rs.getString(5);
+                    String fullname = rs.getString(6);
+                    String gender = rs.getString(7);
+                    Date dob = rs.getDate(8);
+                    String phone = rs.getString(9);
+                    String address = rs.getString(10);
+
+                    user = new UserBean(user_ID, user_Role, name, emailAddress, password, fullname, gender, dob, phone, address);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return user;
+    }
+
+
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
@@ -238,6 +271,7 @@ public class UserService {
 //        us.add(user);
 //       System.out.println(us.login("anhtuan","123456"));
     }
+
 
 
 }
