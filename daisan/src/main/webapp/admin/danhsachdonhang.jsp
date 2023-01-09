@@ -454,12 +454,13 @@
                                                                                     </div>
                                                                                 </th>
                                                                                 <th>ID</th>
-                                                                                <th>Tên đơn hàng</th>
-                                                                                <th>Ngày</th>
-                                                                                <th>Trang thái giao dịch</th>
-                                                                                <th>Tổng cộng</th>
-                                                                                <th>Thẻ Thanh toán</th>
-                                                                                <th>Trạng thái đơn hàng</th>
+                                                                                <th>ID User</th>
+                                                                                <th>Số lượng</th>
+                                                                                <th>Giá</th>
+                                                                                <th>Thanh toán</th>
+                                                                                <th>Ngày giao hàng</th>
+                                                                                <th>Ngày nhận hàng</th>
+                                                                                <th>Trạng thái</th>
                                                                                 <th style="width: 125px;">Tác vụ</th>
                                                                             </tr>
                                                                         </thead>
@@ -489,23 +490,25 @@
                                                                                         <%= order.getUser_ID()%>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <%= order.getDeliveryDate() %>
+                                                                                        <%= order.getNum_item() %>
                                                                                             <small
                                                                                                 class="text-muted"></small>
                                                                                     </td>
+                                                                                    <td><%= order.getPrice() %></td>
+                                                                                    <td>
+                                                                                        <span
+                                                                                                class="badge badge-light-success"><%= order.getPayment() %></span>
+                                                                                    </td>
                                                                                     <td>
                                                                                         <div>
-                                                                                            <span
-                                                                                                class="badge badge-light-success">Đã
-                                                                                                Thanh Toán</span>
+
+                                                                                            <%= order.getDeliveryDate() %>
                                                                                         </div>
                                                                                     </td>
                                                                                     <td>
-                                                                                        <%= order.getPrice() %>
+                                                                                        <%= order.getReceptDate() %>
                                                                                     </td>
-                                                                                    <td>
-                                                                                        <%= order.getPayment() %>
-                                                                                    </td>
+
                                                                                     <td>
                                                                                         <div><span
                                                                                                 class="badge badge-info">

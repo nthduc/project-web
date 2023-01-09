@@ -249,6 +249,9 @@ public class UserService {
                 customer.setUsername(result.getString("username"));
                 customer.setEmail(result.getString("email"));
                 customer.setRole_ID(result.getInt("role_ID"));
+                customer.setDob(result.getDate("dob"));
+                customer.setPhone(result.getString("phone"));
+                customer.setAddress(result.getString("address"));
                 customers.add(customer);
             }
         } catch (SQLException e) {

@@ -398,12 +398,12 @@
                                                                     class="table table-striped dt-responsive nowrap">
                                                                     <thead>
                                                                         <tr>
-                                                                            <th>Tên</th>
                                                                             <th>Tài khoản</th>
+                                                                            <th>Tên</th>
+                                                                            <th>Email</th>
+                                                                            <th>Giới Tính</th>
+                                                                            <th>Số điện thoại</th>
                                                                             <th>Địa chỉ</th>
-                                                                            <th>Tuổi</th>
-                                                                            <th>Ngày tạo</th>
-                                                                            <th>ID</th>
                                                                         </tr>
                                                                     </thead>
 
@@ -415,17 +415,18 @@
 
                                                                             <tr>
                                                                                 <td>
-                                                                                    <%=customer.getFullname()%>
-                                                                                </td>
-                                                                                <td>
+                                                                            
                                                                                     <%=customer.getUsername()%>
                                                                                 </td>
                                                                                 <td>
-                                                                                    <%=customer.getAddress()%>
+                                                                                    <%=customer.getFullname()%>
                                                                                 </td>
-                                                                                <td>61</td>
-                                                                                <td>2022/04/25</td>
-                                                                                <td>3208</td>
+                                                                                <td>
+                                                                                    <%=customer.getEmail()%>
+                                                                                </td>
+                                                                                <td><%=customer.getDob()%></td>
+                                                                                <td><%=customer.getPhone()%></td>
+                                                                                <td> <%=customer.getAddress()%></td>
                                                                             </tr>
                                                                             <%}%>
 
