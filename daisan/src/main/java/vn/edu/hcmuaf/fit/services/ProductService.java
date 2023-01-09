@@ -292,6 +292,41 @@ public class ProductService {
         }
         return listPro;
     }
+
+    public List<ProductBean> getAllProducts() {
+        List<ProductBean> products = new ArrayList<>();
+
+        try {
+            ConnectionDB.connect();
+            String query = "SELECT * FROM products";
+            PreparedStatement statement = ConnectionDB.conn.prepareStatement(query);
+            ResultSet result = statement.executeQuery();
+
+            while (result.next()) {
+                int id = result.getInt("product_ID");
+                String name = result.getString("name");
+                int price = result.getInt("price");
+                int salePrice = result.getInt("sale_price");
+                String description = result.getString("description");
+                String image = result.getString("img_URL");
+                int tag = result.getInt("tag_ID");
+                String company = result.getString("company");
+                int status = result.getInt("status");
+
+                ProductBean product = new ProductBean(id, name, image, price, salePrice, description,status,company,tag);
+                products.add(product);
+            }
+
+            result.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return products;
+    }
     public static void main(String[] args) {
         ProductService pro = new ProductService();
         List<ProductBean> list1 = pro.getAllProduct();
@@ -305,4 +340,6 @@ public class ProductService {
         }
 
     }
+
+
 }
