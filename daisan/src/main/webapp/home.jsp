@@ -56,11 +56,11 @@
                     <ul class="list-unstyled">
                         <c:choose>
                         <c:when test="${sessionScope.acc == null}">
-                            <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
+                            <li><a href=""><i class="icon fa fa-user"></i>Tài khoản của tôi</a>
                             </li>
                         </c:when>
                         <c:when test="${sessionScope.acc != null}">
-                        <li><a href="thongtintaikhoan.jsp"><i class="icon fa fa-user"></i>${sessionScope.acc.fullname}</a>
+                        <li><a href="LoadInfo?id=${sessionScope.acc.user_ID}"><i class="icon fa fa-user"></i>${sessionScope.acc.fullname}</a>
                             </c:when>
                             <c:otherwise>
 

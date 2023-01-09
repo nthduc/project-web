@@ -30,9 +30,6 @@ public class Signup extends HttpServlet {
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
                 String repass = request.getParameter("re_password");
-                TagService tag = new TagService();
-                List<TagBean> listTag = tag.getAllTag();
-                request.setAttribute("Tag",listTag);
             if (!password.equals(repass)){
                 request.setAttribute("mess","Mật khẩu không trùng khớp");
                 request.getRequestDispatcher("dangky.jsp").forward(request,response);
@@ -42,13 +39,14 @@ public class Signup extends HttpServlet {
                 if (u== null){
                         us.themtaikhoan(role,username,email,password);
 
-                        response.sendRedirect("home.jsp");
+                    request.setAttribute("mess","Tài khoản đã đăng ký thành công, đăng nhập để sử dụng");
+                    request.getRequestDispatcher("dangnhap.jsp").forward(request,response);
                 }else{
                     request.setAttribute("mess","Tài khoản đã tồn tại");
                     request.getRequestDispatcher("dangky.jsp").forward(request,response);
                 }
             }
-           request.getRequestDispatcher("dangky.jsp").forward(request,response);
+//           request.getRequestDispatcher("dangky.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
