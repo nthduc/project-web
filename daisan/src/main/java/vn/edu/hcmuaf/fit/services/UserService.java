@@ -75,6 +75,36 @@ public class UserService {
                 e.printStackTrace();
             }
     }
+    public void updateAcount( String fname, String phone, String email, String gender, int id){
+        String query ="UPDATE users SET fullname = ?, phone =?,email=?,gender=? WHERE user_ID = ? ";
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setString(1,fname);
+            ps.setString(2,phone);
+            ps.setString(3,email);
+            ps.setString(4,gender);
+//            ps.setDate(5,dob);
+            ps.setInt(5,id);
+            ps.executeUpdate();
+            System.out.println(" cập nhật thành công");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void updatePass( String pass, int id){
+        String query ="UPDATE users SET password = ? WHERE user_ID = ? ";
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setString(1,pass);
+            ps.setInt(2,id);
+            ps.executeUpdate();
+            System.out.println(" cập nhật mk thành công");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     public int themtaikhoanadmin(int role, String username, String email, String password, String fullname){
         System.out.println(role);
         System.out.println(username);
@@ -167,6 +197,8 @@ public class UserService {
         }
         return user;
     }
+
+
     public  void listUser(){
         try {
             ConnectionDB.connect();
@@ -261,15 +293,50 @@ public class UserService {
         return user;
     }
 
+    public UserBean checkUserByID(int id){
+        UserBean user = null;
+        String query = "select * from users where user_ID = ?";
+        try {
+            ConnectionDB.connect();
+            System.out.print("1");
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            System.out.print("2");
+            ps.setInt(1,id);
+            System.out.print("3");
+            try (ResultSet rs = ps.executeQuery();) {
+                System.out.print("4");
+                if (rs.next()) {
+                    int user_ID = rs.getInt(1);
+                    int user_Role = rs.getInt(2);
+                    String name = rs.getString(3);
+                    String email = rs.getString(4);
+                    String password = rs.getString(5);
+                    String fullname = rs.getString(6);
+                    String gender = rs.getString(7);
+                    Date dob = rs.getDate(8);
+                    String phone = rs.getString(9);
+                    String address = rs.getString(10);
 
+                    user = new UserBean(user_ID,user_Role,name,email,password,fullname,gender,dob,phone,address);
+                    System.out.print("5");
+                }
+            }
+        }catch (Exception e) {
+            System.out.print("6");
+        }
+
+        return user;
+    }
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
 //        us.themtaikhoan(2,"tester","test02@gmail.com","123");
-           us.listUser();
+//           us.listUser();
 //        UserBean user = new UserBean(1,2,"nam","123","12345@gmail.com","0","0",null,"0","0");
 //        us.add(user);
 //       System.out.println(us.login("anhtuan","123456"));
+//            us.updateAcount("tester fun","02212222","tester02@gmai.com","nam",13);
+        us.updatePass("123",1);
     }
 
 

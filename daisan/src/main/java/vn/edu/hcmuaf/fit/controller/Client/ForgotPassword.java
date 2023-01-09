@@ -1,16 +1,24 @@
-package vn.edu.hcmuaf.fit.controller;
+package vn.edu.hcmuaf.fit.controller.Client;
 
-import vn.edu.hcmuaf.fit.bean.UserBean;
-import vn.edu.hcmuaf.fit.services.UserService;
-import vn.edu.hcmuaf.fit.utils.Email;
-import vn.edu.hcmuaf.fit.utils.EmailUtils;
-
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import vn.edu.hcmuaf.fit.bean.UserBean;
+import vn.edu.hcmuaf.fit.services.UserService;
+import vn.edu.hcmuaf.fit.utils.EmailUtils;
+import vn.edu.hcmuaf.fit.utils.Email;
+/**
+ * Xử lí Chức năng quên mật khẩu
+ *
+ * @author Nguyen Thai Duc
+ * @version 1.0
+ * @since 2022-12-06
+ */
+
+
 
 @WebServlet(name = "ForgotPasswordControl", urlPatterns = {"/forgotPassword"})
     public class ForgotPassword extends HttpServlet {
@@ -28,14 +36,15 @@ import java.io.IOException;
                 UserService userService  = new UserService();
                 UserBean account = userService.checkAccountExistEmail(username,emailAddress);
                 if (account == null) {
-                    request.setAttribute("error", "Email hoac username sai!");
+                    request.setAttribute("mess", "Thông tin không tồn tại, hãy kiểm tra lại");
+                    request.getRequestDispatcher("quenmatkhau.jsp").forward(request, response);
                 }
                 if (account != null) {
                     Email email = new Email();
                     email.setFrom("nguyenthaiducbhsmn@gmail.com");
                     email.setFromPassword("hjfxosozfyrtzrfc");
                     email.setTo(emailAddress);
-                    email.setSubject("Daisan. Phương Thức Quên Mật Khẩu ");
+                    email.setSubject("Daisan. Forgot password ");
                     StringBuilder sb = new StringBuilder();
                     sb.append("Dear ").append(username).append("<br>");
                     sb.append("You are used the forgot password. <br> ");
@@ -46,17 +55,18 @@ import java.io.IOException;
                     email.setContent(sb.toString());
                     EmailUtils.send(email);
 
-                    request.setAttribute("mess", "Mat khau da duoc gui den email cua ban!");
-
+                    request.setAttribute("mess", "Mật khẩu đã được gửi đến mail, vui lòng kiểm tra để thực hiện đăng nhập!");
+                    request.getRequestDispatcher("dangnhap.jsp").forward(request, response);
 
                 }
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            request.getRequestDispatcher("quenmatkhau.jsp").forward(request, response);
+//            request.getRequestDispatcher("quenmatkhau.jsp").forward(request, response);
 
         }
+
     }
 
 

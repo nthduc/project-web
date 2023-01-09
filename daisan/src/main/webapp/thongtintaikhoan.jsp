@@ -445,7 +445,7 @@
                     <div class="option-container">
                         <div class="title">
                             <p>Tài khoản của</p>
-                            <p style="font-size: 18px; font-weight: bold;">Mai Truong</p>
+                            <p style="font-size: 18px; font-weight: bold;">${User.fullname} </p>
                         </div>
                         <div class="content">
                             <ul class="nav-menu">
@@ -466,60 +466,57 @@
                 </div>
                 <div class="col-md-9 col-sm-9 my-account">
                     <h2>Thông tin tài khoản</h2>
+                    <p class="text-warning" style="font-size: 15px">${status}</p>
                     <div class="account-info">
-                        <form action="">
+                        <form action="EditInfo" method="post">
                             <div class="form-group">
-                                <label class="info-title" for="name">Họ tên </label>
+                                <label class="info-title" >ID </label>
+                                <input name="id" value="${User.user_ID}" disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="info-title" >Họ tên </label>
                                 <input type="" class="form-control unicase-form-control text-input my-account-input"
-                                       id="name" value="Nguyen Thai Duc">
+                                       id="fullname" value="${User.fullname}">
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="phone">Số điện thoại </label>
                                 <input type="" class="form-control unicase-form-control text-input my-account-input"
-                                       id="phone" value="0934308706">
+                                       id="phone" value="${User.phone}">
                             </div>
-                            <div class="form-group">
-                                <label class="info-title" for="code">Mã xác thực </label>
-                                <input type="text"
-                                       class="form-control unicase-form-control text-input my-account-input" id="code"
-                                       placeholder="Nhập mã xác thực gửi tới số điện thoại" style="width: 50%;">
-                                <button type="submit" class="btn-upper btn btn-primary checkout-page-button"
-                                        style="height: 40px; margin-bottom: 3px;">Gửi mã xác nhận</button>
-                            </div>
+
                             <div class="form-group">
                                 <label class="info-title" for="email">Email </label>
                                 <input type="" class="form-control unicase-form-control text-input my-account-input"
-                                       id="email" value="nguyenthaiduc0212@gmail.com" disabled>
+                                       id="email" value="${User.email}" >
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="email">Giới tính </label>
-                                <input type="radio" id="male" name="gender" value="male">
-                                <label for="male" class="radio-gender">Nam</label>
-                                <input type="radio" id="female" name="gender" value="female">
-                                <label for="female" class="radio-gender">Nữ</label>
+                                <input type=""  name="gender" value="${User.gender}">
+
                             </div>
                             <div class="form-group">
                                 <label class="info-title" for="email" style="position: relative; top: 7px;">Ngày
                                     sinh <br /><span>(không bắt buộc)</span> </label>
-                                <input type="date" name="date" id="" style="width: 50%;">
+                                <input type="date" name="dob" id="" style="width: 50%;" value="${User.dob}" disabled>
                             </div>
                             <div class="form-group">
-                                <label class="info-title" for="exampleInputEmail1">Mật khẩu cũ</label>
-                                <input type="password"
+                                <label class="info-title" >Mật khẩu cũ</label>
+                                <input  name="old-pass" type="password"
                                        class="form-control unicase-form-control text-input my-account-input"
-                                       id="exampleInputEmail1">
+                                       >
                             </div>
                             <div class="form-group">
-                                <label class="info-title" for="exampleInputEmail1">Mật khẩu mới</label>
-                                <input type="password"
+                                <label class="info-title" >Mật khẩu mới</label>
+                                <input name="new-pass" type="password"
                                        class="form-control unicase-form-control text-input my-account-input"
-                                       id="exampleInputEmail1">
+                                      >
                             </div>
                             <div class="form-group">
-                                <label class="info-title" for="exampleInputEmail1">Nhập lại mật khẩu</label>
-                                <input type="password"
+                                <label class="info-title" >Nhập lại mật khẩu</label>
+                                <input  name="renew-pass" type="password"
                                        class="form-control unicase-form-control text-input my-account-input"
-                                       id="exampleInputEmail1">
+                                    >
                             </div>
 
                             <br />
