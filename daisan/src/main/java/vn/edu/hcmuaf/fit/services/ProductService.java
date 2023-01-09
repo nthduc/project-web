@@ -327,6 +327,29 @@ public class ProductService {
 
         return products;
     }
+
+    public boolean addProduct(ProductBean product) {
+        String query = "INSERT INTO products (name, img_URL, price, sale_price, description, status, company, tag_ID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        int affectedRows = 0;
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setString(1, product.getName());
+            ps.setString(2, product.getImgURL());
+            ps.setInt(3, product.getPrice());
+            ps.setInt(4, product.getSalePrice());
+            ps.setString(5, product.getDescription());
+            ps.setInt(6, product.getStatus());
+            ps.setString(7, product.getCompany());
+            ps.setInt(8, product.getTag_ID());
+            affectedRows = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows > 0;
+    }
+
     public static void main(String[] args) {
         ProductService pro = new ProductService();
         List<ProductBean> list1 = pro.getAllProduct();
@@ -340,6 +363,7 @@ public class ProductService {
         }
 
     }
+
 
 
 }
