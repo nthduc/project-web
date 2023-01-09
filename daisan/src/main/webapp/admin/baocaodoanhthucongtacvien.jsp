@@ -85,7 +85,7 @@
                                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light"
                                                 data-toggle="dropdown" href="taikhoanadmin.jsp" role="button"
                                                 aria-haspopup="false" aria-expanded="false">
-                                                <img src="assets\images\users\duc.jpg" alt="user-image"
+                                                <img src="https://i.imgur.com/GHS1690.png" alt="user-image"
                                                     class="rounded-circle">
                                                 <span class="pro-user-name ml-1">
                                                     ${sessionScope.user.fullname} <i class="mdi mdi-chevron-down"></i>
@@ -446,7 +446,8 @@
                                                                         <option value="25">25</option>
                                                                         <option value="50">50</option>
                                                                         <option value="100">100</option>
-                                                                    </select> entries</label></div>
+                                                                    </select> entries</label>
+                                                            </div>
                                                         </div>
                                                         <div class="col-sm-12 col-md-6">
                                                             <div id="tickets-table_filter" class="dataTables_filter">
@@ -832,20 +833,20 @@
                     <script src="assets\libs\datatables\jquery.dataTables.min.js"></script>
                     <script src="assets\libs\datatables\dataTables.bootstrap4.js"></script>
                     <script src="assets\libs\datatables\dataTables.responsive.min.js"></script>
-                    <script src="assets\libs\datatables\responsive.bootstrap4.min.js"></script>
-                    <script src="assets\libs\datatables\dataTables.buttons.min.js"></script>
-                    <script src="assets\libs\datatables\buttons.bootstrap4.min.js"></script>
-                    <script src="assets\libs\datatables\buttons.html5.min.js"></script>
-                    <script src="assets\libs\datatables\buttons.flash.min.js"></script>
-                    <script src="assets\libs\datatables\buttons.print.min.js"></script>
-                    <script src="assets\libs\datatables\dataTables.keyTable.min.js"></script>
-                    <script src="assets\libs\datatables\dataTables.select.min.js"></script>
-                    <script src="assets\libs\pdfmake\pdfmake.min.js"></script>
-                    <script src="assets\libs\pdfmake\vfs_fonts.js"></script>
+                    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+                    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+                    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+                    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+                    <script src="assets/libs/datatables/buttons.flash.min.js"></script>
+                    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+                    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+                    <script src="assets/libs/datatables/dataTables.select.min.js"></script>
+                    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+                    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
                     <!-- third party js ends -->
 
                     <!-- Datatables init -->
-                    <script src="assets\js\pages\datatables.init.js"></script>
+                    <script src="assets/js/pages/datatables.init.js"></script>
 
                     <!-- App js -->
                     <script src="assets/js/app.min.js"></script>
