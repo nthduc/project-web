@@ -60,7 +60,7 @@
                     <c:when test="${sessionScope.user != null}">
                       <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown"
                         href="taikhoanadmin.jsp" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="assets\images\users\duc.jpg" alt="user-image" class="rounded-circle">
+                        <img src="https://i.imgur.com/GHS1690.png" alt="user-image" class="rounded-circle">
                         <span class="pro-user-name ml-1">
                           ${sessionScope.user.fullname} <i class="mdi mdi-chevron-down"></i>
                         </span>
