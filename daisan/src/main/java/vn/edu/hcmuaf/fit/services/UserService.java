@@ -327,6 +327,25 @@ public class UserService {
 
         return user;
     }
+
+    public boolean changePassword(String username, String currentPassword, String newPassword) {
+        String query = "UPDATE users SET password = ? WHERE username = ? AND password = ?";
+        int affectedRows = 0;
+
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setString(1, newPassword);
+            ps.setString(2, username);
+            ps.setString(3, currentPassword);
+            affectedRows = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows > 0;
+    }
+
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));

@@ -76,7 +76,7 @@
                                                 </a>
 
                                                 <!-- item-->
-                                                <a href="404.jsp" class="dropdown-item notify-item">
+                                                <a href="doimatkhau.jsp" class="dropdown-item notify-item">
                                                     <i class="remixicon-lock-unlock-line"></i>
                                                     <span>Đổi mật khẩu</span>
                                                 </a>
