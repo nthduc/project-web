@@ -79,7 +79,7 @@
                                                 </a>
 
                                                 <!-- item-->
-                                                <a href="404.jsp" class="dropdown-item notify-item">
+                                                <a href="doimatkhau.jsp" class="dropdown-item notify-item">
                                                     <i class="remixicon-lock-unlock-line"></i>
                                                     <span>Đổi mật khẩu</span>
                                                 </a>
@@ -412,7 +412,7 @@
                                                 <div class="ribbon-two ribbon-two-danger"><span>Admin</span></div>
                                                 <div class="clearfix"></div>
                                                 <div class="pt-2 pb-2">
-                                                    <img src="assets/images/users/duc.jpg"
+                                                    <img src="https://i.imgur.com/GHS1690.png"
                                                         class="rounded-circle img-thumbnail avatar-xl"
                                                         alt="profile-image">
 

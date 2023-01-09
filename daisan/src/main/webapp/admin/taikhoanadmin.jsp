@@ -72,10 +72,11 @@
                         </a>
 
                         <!-- item-->
-                        <a href="404.jsp" class="dropdown-item notify-item">
+                        <a href="doimatkhau.jsp" class="dropdown-item notify-item">
                           <i class="remixicon-lock-unlock-line"></i>
                           <span>Đổi mật khẩu</span>
                         </a>
+
 
                         <!-- item-->
                         <a href="404.jsp" class="dropdown-item notify-item">
@@ -129,7 +130,7 @@
               <div class="logo-box">
                 <a href="trangchu.jsp" class="logo text-center">
                   <span class="logo-lg">
-                    <img src="assets\images\logo-white.png" alt="" height="35">
+                    <img src="assets/images/daisan.png" alt="" height="35">
                     <!-- <span class="logo-lg-text-light">Xeria</span> -->
                   </span>
                   <span class="logo-sm">

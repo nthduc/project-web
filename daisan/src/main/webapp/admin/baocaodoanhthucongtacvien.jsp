@@ -99,7 +99,7 @@
                                                 </a>
 
                                                 <!-- item-->
-                                                <a href="404.jsp" class="dropdown-item notify-item">
+                                                <a href="doimatkhau.jsp" class="dropdown-item notify-item">
                                                     <i class="remixicon-lock-unlock-line"></i>
                                                     <span>Đổi mật khẩu</span>
                                                 </a>
@@ -552,7 +552,7 @@
                                                                         <td>
                                                                             <a href="javascript: void(0);"
                                                                                 class="text-dark">
-                                                                                <img src="assets/images/users/duc.jpg"
+                                                                                <img src="https://i.imgur.com/GHS1690.png"
                                                                                     alt="contact-img"
                                                                                     title="contact-img"
                                                                                     class="avatar-sm rounded-circle img-thumbnail">

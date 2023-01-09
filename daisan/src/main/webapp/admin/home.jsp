@@ -73,10 +73,11 @@
                         </a>
 
                         <!-- item-->
-                        <a href="404.jsp" class="dropdown-item notify-item">
+                        <a href="doimatkhau.jsp" class="dropdown-item notify-item">
                           <i class="remixicon-lock-unlock-line"></i>
                           <span>Đổi mật khẩu</span>
                         </a>
+
 
                         <!-- item-->
                         <a href="404.jsp" class="dropdown-item notify-item">
@@ -561,7 +562,7 @@
                           <h4 class="header-title mb-4">ADMIN Group 17</h4>
 
                           <div class="media" id="cardCollpase1" class="pt-3 collapse show">
-                            <img class="mr-3 rounded-circle" src="assets/images/users/duc.jpg" width="40"
+                            <img class="mr-3 rounded-circle" src="https://i.imgur.com/GHS1690.png" width="40"
                               alt="Generic placeholder image">
                             <div class="media-body">
 

@@ -23,7 +23,7 @@ public class ConnectionDB {
     private static final String dbName = "daisan";
     private static final String unicode = "?useUnicode=true&characterEncoding=utf-8";
     private static final String user = "root";
-    private static final String password = "021220";
+    private static final String password = "";
     static {
         try {
             // Load the MySQL JDBC driver
