@@ -232,7 +232,7 @@
                                                 </li>
 
                                                 <li>
-                                                    <a href="baocaodoanhthuctv.html">Báo cáo doanh thu CTV</a>
+                                                    <a href="baocaodoanhthucongtacvien.jsp">Báo cáo doanh thu CTV</a>
                                                 </li>
 
 
