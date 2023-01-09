@@ -433,11 +433,7 @@
                                                                                         <th class="all dt-checkboxes-cell dt-checkboxes-select-all sorting_disabled"
                                                                                             style="width: 28.8px;"
                                                                                             rowspan="1" colspan="1"
-                                                                                            data-col="0" aria-label="
-
-
-                                                                &amp;nbsp;
-">
+                                                                                            data-col="0" aria-label="&amp;nbsp;">
                                                                                             <div
                                                                                                 class="custom-control custom-checkbox">
                                                                                                 <input type="checkbox"
@@ -498,18 +494,6 @@
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
-
-
-
-
-
-
-
-
-
-
-
-
                                                                                     <% List<ProductBean> products =
                                                                                         ProductService.getInstance().getAllProducts();
                                                                                         for (ProductBean product :
@@ -657,6 +641,7 @@
                                                                                                     </li>
                                                                                                 </ul>
                                                                                             </td>
+                                            
                                                                                         </tr>
                                                                                         <%}%>
                                                                                 </tbody>
