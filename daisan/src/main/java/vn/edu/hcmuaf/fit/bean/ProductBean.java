@@ -36,6 +36,18 @@ public class ProductBean implements Serializable {
         this.company = company;
         this.tag_ID = tag_ID;
     }
+
+    public ProductBean(String name, String imgURL, int price, int salePrice, String description, int status, String company, int tag_ID) {
+    this.name = name;
+    this.imgURL = imgURL;
+    this.price = price;
+    this.salePrice = salePrice;
+    this.description = description;
+    this.status = status;
+    this.company = company;
+    this.tag_ID = tag_ID;
+
+    }
 //    public ProductBean(int idP, String nameP, String image, int priceP, int saleP, String desc, int status, String nameC, int tag) {
 //    }
 

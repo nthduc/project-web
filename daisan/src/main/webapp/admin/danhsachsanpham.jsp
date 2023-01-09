@@ -378,11 +378,83 @@
                                                         <div class="card-body">
                                                             <div class="row mb-2">
                                                                 <div class="col-sm-6">
-                                                                    <a href="themsanpham.jsp"
-                                                                        class="btn btn-danger mb-2"><i
-                                                                            class="mdi mdi-plus-circle mr-1"></i> Thêm
-                                                                        sản phẩm</a>
+                                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal">
+                                                                        Thêm sản phẩm
+                                                                    </button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                        <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <!-- Modal form goes here -->
+                                                                                    <form method="post" action="/AddProductAdmin">
+                                                                                        <div class="form-group">
+                                                                                            <label for="productName">Name</label>
+                                                                                            <input type="text" class="form-control" id="productName" placeholder="Enter product name" name="nameProduct">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productDescription">Description</label>
+                                                                                            <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" name="description"></textarea>
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productPrice">Price</label>
+                                                                                            <input type="number" class="form-control" id="productPrice" placeholder="Enter product price" name="price">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productSalePrice">Sale Price</label>
+                                                                                            <input type="number" class="form-control" id="productSalePrice" placeholder="Enter sale price" name="salePrice">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productStatus">Status</label>
+                                                                                            <select class="form-control" id="productStatus" name="status">
+                                                                                                <option value="1">Active</option>
+                                                                                                <option value="0">Inactive</option>
+                                                                                            </select>
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productCompany">Company</label>
+                                                                                            <input type="text" class="form-control" id="productCompany" placeholder="Enter product company" name="company">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productImage">Image</label>
+                                                                                            <input type="text" class="form-control" id="productImage" placeholder="Enter product company" name="imgURL">
+                                                                                        </div>
+
+                                                                                        <div class="form-group">
+                                                                                            <label for="productTag">Tag</label>
+                                                                                            <select class="form-control" id="productTag" name="tagID">
+                                                                                                <option>1</option>
+                                                                                                <option>2</option>
+                                                                                                <option>3</option>
+                                                                                                <option>4</option>
+                                                                                                <option>5</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                            <input type="submit" class="btn btn-primary" value="Thêm"/>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
+                                                                <!-- Modal -->
                                                                 <div class="col-sm-6">
                                                                     <div class="float-sm-right">
 
@@ -641,7 +713,7 @@
                                                                                                     </li>
                                                                                                 </ul>
                                                                                             </td>
-                                            
+
                                                                                         </tr>
                                                                                         <%}%>
                                                                                 </tbody>
