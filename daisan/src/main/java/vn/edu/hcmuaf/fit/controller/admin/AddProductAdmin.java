@@ -34,7 +34,7 @@ public class AddProductAdmin extends HttpServlet {
 
         if (success) {
             // redirect to product list page
-            response.sendRedirect(request.getContextPath() + "/admin/danhsachsanpham.jsp");
+            request.getRequestDispatcher("/admin/danhsachsanpham.jsp").forward(request, response);
         } else {
             // show error message
             request.setAttribute("error", "Error adding product. Please try again.");

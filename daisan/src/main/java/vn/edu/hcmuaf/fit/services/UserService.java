@@ -349,6 +349,30 @@ public class UserService {
         return affectedRows > 0;
     }
 
+    public boolean addCustomer(UserBean user) {
+        String query = "INSERT INTO users (role_ID, username,password, email, fullname, gender, phone, address) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
+        int affectedRows = 0;
+        System.out.println(user.getRole_ID());
+        System.out.println(user.getUsername());
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setInt(1, user.getRole_ID());
+            ps.setString(2, user.getUsername());
+            ps.setString(3, user.getPassword());
+            ps.setString(4, user.getEmail());
+            ps.setString(5, user.getFullname());
+            ps.setString(6, user.getGender());
+            ps.setString(7, user.getPhone());
+            ps.setString(8, user.getAddress());
+            affectedRows = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows > 0;
+    }
+
     public static void main(String[] args) {
         UserService us = new UserService();
 //        System.out.println(us.checkUser("anhtuan"));
