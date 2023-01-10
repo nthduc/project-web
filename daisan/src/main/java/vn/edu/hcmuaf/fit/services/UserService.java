@@ -333,6 +333,8 @@ public class UserService {
 
     public boolean changePassword(String username, String currentPassword, String newPassword) {
         String query = "UPDATE users SET password = ? WHERE username = ? AND password = ?";
+        System.out.println("Mat khau hien tai hien tai:"+ "  " + currentPassword);
+        System.out.println("Mat khau moi:"+ "  " +newPassword);
         int affectedRows = 0;
 
         try {

@@ -57,4 +57,25 @@ public class OrderService {
         }
         return orders;
     }
+
+    public boolean addOrder(OrderBean order) {
+        String query = "INSERT INTO orders (user_ID, num_item, price, payment, delivery_date, recept_date, status) VALUES ( ?, ?, ?, ?, ?, ?, ?)";
+        int affectedRows = 0;
+        try {
+            ConnectionDB.connect();
+            PreparedStatement ps = ConnectionDB.conn.prepareStatement(query);
+            ps.setInt(1, order.getOrder_ID());
+            ps.setInt(2, order.getNum_item());
+            ps.setInt(3, order.getPrice());
+            ps.setString(4, order.getPayment());
+            ps.setDate(5, (java.sql.Date) order.getDeliveryDate());
+            ps.setDate(6, (java.sql.Date) order.getReceptDate());
+            ps.setString(7, order.getStatus());
+            affectedRows = ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return affectedRows > 0;
+    }
 }

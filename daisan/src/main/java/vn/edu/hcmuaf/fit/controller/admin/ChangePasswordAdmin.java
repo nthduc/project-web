@@ -36,7 +36,7 @@ public class ChangePasswordAdmin extends HttpServlet {
 
         if (result) {
             session.setAttribute("message", "Đổi mật khẩu thành công");
-            response.sendRedirect(request.getContextPath() + "/admin/doimatkhau.jsp");
+            response.sendRedirect(request.getContextPath() + "/admin/dangnhap.jsp");
         } else {
             session.setAttribute("message", "Đổi mật khẩu thất bại. Vui lòng kiểm tra lại thông tin");
             response.sendRedirect(request.getContextPath() + "/admin/doimatkhau.jsp");
