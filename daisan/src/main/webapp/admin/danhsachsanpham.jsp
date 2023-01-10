@@ -387,7 +387,7 @@
                                                                         <div class="modal-dialog" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
-                                                                                    <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                                                                                    <h5 class="modal-title" id="addProductModalLabel">Thêm sản phẩm</h5>
                                                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                                         <span aria-hidden="true">&times;</span>
                                                                                     </button>
@@ -396,27 +396,27 @@
                                                                                     <!-- Modal form goes here -->
                                                                                     <form method="post" action="/AddProductAdmin">
                                                                                         <div class="form-group">
-                                                                                            <label for="productName">Name</label>
+                                                                                            <label for="productName">Tên sản phẩm</label>
                                                                                             <input type="text" class="form-control" id="productName" placeholder="Enter product name" name="nameProduct">
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productDescription">Description</label>
+                                                                                            <label for="productDescription">Mô tả</label>
                                                                                             <textarea class="form-control" id="productDescription" rows="3" placeholder="Enter product description" name="description"></textarea>
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productPrice">Price</label>
+                                                                                            <label for="productPrice">Giá</label>
                                                                                             <input type="number" class="form-control" id="productPrice" placeholder="Enter product price" name="price">
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productSalePrice">Sale Price</label>
+                                                                                            <label for="productSalePrice">Giá khuyến mãi</label>
                                                                                             <input type="number" class="form-control" id="productSalePrice" placeholder="Enter sale price" name="salePrice">
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productStatus">Status</label>
+                                                                                            <label for="productStatus">Trạng thái</label>
                                                                                             <select class="form-control" id="productStatus" name="status">
                                                                                                 <option value="1">Active</option>
                                                                                                 <option value="0">Inactive</option>
@@ -424,12 +424,12 @@
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productCompany">Company</label>
+                                                                                            <label for="productCompany">Công Ty</label>
                                                                                             <input type="text" class="form-control" id="productCompany" placeholder="Enter product company" name="company">
                                                                                         </div>
 
                                                                                         <div class="form-group">
-                                                                                            <label for="productImage">Image</label>
+                                                                                            <label for="productImage">Ảnh</label>
                                                                                             <input type="text" class="form-control" id="productImage" placeholder="Enter product company" name="imgURL">
                                                                                         </div>
 

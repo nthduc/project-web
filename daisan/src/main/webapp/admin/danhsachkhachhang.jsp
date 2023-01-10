@@ -390,11 +390,94 @@
                                                     <div class="col-12">
                                                         <div class="card">
                                                             <div class="card-body">
+                                                                <div class="row mb-2">
+                                                                    <div class="col-sm-6">
+                                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal">
+                                                                            Thêm khách hàng
+                                                                        </button>
+    
+                                                                        <!-- Modal -->
+                                                                        <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                                                                            <div class="modal-dialog" role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="addProductModalLabel">Thêm khách hàng</h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">&times;</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <!-- Modal form goes here -->
+                                                                                        <form method="post" action="/AddCustomerAdmin">
+                                                                                            <div class="form-group">
+                                                                                                <label for="roleUser">Role</label>
+                                                                                                <select id="roleUser" name="roleUser" class="form-control" type="number">
+                                                                                                    <option>1</option>
+                                                                                                    <option>2</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label for="nameUser">Tên</label>
+                                                                                                <input type="text" class="form-control" id="nameUser" placeholder="Enter name" name="nameUser">
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label for="passUser">Mật khẩu</label>
+                                                                                                <input type="password" class="form-control" id="passUser" placeholder="Enter pass" name="passUser">
+                                                                                            </div>
+    
+                                                                                            <div class="form-group">
+                                                                                                <label for="emailUser">Email</label>
+                                                                                                <input type="email" class="form-control" id="emailUser" placeholder="Enter Email" name="emailUser"/>
+                                                                                            </div>
+    
+                                                                                            <div class="form-group">
+                                                                                                <label for="fullNameUser">Họ tên</label>
+                                                                                                <input type="text" class="form-control" id="fullNameUser" placeholder="Enter product price" name="fullNameUser">
+                                                                                            </div>
+    
+                                                                                            <div class="form-group">
+                                                                                                <label for="genderUser">Giới tính</label>
+                                                                                                <input type="text" class="form-control" id="genderUser" placeholder="Enter sale price" name="genderUser">
+                                                                                            </div>
+    
+                                                                                            <div class="form-group">
+                                                                                                <label for="phoneUser">Số điện thoại</label>
+                                                                                                <input type="text" class="form-control" id="phoneUser" placeholder="Enter product company" name="phoneUser">
+                                                                                            </div>
+    
+                                                                                            <div class="form-group">
+                                                                                                <label for="addressUser">Địa chỉ</label>
+                                                                                                <input type="text" class="form-control" id="addressUser" placeholder="Enter product company" name="addressUser">
+                                                                                            </div>
+    
+                                                                                            
+                                                                                            <div class="modal-footer">
+                                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                                                                <input type="submit" class="btn btn-primary" value="Thêm"/>
+                                                                                            </div>
+                                                                                        </form>
+                                                                                    </div>
+    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- Modal -->
+                                                                    <div class="col-sm-6">
+                                                                        <div class="float-sm-right">
+    
+                                                                            <button type="button"
+                                                                                class="btn btn-success mb-2 mb-sm-0"><i
+                                                                                    class="mdi mdi-cogs"></i></button>
+    
+                                                                        </div>
+                                                                    </div><!-- end col-->
+                                                                </div>
 
 
 
-
-                                                                <table id="datatable-buttons"
+                                                                <table id=""
                                                                     class="table table-striped dt-responsive nowrap">
                                                                     <thead>
                                                                         <tr>
