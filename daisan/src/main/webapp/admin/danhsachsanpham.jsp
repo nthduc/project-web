@@ -566,13 +566,14 @@
                                                                                     </tr>
                                                                                 </thead>
                                                                                 <tbody>
+                                                                                    <aside
                                                                                     <% List<ProductBean> products =
                                                                                         ProductService.getInstance().getAllProducts();
                                                                                         for (ProductBean product :
                                                                                         products) {
                                                                                         %>
                                                                                         <tr role="row" class="odd">
-                                                                                            <td tabindex="0"
+                                                                                            <td tabindex="<%=product.getId()%>"
                                                                                                 class="dt-checkboxes-cell">
                                                                                                 <div
                                                                                                     class="custom-control custom-checkbox">
@@ -825,7 +826,7 @@
                             <script src="./assets/js/vendor.min.js"></script>
 
                             <!-- third party js -->
-                            <script src="./assets/libs/datatables/jquery.dataTables.min.js" type="module"></script>
+                            <!-- <script src="./assets/libs/datatables/jquery.dataTables.min.js" type="module"></script>
                             <script src="./assets/libs/datatables/dataTables.bootstrap4.js"></script>
                             <script src="./assets/libs/datatables/dataTables.responsive.min.js"></script>
                             <script src="./assets/libs/datatables/responsive.bootstrap4.min.js"></script>
@@ -837,7 +838,7 @@
                             <script src="./assets/libs/datatables/dataTables.keyTable.min.js"></script>
                             <script src="./assets/libs/datatables/dataTables.select.min.js"></script>
                             <script src="./assets/libs/pdfmake/pdfmake.min.js"></script>
-                            <script src="./assets/libs/pdfmake/vfs_fonts.js"></script>
+                            <script src="./assets/libs/pdfmake/vfs_fonts.js"></script> -->
                             <!-- third party js ends -->
 
                             <!-- Datatables init -->

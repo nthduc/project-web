@@ -31,6 +31,17 @@ public class OrderBean implements Serializable {
         this.status = status;
     }
 
+    public OrderBean(int user_ID, int num_item, int price,String payment, Date deliveryDate, Date receptDate, String status) {
+        this.user_ID = user_ID;
+        this.num_item = num_item;
+        this.price = price;
+        this.payment = payment;
+        this.deliveryDate = deliveryDate;
+        this.receptDate = receptDate;
+        this.status = status;
+
+    }
+
     public int getOrder_ID() {
         return order_ID;
     }

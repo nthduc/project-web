@@ -418,17 +418,17 @@
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label for="nameUser">Tên</label>
-                                                                                                <input type="text" class="form-control" id="nameUser" placeholder="Enter name" name="nameUser">
-                                                                                            </div>
-
-                                                                                            <div class="form-group">
-                                                                                                <label for="passUser">Mật khẩu</label>
-                                                                                                <input type="password" class="form-control" id="passUser" placeholder="Enter pass" name="passUser">
+                                                                                                <input type="text" class="form-control" id="nameUser" placeholder="Enter product name" name="nameUser">
                                                                                             </div>
     
                                                                                             <div class="form-group">
                                                                                                 <label for="emailUser">Email</label>
                                                                                                 <input type="email" class="form-control" id="emailUser" placeholder="Enter Email" name="emailUser"/>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
+                                                                                                <label for="passUser">Mật khẩu</label>
+                                                                                                <input type="password" class="form-control" id="passUser" placeholder="Enter Email" name="passUser"/>
                                                                                             </div>
     
                                                                                             <div class="form-group">

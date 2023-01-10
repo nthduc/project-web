@@ -1,8 +1,9 @@
 **Lập Trình Web**
-***Thành Viên***
-- Nguyễn Thái Đức
-- Bùi Anh Tuấn
-- Trần Thị Mỹ Thùy
+- IntelliJ Idea Ultimate
+- Navicat Premium
+- MySQL
+
+**Deploy**
 
 - `heroku create`
 - `mvn package`

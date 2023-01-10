@@ -425,11 +425,68 @@
                                                                     </div>
                                                                     <div class="col-lg-4">
                                                                         <div class="text-lg-right">
-                                                                            <button type="button"
-                                                                                class="btn btn-danger mb-2 mr-2"><i
-                                                                                    class="mdi mdi-basket mr-1"></i>
+                                                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal">
                                                                                 Thêm đơn hàng
-                                                                                mới</button>
+                                                                            </button>
+        
+                                                                            <!-- Modal -->
+                                                                            <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                                                                                <div class="modal-dialog" role="document">
+                                                                                    <div class="modal-content">
+                                                                                        <div class="modal-header">
+                                                                                            <h5 class="modal-title" id="addProductModalLabel">Thêm đơn hàng</h5>
+                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                                <span aria-hidden="true">&times;</span>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                        <div class="modal-body">
+                                                                                            <!-- Modal form goes here -->
+                                                                                            <form method="post" action="/AddOrderAdmin">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="userID">User ID</label>
+                                                                                                    <input type="text" class="form-control" id="userID" placeholder="Enter UserID" name="userID">
+                                                                                                </div>
+                                                                                                <div class="form-group">
+                                                                                                    <label for="numItem">Số lượng</label>
+                                                                                                    <input type="number" class="form-control" id="numItem" placeholder="Enter numItem" name="numItem">
+                                                                                                </div>
+        
+                                                                                                <div class="form-group">
+                                                                                                    <label for="priceOrder">Giá</label>
+                                                                                                    <input type="number" class="form-control" id="priceOrder" placeholder="Enter price" name="priceOrder"/>
+                                                                                                </div>
+        
+                                                                                                <div class="form-group">
+                                                                                                    <label for="delivery">Ngày giao hàng</label>
+                                                                                                    <input type="date" class="form-control" id="delivery" placeholder="Enter " name="delivery">
+                                                                                                </div>
+        
+                                                                                                <div class="form-group">
+                                                                                                    <label for="recept">Ngày nhận hàng</label>
+                                                                                                    <input type="date" class="form-control" id="recept" placeholder="Enter" name="recept">
+                                                                                                </div>
+        
+                                                                                                <div class="form-group">
+                                                                                                    <label for="payment">Phương thức thanh toán</label>
+                                                                                                    <input type="text" class="form-control" id="payment" placeholder="Enter  payment" name="payment">
+                                                                                                </div>
+        
+                                                                                                <div class="form-group">
+                                                                                                    <label for="status">Trạng thái</label>
+                                                                                                    <input type="text" class="form-control" id="status" placeholder="Enter status" name="status">
+                                                                                                </div>
+        
+                                                                                                
+                                                                                                <div class="modal-footer">
+                                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                                                                                    <input type="submit" class="btn btn-primary" value="Thêm"/>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+        
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                             <button type="button"
                                                                                 class="btn btn-light mb-2">Xuất
                                                                                 Excel</button>
