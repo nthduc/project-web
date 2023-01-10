@@ -154,43 +154,50 @@
                                                             data-toggle="dropdown">
                         <div class="items-cart-inner">
                             <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-                            <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span
-                                    class="total-price"> <span class="sign">420.850</span><span
-                                    class="value">đ</span> </span> </div>
+                            <div class="basket-item-count"><span class="count">${Size}</span></div>
+                            <div class="total-price-basket"> <span class="lbl">Item -</span> <span
+                                    class="total-price"> <span class="sign">${Total}</span><span
+                                    class="value">$</span> </span> </div>
                         </div>
                     </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="width: 600px">
                             <li>
                                 <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                    src="assets/images/products/gachoplat/p1.jpg" alt=""></a>
+                                    <c:forEach items="${List}" var="c">
+                                        <div class="row">
+                                            <div class="col-xs-2">
+                                                <div class="image"> <a href=""><img
+                                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiyJR2fSM2OQO8fOkgEKYppi46AODZHFaw5A&usqp=CAU"
+                                                        alt=""></a> </div>
                                             </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
-                                                600*600mm VOC-H01</a>
-                                            </h3>
-                                            <div class="price">420.850đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a>
-                                        </div>
-                                    </div>
+                                            <div class="col-xs-5">
+                                                <h3 class="name"><a href="">${c.name}</a>
+                                                </h3>
+                                            </div>
+                                            <div class="col-xl-1">
+                                                <div class="price">SL:${c.quantity}</div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <div class="price">${c.price}$</div>
+                                            </div>
+
+                                            <div class="col-xs-1 action"> <a href="#"><i
+                                                    class="fa fa-trash"></i></a> </div>
+                                        </div><br>
+                                    </c:forEach>
+
                                 </div>
                                 <!-- /.cart-item -->
                                 <div class="clearfix"></div>
                                 <hr>
                                 <div class="clearfix cart-total">
                                     <div class="pull-right"> <span class="text">Tổng tiền :</span><span
-                                            class='price'>420.850đ</span> </div>
+                                            class='price'>${Total}$</span> </div>
                                     <div class="clearfix"></div>
-                                    <a href="giohang.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Xem
-                                        giỏ hàng</a>
+<%--                                    <a href="ShowCart"--%>
+<%--                                       class="btn btn-upper btn-primary btn-block m-t-20 " style="width: 150px; margin-left:250px">Xem giỏ hàng</a>--%>
                                     <a href="thanhtoan.jsp"
-                                       class="btn btn-upper btn-primary btn-block m-t-20">Thanh
-                                        toán</a>
+                                       class="btn btn-upper btn-primary btn-block m-t-20" style="width: 150px; margin-left:250px">Thanh toán</a>
                                 </div>
                                 <!-- /.cart-total-->
 
@@ -198,9 +205,12 @@
                         </ul>
                         <!-- /.dropdown-menu-->
                     </div>
-                    <!-- /.dropdown-cart -->
 
-                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+                    <!-- /.dropdown-menu-->
+                </div>
+                <!-- /.dropdown-cart -->
+
+                <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
                 </div>
                 <!-- /.top-cart-row -->
             </div>
@@ -496,7 +506,7 @@
                                 <div class="cart clearfix animate-effect">
                                     <div class="action">
                                         <div class="add-cart-button btn-group">
-                                            <button class="btn btn-primary cart-btn" type="button" href="" style="margin-left: 30px">Thêm vào giỏ
+                                            <button class="btn btn-primary cart-btn" type="button" href="AddCart?id=${s.id}" style="margin-left: 30px">Thêm vào giỏ
                                                 hàng</button>
                                         </div>
                                     </div>
@@ -829,23 +839,12 @@
                                                     <!-- /.product-info -->
                                                     <div class="cart clearfix animate-effect">
                                                         <div class="action">
-                                                            <ul class="list-unstyled">
-                                                                <li class="add-cart-button btn-group">
-                                                                    <button data-toggle="tooltip"
-                                                                            class="btn btn-primary icon" type="button"
-                                                                            title="Add Cart"> <i
-                                                                            class="fa fa-shopping-cart"></i> </button>
-                                                                    <button class="btn btn-primary cart-btn"
-                                                                            type="button">Thêm vào giỏ hàng</button>
+                                                            <ul class="list-unstyled" style="margin-right: 30px">
+                                                                <li class="add-cart-button btn-group" style="margin-right: 30px">
+                                                                    <a class="btn btn-primary" href="AddCart?id=${n.id}"><i class="fa fa-shopping-cart" ></i> Thêm vào giỏ hàng</a>
+
                                                                 </li>
-                                                                <li class="lnk wishlist"> <a data-toggle="tooltip"
-                                                                                             class="add-to-cart" href="chitietsanpham.html"
-                                                                                             title="Wishlist"> <i
-                                                                        class="icon fa fa-heart"></i> </a> </li>
-                                                                <li class="lnk"> <a data-toggle="tooltip"
-                                                                                    class="add-to-cart" href="chitietsanpham.html"
-                                                                                    title="Compare"> <i class="fa fa-signal"
-                                                                                                        aria-hidden="true"></i> </a> </li>
+
                                                             </ul>
                                                         </div>
                                                         <!-- /.action -->

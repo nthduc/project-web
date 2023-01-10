@@ -1,8 +1,6 @@
 package vn.edu.hcmuaf.fit.controller.Client;
 
-import vn.edu.hcmuaf.fit.bean.BannerBean;
-import vn.edu.hcmuaf.fit.bean.ProductBean;
-import vn.edu.hcmuaf.fit.bean.TagBean;
+import vn.edu.hcmuaf.fit.bean.*;
 import vn.edu.hcmuaf.fit.db.ConnectionDB;
 import vn.edu.hcmuaf.fit.services.BannerService;
 import vn.edu.hcmuaf.fit.services.ProductService;

@@ -1,4 +1,8 @@
-<%--
+<%@ page import="vn.edu.hcmuaf.fit.bean.Cart" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.hcmuaf.fit.bean.CartItem" %>
+<%@ page import="vn.edu.hcmuaf.fit.bean.ProductBean" %>
+<%@ page import="vn.edu.hcmuaf.fit.services.ProductService" %><%--
   Created by IntelliJ IDEA.
   User: ACER
   Date: 7/12/2022
@@ -114,8 +118,8 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
                     <!-- ============================================================= LOGO ============================================================= -->
-                    <div class="logo" ;"> <a href="/Home"> <img src="assets\images\daisan.png" alt="logo"
-                                                                    style="height: 55px; margin-top: -10px" "> </a> </div>
+                    <div class="logo" > <a href="/Home"> <img src="assets\images\daisan.png" alt="logo"
+                                                                    style="height: 55px; margin-top: -10px" > </a> </div>
                 <!-- /.logo -->
                 <!-- ============================================================= LOGO : END ============================================================= --> </div>
             <!-- /.logo-holder -->
@@ -150,46 +154,55 @@
             <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                 <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
+
                 <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
                                                         data-toggle="dropdown">
                     <div class="items-cart-inner">
                         <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                        <div class="basket-item-count"><span class="count">1</span></div>
-                        <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span
-                                class="total-price"> <span class="sign">420.850</span><span
-                                class="value">đ</span> </span> </div>
+                        <div class="basket-item-count"><span class="count">${Size}</span></div>
+                        <div class="total-price-basket"> <span class="lbl">Item -</span> <span
+                                class="total-price"> <span class="sign">${Total}</span><span
+                                class="value">$</span> </span> </div>
                     </div>
                 </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="width: 600px">
                         <li>
                             <div class="cart-item product-summary">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p1.jpg"
-                                                alt=""></a> </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
-                                            600*600mm VOC-H01</a>
-                                        </h3>
-                                        <div class="price">420.850đ</div>
-                                    </div>
-                                    <div class="col-xs-1 action"> <a href="#"><i
-                                            class="fa fa-trash"></i></a> </div>
-                                </div>
+                                <c:forEach items="${List}" var="c">
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <div class="image"> <a href=""><img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiyJR2fSM2OQO8fOkgEKYppi46AODZHFaw5A&usqp=CAU"
+                                                    alt=""></a> </div>
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <h3 class="name"><a href="">${c.name}</a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-xl-1">
+                                            <div class="price">SL:${c.quantity}</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="price">${c.price}$</div>
+                                        </div>
+
+                                        <div class="col-xs-1 action"> <a href="#"><i
+                                                class="fa fa-trash"></i></a> </div>
+                                    </div><br>
+                                </c:forEach>
+
                             </div>
                             <!-- /.cart-item -->
                             <div class="clearfix"></div>
                             <hr>
                             <div class="clearfix cart-total">
                                 <div class="pull-right"> <span class="text">Tổng tiền :</span><span
-                                        class='price'>420.850đ</span> </div>
+                                        class='price'>${Total}$</span> </div>
                                 <div class="clearfix"></div>
-                                <a href="giohang.jsp"
-                                   class="btn btn-upper btn-primary btn-block m-t-20">Xem giỏ hàng</a>
+                                <a href="ShowCart"
+                                   class="btn btn-upper btn-primary btn-block m-t-20 " style="width: 150px; margin-left:250px">Xem giỏ hàng</a>
                                 <a href="thanhtoan.jsp"
-                                   class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
+                                   class="btn btn-upper btn-primary btn-block m-t-20" style="width: 150px; margin-left:250px">Thanh toán</a>
                             </div>
                             <!-- /.cart-total-->
 
@@ -197,7 +210,11 @@
                     </ul>
                     <!-- /.dropdown-menu-->
                 </div>
+
+                <!-- /.dropdown-menu-->
+            </div>
                 <!-- /.dropdown-cart -->
+
 
                 <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
             </div>
@@ -446,6 +463,7 @@
             <div class="row">
                 <div class="col col-md-12">
                     <table class="table table-bordered">
+
                         <thead>
                         <tr>
                             <th>STT</th>
@@ -458,22 +476,31 @@
                         </tr>
                         </thead>
                         <tbody id="datarow">
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <img src="assets/images/products/gachoplat/p1.jpg" class="product-image">
-                            </td>
-                            <td>Gạch ốp lát Eurotile BST Vọng Cát 600*600mm VOC-H01</td>
-                            <td class="text-right">1</td>
-                            <td class="text-right">420.850</td>
-                            <td class="text-right">420.850</td>
-                            <td>
-                                <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
-                                <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
-                                    <i class="fa fa-trash" aria-hidden="true"></i> Xóa
-                                </a>
-                            </td>
-                        </tr>
+<%--                        <% List<CartItem> cart = (List<CartItem>)session.getAttribute("Cart");--%>
+<%--                            int stt = 0;--%>
+<%--                            for (CartItem c: cart) {--%>
+<%--                                ProductBean pro = ProductService.getInstance().getProductByID(c.getPro_id());--%>
+
+<%--                        %>--%>
+
+                        <c:forEach items="${List} " var="i">
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <img src="${i.Pro_id}" class="product-image">
+                                </td>
+                                <td>${i.name}</td>
+                                <td class="text-right">${i.quantity}</td>
+                                <td class="text-right">${i.price}</td>
+                                <td class="text-right">${i.quantity * c.price }</td>
+                                <td>
+                                    <!-- Nút xóa, bấm vào sẽ xóa thông tin dựa vào khóa chính `sp_ma` -->
+                                    <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+                                    </a>
+                                </td>
+                            </tr>
+                        </c:forEach>
 
                         </tbody>
                     </table>

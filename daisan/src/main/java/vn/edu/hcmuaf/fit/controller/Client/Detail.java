@@ -2,7 +2,6 @@ package vn.edu.hcmuaf.fit.controller.Client;
 
 import vn.edu.hcmuaf.fit.bean.ProductBean;
 import vn.edu.hcmuaf.fit.bean.TagBean;
-import vn.edu.hcmuaf.fit.db.ConnectionDB;
 import vn.edu.hcmuaf.fit.services.ProductService;
 import vn.edu.hcmuaf.fit.services.TagService;
 
@@ -10,9 +9,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.*;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -55,6 +51,8 @@ public class Detail extends HttpServlet {
         request.setAttribute("Like",like);
         request.setAttribute("namePro",name);
         request.setAttribute("Pro",product);
+        List<ProductBean> list = pro.getAllProduct();
+
         request.getRequestDispatcher("chitietsanpham.jsp").forward(request,response);
     }
 

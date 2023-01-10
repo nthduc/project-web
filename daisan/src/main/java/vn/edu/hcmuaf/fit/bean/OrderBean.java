@@ -7,14 +7,13 @@ import java.util.Date;
 public class OrderBean implements Serializable {
     private int order_ID;
     private int user_ID;
-    private InfoBean info;
     private int num_item;
     private String payment;
     private String status;
     private int price;
     private Date receptDate;
     private Date deliveryDate;
-    private ArrayList<ItemBean> list;
+    private ArrayList<CartItem> list;
 
     public OrderBean() {
 
@@ -45,14 +44,6 @@ public class OrderBean implements Serializable {
 
     public void setUser_ID(int user_ID) {
         this.user_ID = user_ID;
-    }
-
-    public InfoBean getInfo() {
-        return info;
-    }
-
-    public void setInfo(InfoBean info) {
-        this.info = info;
     }
 
     public int getNum_item() {
@@ -103,11 +94,11 @@ public class OrderBean implements Serializable {
         this.deliveryDate = deliveryDate;
     }
 
-    public ArrayList<ItemBean> getList() {
+    public ArrayList<CartItem> getList() {
         return list;
     }
 
-    public void setList(ArrayList<ItemBean> list) {
+    public void setList(ArrayList<CartItem> list) {
         this.list = list;
     }
 }

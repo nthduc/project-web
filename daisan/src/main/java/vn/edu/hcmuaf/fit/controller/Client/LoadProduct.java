@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.controller.Client;
 
+import vn.edu.hcmuaf.fit.bean.CartItem;
 import vn.edu.hcmuaf.fit.bean.ProductBean;
 import vn.edu.hcmuaf.fit.bean.TagBean;
 import vn.edu.hcmuaf.fit.services.ProductService;
@@ -10,10 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 
 @WebServlet(name = "LoadProduct", urlPatterns = "/products")
 public class LoadProduct extends HttpServlet {
@@ -39,6 +37,25 @@ public class LoadProduct extends HttpServlet {
                     request.setAttribute("id",tag_id);
                     List<ProductBean> listC = pro.getAllProductByTagID(tag_id);
                     request.setAttribute("ListC",listC);
+////        List<CartItem> cart = null;
+//        HttpSession session = request.getSession();
+//
+//
+//        List<CartItem> listc = (List<CartItem>)session.getAttribute("Cart");
+//        request.setAttribute("Size", listc.size());
+//        int total =0;
+//        for (CartItem i: listc){
+//            total += (i.getPrice()*i.getQuantity());
+//        }
+//        request.setAttribute("Total",total);
+//        System.out.println(listc.size());
+//        List<CartItem> listProduct = new ArrayList<>();
+//        for(CartItem c: listc){
+//            CartItem item1 = new CartItem(c.getPro_id(),c.getName(),c.getQuantity(),c.getPrice());
+//            listProduct.add(item1);
+//        }
+//        request.setAttribute("List",listProduct);
+
                     request.getRequestDispatcher("dssanpham.jsp").forward(request,response);
     }
     @Override

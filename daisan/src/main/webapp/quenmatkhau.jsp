@@ -150,42 +150,50 @@
                                                         data-toggle="dropdown">
                     <div class="items-cart-inner">
                         <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                        <div class="basket-item-count"><span class="count">1</span></div>
-                        <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span
-                                class="total-price"> <span class="sign">420.850</span><span
-                                class="value">đ</span> </span> </div>
+                        <div class="basket-item-count"><span class="count">${Size}</span></div>
+                        <div class="total-price-basket"> <span class="lbl">Item -</span> <span
+                                class="total-price"> <span class="sign">${Total}</span><span
+                                class="value">$</span> </span> </div>
                     </div>
                 </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="width: 600px">
                         <li>
                             <div class="cart-item product-summary">
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                src="assets/images/products/gachoplat/p1.jpg"
-                                                alt=""></a>
+                                <c:forEach items="${List}" var="c">
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <div class="image"> <a href=""><img
+                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiyJR2fSM2OQO8fOkgEKYppi46AODZHFaw5A&usqp=CAU"
+                                                    alt=""></a> </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
-                                            600*600mm VOC-H01</a>
-                                        </h3>
-                                        <div class="price">420.850đ</div>
-                                    </div>
-                                    <div class="col-xs-1 action"> <a href="#"><i
-                                            class="fa fa-trash"></i></a>
-                                    </div>
-                                </div>
+                                        <div class="col-xs-5">
+                                            <h3 class="name"><a href="">${c.name}</a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-xl-1">
+                                            <div class="price">SL:${c.quantity}</div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="price">${c.price}$</div>
+                                        </div>
+
+                                        <div class="col-xs-1 action"> <a href="#"><i
+                                                class="fa fa-trash"></i></a> </div>
+                                    </div><br>
+                                </c:forEach>
+
                             </div>
                             <!-- /.cart-item -->
                             <div class="clearfix"></div>
                             <hr>
                             <div class="clearfix cart-total">
-                                <div class="pull-right"> <span class="text">Tổng Cộng :</span><span
-                                        class='price'>420.850đ</span> </div>
+                                <div class="pull-right"> <span class="text">Tổng tiền :</span><span
+                                        class='price'>${Total}$</span> </div>
                                 <div class="clearfix"></div>
+                                <%--                                    <a href="ShowCart"--%>
+                                <%--                                       class="btn btn-upper btn-primary btn-block m-t-20 " style="width: 150px; margin-left:250px">Xem giỏ hàng</a>--%>
                                 <a href="thanhtoan.jsp"
-                                   class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
+                                   class="btn btn-upper btn-primary btn-block m-t-20" style="width: 150px; margin-left:250px">Thanh toán</a>
                             </div>
                             <!-- /.cart-total-->
 
@@ -193,7 +201,10 @@
                     </ul>
                     <!-- /.dropdown-menu-->
                 </div>
-                <!-- /.dropdown-cart -->
+
+                <!-- /.dropdown-menu-->
+            </div>
+            <!-- /.dropdown-cart -->                <!-- /.dropdown-cart -->
 
                 <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
             </div>

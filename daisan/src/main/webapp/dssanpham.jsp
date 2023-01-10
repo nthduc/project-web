@@ -71,7 +71,7 @@
                                 </c:otherwise>
                                 </c:choose>
                                         <li><a href="sanphamyeuthich.jsp"><i class="icon fa fa-heart"></i>Yêu thích</a></li>
-                                        <li><a href="giohang.jsp"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                                        <li><a href="ShowCart?name=${sessionScope.cart}"><i class="icon fa fa-shopping-cart"></i>Giỏ hàng</a></li>
                                         <li><a href="thanhtoan.jsp"><i class="icon fa fa-check"></i>Thanh toán</a></li>
                             <c:choose>
                                 <c:when test="${sessionScope.acc == null}">
@@ -152,44 +152,66 @@
                 <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                     <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-                    <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                            <div class="basket-item-count"><span class="count">1</span></div>
-                            <div class="total-price-basket"> <span class="lbl">Giỏ -</span> <span class="total-price"> <span
-                                    class="sign">420.850</span><span class="value">đ</span> </span> </div>
-                        </div>
-                    </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="cart-item product-summary">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <div class="image"> <a href="chitietsanpham.jsp"><img
-                                                    src="assets/images/products/gachoplat/p1.jpg" alt=""></a> </div>
-                                        </div>
-                                        <div class="col-xs-7">
-                                            <h3 class="name"><a href="">Gạch ốp lát Eurotile BST Vọng Cát
-                                                600*600mm VOC-H01</a>
-                                            </h3>
-                                            <div class="price">420.850đ</div>
-                                        </div>
-                                        <div class="col-xs-1 action"> <a href="#"><i class="fa fa-trash"></i></a> </div>
-                                    </div>
-                                </div>
-                                <!-- /.cart-item -->
-                                <div class="clearfix"></div>
-                                <hr>
-                                <div class="clearfix cart-total">
-                                    <div class="pull-right"> <span class="text">Tổng tiền :</span><span class='price'>900.000đ.00</span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <a href="thanhtoan.jsp" class="btn btn-upper btn-primary btn-block m-t-20">Thanh toán</a>
-                                </div>
-                                <!-- /.cart-total-->
 
-                            </li>
-                        </ul>
+                        <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
+                                                                data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
+                                <div class="basket-item-count"><span class="count">${Size}</span></div>
+                                <div class="total-price-basket"> <span class="lbl">Item -</span> <span
+                                        class="total-price"> <span class="sign">${Total}</span><span
+                                        class="value">$</span> </span> </div>
+                            </div>
+                        </a>
+                            <ul class="dropdown-menu" style="width: 600px">
+                                <li>
+                                    <div class="cart-item product-summary">
+                                        <c:forEach items="${List}" var="c">
+
+                                            <div class="row">
+                                            <c:forEach items="IMG" var="i">
+                                                <div class="col-xs-2">
+                                                    <div class="image"> <a href=""><img
+                                                            src="${i}"
+                                                            alt=""></a> </div>
+                                                </div>
+                                            </c:forEach>
+                                                <div class="col-xs-5">
+                                                    <h3 class="name"><a href="">${c.name}</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="col-xl-1">
+                                                    <div class="price">SL:${c.quantity}</div>
+                                                </div>
+                                                <div class="col-xs-2">
+                                                    <div class="price">${c.price}$</div>
+                                                </div>
+
+                                                <div class="col-xs-1 action"> <a href="#"><i
+                                                        class="fa fa-trash"></i></a> </div>
+                                            </div><br>
+                                        </c:forEach>
+
+                                    </div>
+                                    <!-- /.cart-item -->
+                                    <div class="clearfix"></div>
+                                    <hr>
+                                    <div class="clearfix cart-total">
+                                        <div class="pull-right"> <span class="text">Tổng tiền :</span><span
+                                                class='price'>${Total}$</span> </div>
+                                        <div class="clearfix"></div>
+<%--                                        <a href="giohang.jsp"--%>
+<%--                                           class="btn btn-upper btn-primary btn-block m-t-20 " style="width: 150px; margin-left:250px">Xem giỏ hàng</a>--%>
+                                        <a href="thanhtoan.jsp"
+                                           class="btn btn-upper btn-primary btn-block m-t-20" style="width: 150px; margin-left:250px">Thanh toán</a>
+                                    </div>
+                                    <!-- /.cart-total-->
+
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-menu-->
+                        </div>
+
                         <!-- /.dropdown-menu-->
                     </div>
                     <!-- /.dropdown-cart -->
@@ -880,7 +902,7 @@
                                                     <h3 class="name"><a href="productDetail?product_id=${p.id}">${p.name}</a></h3>
                                                     <div class="rating rateit-small"></div>
                                                     <div class="description"></div>
-                                                    <div class="product-price"> <span class="price"> ${p.price}đ </span> <span
+                                                    <div class="product-price"> <span class="price"> ${p.price} $ </span> <span
                                                             class="price-before-discount">${p.salePrice}đ</span> </div>
                                                     <!-- /.product-price -->
 
@@ -888,16 +910,12 @@
                                                 <!-- /.product-info -->
                                                 <div class="cart clearfix animate-effect">
                                                     <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
+                                                        <ul class="list-unstyled" style="margin-right: 30px">
+                                                            <li class="add-cart-button btn-group" style="margin-right: 30px">
+                                                               <a class="btn btn-primary" href="AddCart?id=${p.id}"><i class="fa fa-shopping-cart" ></i> Thêm vào giỏ hàng</a>
 
                                                             </li>
-                                                            <li class="lnk wishlist"> <a class="add-to-cart" href="chitietsanpham.jsp"
-                                                                                         title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                                                            <li class="lnk"> <a class="add-to-cart" href="chitietsanpham.jsp" title="Compare"> <i
-                                                                    class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+
                                                         </ul>
                                                     </div>
                                                     <!-- /.action -->
